@@ -1,19 +1,9 @@
 # 오픈소스 LLM 활용 프로젝트
 
-로컬 LLM(Ollama) 2개를 비교하고, Cloud API 모델 1개를 소규모로 함께 비교하여
-특정 Use Case에 가장 적합한 모델 1개를 선정하는 팀 프로젝트입니다.
-
-## 팀 정보
-
-| 이름 | 역할/담당 |
-|---|---|
-| (이름 입력) | (담당 작업 입력) |
-| (이름 입력) | (담당 작업 입력) |
-
 ## 프로젝트 진행 상태
 
 - [x] STEP 1. 문제 정의 (`docs/00_use_case.md`)
-- [x] STEP 2. 모델 요구사항 정의 (`docs/01_requirements.md`)
+- [ ] STEP 2. 모델 요구사항 정의 (`docs/01_requirements.md`)
 - [ ] STEP 3. 후보 모델 탐색 (`docs/02_candidate_models.md`)
 - [ ] STEP 4. 모델 실행 환경 확인 (`scripts/01_ollama_chat.py` 실행 확인)
 - [ ] STEP 5. 평가 질문/기준 확정 (`data/questions.json`, `docs/03_evaluation.md`)
@@ -83,10 +73,9 @@ copy .env.example .env
 6. Cloud 비교 실행: `uv run scripts/run_cloud_experiment.py`
 6. 결과는 `results/local/*.jsonl`, `results/cloud/*.jsonl`에 원본 그대로 저장됩니다.
 
-## 입력 문서 (가상 교인 명부)
+## 입력 문서
 
-질문 10개는 "교인 명부를 읽고 심방 대상을 고르는" 작업이라, 질문과 함께 명부를 문서로 넣어 줍니다.
-명부는 전부 합성 데이터이며 실제 인물과 무관합니다.
+질문 10개는 "데이터를 읽고 심방 대상을 고르는" 작업이라, 질문과 함께 가상의 명부를 문서로 넣어 줍니다.
 
 | 데이터셋 | 인원 | 이력 연차 | 용도 |
 |---|---|---|---|
@@ -103,11 +92,7 @@ uv run scripts/format_congregation_prompt.py --limit 30
 ```
 
 - 각 인물은 기본 정보, 출석, 건강, 경조사, 가족관계, 기도제목, 심방기록, 소속이력을 가집니다.
-- 전체의 10%는 담당자 입력이 빠져 기록이 거의 비어 있는 교인입니다. 모델이 정보 부족을
-  인정하는지 보기 위한 구간입니다.
-- ID는 영문 대소문자와 숫자를 섞은 6자리입니다. 세 데이터셋에서 같은 사람은 같은 ID를 씁니다.
-- 데이터 파일에는 명부만 넣습니다. 생성 조건이나 정답지처럼 실제 교회 DB에 없을 항목은
-  저장하지 않습니다.
+- 전체의 10%는 기록이 비어 있는 교인입니다. 모델이 정보 부족을 인정하는지 보기 위한 구간입니다.
 - 자세한 구성은 [data/sample_congregation_members.md](data/sample_congregation_members.md) 참고.
 
 > **주의**: 앞 30명만 넣어도 입력이 약 1만 토큰입니다. Ollama 기본 컨텍스트로는 문서 앞부분이
@@ -120,5 +105,4 @@ uv run scripts/format_congregation_prompt.py --limit 30
 
 ## 참고
 
-- 모델 가중치 파일, API 키, 가상환경(.venv)은 저장소에 올리지 않습니다.
 - 원본 실험 기록(JSON/JSONL)은 그대로 보존하고, 실패/워밍업/재시도는 본 실험과 구분해 별도 기록합니다.
