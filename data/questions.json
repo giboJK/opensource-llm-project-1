@@ -1,0 +1,15 @@
+{
+  "_readme": "STEP 5에서 채웁니다. type: normal | edge | insufficient. used_in_cloud_compare는 결과를 보기 전에 5개만 true로 미리 지정하세요.",
+  "questions": [
+    { "id": "q01", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q02", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q03", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q04", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q05", "type": "edge", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q06", "type": "edge", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q07", "type": "edge", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q08", "type": "insufficient", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q09", "type": "insufficient", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
+    { "id": "q10", "type": "insufficient", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false }
+  ]
+}

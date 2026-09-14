@@ -1,0 +1,13 @@
+[project]
+name = "opensource-llm-project"
+version = "0.1.0"
+description = "로컬 LLM(Ollama) vs Cloud API 비교 및 모델 선정 프로젝트"
+requires-python = ">=3.12"
+dependencies = [
+    "ollama>=0.3.0",
+    "openai>=1.40.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.uv]
+package = false

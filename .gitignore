@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv*/
+venv/
+
+# uv
+.uv-cache/
+
+# Environment / secrets
+.env
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+
+# Model weights (never commit these)
+*.gguf
+*.bin
+*.safetensors
+models/
+
+# Large downloads
+*.zip
+*.tar.gz
