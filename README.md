@@ -13,7 +13,7 @@
 ## 프로젝트 진행 상태
 
 - [x] STEP 1. 문제 정의 (`docs/00_use_case.md`)
-- [ ] STEP 2. 모델 요구사항 정의 (`docs/01_requirements.md`)
+- [x] STEP 2. 모델 요구사항 정의 (`docs/01_requirements.md`)
 - [ ] STEP 3. 후보 모델 탐색 (`docs/02_candidate_models.md`)
 - [ ] STEP 4. 모델 실행 환경 확인 (`scripts/01_ollama_chat.py` 실행 확인)
 - [ ] STEP 5. 평가 질문/기준 확정 (`data/questions.json`, `docs/03_evaluation.md`)
