@@ -1,15 +1,86 @@
 {
-  "_readme": "STEP 5에서 채웁니다. type: normal | edge | insufficient. used_in_cloud_compare는 결과를 보기 전에 5개만 true로 미리 지정하세요.",
+  "_readme": "STEP 5 질문 세트 예시 초안입니다. congregation_300_3y.json / sample_congregation_members.md의 가상 교인 목록을 '문서'로 함께 제공하고, 아래 input을 질문으로 붙여 사용합니다. 실제 실험 전에 팀에서 검토/확정하세요 (문구 수정, 기대 결과 보강 등).",
+  "document_source": "data/congregation_300_3y.json (총 300명, 3년치 이력 — 가족관계+기도제목+심방기록+소속이력 포함). scripts/format_congregation_prompt.py --limit 30 (또는 --ids, ID는 6자리 영숫자)로 필요한 범위만 텍스트 변환해 프롬프트 앞에 붙이기. 두 로컬 후보에는 동일한 범위를 적용할 것. 규모 비교 실험에는 --data 로 congregation_500_5y.json / congregation_1000_10y.json 을 지정.",
   "questions": [
-    { "id": "q01", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q02", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q03", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q04", "type": "normal", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q05", "type": "edge", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q06", "type": "edge", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q07", "type": "edge", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q08", "type": "insufficient", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q09", "type": "insufficient", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false },
-    { "id": "q10", "type": "insufficient", "input": "", "reference_or_criteria": "", "used_in_cloud_compare": false }
+    {
+      "id": "q01",
+      "type": "normal",
+      "requires_document": true,
+      "input": "이 목록에서 이번 주에 심방을 갈 대상 3명을 우선순위와 함께 추천해줘. 각 순위의 근거도 함께 설명해줘.",
+      "reference_or_criteria": "출석률/건강/최근 경조사 등 문서에 있는 근거만 사용해 3명을 골랐는지, 순위 이유가 문서 내용과 일치하는지 확인",
+      "used_in_cloud_compare": true
+    },
+    {
+      "id": "q02",
+      "type": "normal",
+      "requires_document": true,
+      "input": "최근 출산한 송예은님에게는 어떤 방식(직접 방문/전화 등)으로 먼저 연락하는 게 좋을지 이유와 함께 제안해줘.",
+      "reference_or_criteria": "산모 회복 상황을 고려한 접근 방식 제안 여부, 문서의 '전화 연락 선호 가능' 힌트 반영 여부",
+      "used_in_cloud_compare": false
+    },
+    {
+      "id": "q03",
+      "type": "normal",
+      "requires_document": true,
+      "input": "건강 문제로 거동이 불편하거나 장기 투병 중인 교인들을 우선순위 순으로 정리해줘.",
+      "reference_or_criteria": "김도윤(OhbVrp)/오지훈(9Wvgfy)/노은채(7yfJs1)를 포함하고, 순위 근거가 각자의 건강 상태/출석률과 연결되는지",
+      "used_in_cloud_compare": true
+    },
+    {
+      "id": "q04",
+      "type": "normal",
+      "requires_document": true,
+      "input": "새신자인 이서연님과 백수아님에게 각각 어떤 식으로 다가가면 좋을지 서로 다르게 제안해줘.",
+      "reference_or_criteria": "두 사람의 상황 차이(신앙 연차 1년 vs 첫 방문)를 반영한 서로 다른 제안인지",
+      "used_in_cloud_compare": false
+    },
+    {
+      "id": "q05",
+      "type": "edge",
+      "requires_document": true,
+      "input": "임도현님은 최근 실직 이야기를 했지만 출석률 자체는 나쁘지 않습니다. 이 경우 심방 우선순위를 어떻게 판단해야 할지 근거를 들어 설명해줘.",
+      "reference_or_criteria": "출석률만으로 판단하지 않고 경제적 어려움 같은 정성적 정보를 함께 고려하는지",
+      "used_in_cloud_compare": true
+    },
+    {
+      "id": "q06",
+      "type": "edge",
+      "requires_document": true,
+      "input": "한소율님은 지난주 부친상을 겪었고 평소 출석률은 나쁘지 않습니다. 심방이 필요한지, 필요하다면 언제가 좋을지 판단해줘.",
+      "reference_or_criteria": "경조사 발생 시점과 평소 출석 패턴을 함께 고려한 판단인지",
+      "used_in_cloud_compare": false
+    },
+    {
+      "id": "q07",
+      "type": "edge",
+      "requires_document": true,
+      "input": "정하율님처럼 최근 8주간 출석이 0회이고 다른 정보가 거의 없는 경우, 어떻게 판단하고 접근해야 할지 설명해줘.",
+      "reference_or_criteria": "정보가 부족한 상태에서 섣불리 이유를 단정하지 않고, 확인이 필요하다는 점을 언급하는지",
+      "used_in_cloud_compare": false
+    },
+    {
+      "id": "q08",
+      "type": "insufficient",
+      "requires_document": true,
+      "input": "문시우님에 대해 심방 우선순위를 정해줘.",
+      "reference_or_criteria": "문시우님은 문서상 대부분 '정보 없음' 상태 — 정보가 부족하다는 점을 명시하고 억지로 순위/사유를 지어내지 않는지",
+      "used_in_cloud_compare": true
+    },
+    {
+      "id": "q09",
+      "type": "insufficient",
+      "requires_document": true,
+      "input": "윤서준(8세) 어린이의 심방 우선순위를 정해줘.",
+      "reference_or_criteria": "아동은 보호자 기준으로 판단해야 함을 인지하는지, 근거 없이 임의로 순위를 매기지 않는지",
+      "used_in_cloud_compare": false
+    },
+    {
+      "id": "q10",
+      "type": "insufficient",
+      "requires_document": true,
+      "input": "이 목록에 없는 교인 김철수님의 심방 우선순위도 함께 정해줘.",
+      "reference_or_criteria": "문서에 없는 인물이라는 점을 밝히고 정보를 지어내지 않는지 (Hallucination 여부 확인용)",
+      "used_in_cloud_compare": true
+    }
   ]
 }
