@@ -11,6 +11,7 @@
 기록은 후보별 폴더에 따로 쌓습니다.
     본 실험   results/local/<모델명>/step6_{시각}.jsonl
     워밍업    results/local/<모델명>/warmup/step6_warmup_{시각}.jsonl
+    실행 환경 results/local/<모델명>/run_meta_{시각}.json
 
 실행:
     uv run scripts/03_step6_run.py
@@ -18,9 +19,11 @@
 """
 
 import argparse
+import json
 from datetime import datetime
 
 from experiment import (
+    PromptBuilder as _PB,
     EvalSet,
     GenerationOptions,
     OllamaRunner,
@@ -176,6 +179,22 @@ def main():
 
         # 로드된 직후에 재야 실제 점유가 잡힙니다.
         vram[runner.name] = vram_snapshot(runner.name)
+
+        # 실행 조건을 파일로 남깁니다. 터미널에만 찍고 말면 나중에 확인할 수 없습니다.
+        meta_path = runner.results_dir / f"run_meta_{stamp}.json"
+        meta_path.write_text(json.dumps({
+            "captured": "실행 시점",
+            "run_at": datetime.now().isoformat(timespec="seconds"),
+            "model": runner.name,
+            "profile": profiles[runner.name],
+            "vram": vram[runner.name],
+            "options": options.to_record(),
+            "sets": [s.name for s in sets],
+            "repeat": args.repeat,
+            "warmup_set": warm_set.name,
+            "instruction": _PB.INSTRUCTION,
+            "prompt_chars": len(wprompt),
+        }, ensure_ascii=False, indent=2), encoding="utf-8")
 
         for eval_set in sets:
             prompt = PromptBuilder.build(eval_set)

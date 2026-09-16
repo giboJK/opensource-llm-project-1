@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실험 결과</title>
+<!--
+  집계값을 담고 있지 않습니다. index_data.js 에 실린 원본 기록과 실행 조건을 읽어,
+  열릴 때마다 아래 JS 가 직접 계산해 그립니다.
+  데이터를 fetch 가 아니라 <script src> 로 읽는 이유는, file:/// 에서 브라우저가 fetch 로
+  로컬 파일을 읽는 것을 막기 때문입니다.
+-->
+<style>
+  :root { --line:#e2e0d8; --muted:#6b6a64; --bg:#faf9f5; --card:#fff; --sidebar:#f3f1ea;
+          --ok:#1d6b4f; --okbg:#e6f3ec; --ng:#a33; --ngbg:#fbeaea; --accent:#3d3a33; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:#22211e;
+         font:15px/1.65 -apple-system,"Segoe UI","Malgun Gothic",sans-serif; }
+  .layout { display:flex; min-height:100vh; align-items:flex-start; }
+  nav { width:270px; flex:0 0 270px; background:var(--sidebar); border-right:1px solid var(--line);
+        padding:22px 16px 40px; position:sticky; top:0; max-height:100vh; overflow:auto; }
+  nav h1 { font-size:16px; font-weight:600; margin:0 0 4px; }
+  nav .gen { color:var(--muted); font-size:12px; margin:0 0 18px; }
+  nav .scope { font-size:12px; color:var(--muted); margin:18px 0 6px; font-weight:600; }
+  nav .model { padding:7px 10px; border-radius:7px; cursor:pointer; font-size:14px; }
+  nav .model:hover { background:#e9e6dc; }
+  nav .model.on { background:var(--accent); color:#fff; }
+  nav .run { padding:4px 10px 4px 22px; font-size:13px; color:var(--muted);
+             cursor:pointer; border-radius:6px; }
+  nav .run:hover { background:#e9e6dc; }
+  nav .run.on { background:#dedace; color:#22211e; font-weight:600; }
+  nav .empty { color:var(--muted); font-size:13px; padding:4px 10px; }
+  main { flex:1; min-width:0; padding:32px 32px 80px; max-width:920px; }
+  h2 { font-size:19px; font-weight:600; margin:38px 0 4px; }
+  h2:first-child { margin-top:0; }
+  h3 { font-size:15px; font-weight:600; margin:22px 0 6px; }
+  .sub { color:var(--muted); font-size:14px; margin:0 0 10px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px;
+          padding:18px 20px; margin-top:12px; }
+  .step { display:inline-block; font-size:12px; font-weight:600; color:#fff;
+          background:var(--accent); border-radius:99px; padding:2px 10px; margin-bottom:6px; }
+  .banner { display:flex; align-items:center; gap:14px; padding:18px 20px; border-radius:10px;
+            margin:14px 0 4px; border:1px solid; }
+  .banner.pass { background:var(--okbg); border-color:#bfe0cf; }
+  .banner.fail { background:var(--ngbg); border-color:#eec9c9; }
+  .banner b { font-size:20px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:500; font-size:13px; }
+  tr:last-child td { border-bottom:none; }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:99px; font-size:12px; font-weight:600; }
+  .tag.ok { background:var(--okbg); color:var(--ok); }
+  .tag.ng { background:var(--ngbg); color:var(--ng); }
+  .bar { height:10px; background:#eceae2; border-radius:99px; overflow:hidden; margin-top:6px; }
+  .bar > i { display:block; height:100%; background:#8a8577; }
+  pre { background:#f5f3ec; border:1px solid var(--line); border-radius:8px; padding:14px 16px;
+        overflow:auto; font-size:12.5px; line-height:1.6; max-height:420px; white-space:pre-wrap;
+        word-break:break-all; margin:8px 0 0; }
+  details > summary { cursor:pointer; font-size:14px; color:var(--accent); font-weight:600;
+                      padding:4px 0; }
+  blockquote { margin:10px 0 0; padding:12px 16px; background:#f5f3ec;
+               border-left:3px solid #cfcbbd; border-radius:0 6px 6px 0; }
+  blockquote .who { font-weight:600; }
+  blockquote .meta { color:var(--muted); font-size:13px; margin-top:6px; }
+  code { background:#f0eee7; padding:1px 5px; border-radius:4px; font-size:13px; }
+  .note { color:var(--muted); font-size:13px; margin-top:10px; }
+  .miss { color:var(--ng); font-weight:600; }
+  .placeholder { color:var(--muted); padding:40px 0; }
+  @media (max-width:820px) {
+    .layout { display:block; } nav { width:auto; max-height:none; position:static; }
+    main { padding:24px 16px 60px; }
+  }
+  @media print { nav { display:none; } main { max-width:none; } .card,.banner { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav id="nav"></nav>
+  <main id="main"><p class="placeholder">index_data.js 를 불러오지 못했습니다. 같은 폴더에 있는지 확인하세요.</p></main>
+</div>
+
+<script src="index_data.js"></script>
+<script>
+(function () {
+  var D = window.RESULTS_INDEX;
+  if (!D) return;
+
+  // ---------- 유틸 ----------
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function mean(list) {
+    var v = list.filter(function (x) { return x !== null && x !== undefined; });
+    return v.length ? Math.round((v.reduce(function (a, b) { return a + b; }, 0) / v.length) * 10) / 10 : null;
+  }
+  function nOf(list) { return list.filter(function (x) { return x != null; }).length; }
+  function tag(ok) { return '<span class="tag ' + (ok ? "ok" : "ng") + '">' + (ok ? "통과" : "미달") + "</span>"; }
+  function pct(a, b) { return b ? Math.round((a / b) * 100) : 0; }
+  function val(x, u) { return x == null ? "측정 못 함" : x + u; }
+  function normId(v) { return String(v == null ? "" : v).trim().replace(/^\[|\]$/g, "").trim(); }
+  function entriesOf(row) {
+    var m = /\{[\s\S]*\}/.exec(row.answer || "");
+    if (!m) return [];
+    try { return JSON.parse(m[0]).top10 || []; } catch (e) { return []; }
+  }
+
+  // ---------- 선택 상태 ----------
+  var flat = [];
+  D.scopes.forEach(function (sc) {
+    sc.models.forEach(function (m) {
+      m.runs.forEach(function (r) { flat.push({ scope: sc, model: m, run: r }); });
+    });
+  });
+  var cur = flat.length ? 0 : -1;
+
+  // ---------- 왼쪽 목록 ----------
+  function renderNav() {
+    var h = ['<h1>실험 결과</h1><p class="gen">' + esc(D.generated_at.replace("T", " ")) + " 기준</p>"];
+    D.scopes.forEach(function (sc) {
+      h.push('<div class="scope">' + esc(sc.label) + "</div>");
+      if (!sc.models.length) { h.push('<div class="empty">실험 기록 없음</div>'); return; }
+      sc.models.forEach(function (m) {
+        var active = cur >= 0 && flat[cur].model === m;
+        h.push('<div class="model' + (active ? " on" : "") + '" data-model="' + esc(m.folder) + '">' +
+               esc(m.model) + "</div>");
+        m.runs.forEach(function (r) {
+          var i = flat.findIndex(function (f) { return f.model === m && f.run === r; });
+          h.push('<div class="run' + (i === cur ? " on" : "") + '" data-i="' + i + '">' +
+                 esc(r.label) + "</div>");
+        });
+      });
+    });
+    var nav = document.getElementById("nav");
+    nav.innerHTML = h.join("");
+    nav.querySelectorAll(".run").forEach(function (el) {
+      el.onclick = function () { cur = +el.dataset.i; renderNav(); renderMain(); window.scrollTo(0, 0); };
+    });
+    nav.querySelectorAll(".model").forEach(function (el) {
+      el.onclick = function () {
+        var first = flat.findIndex(function (f) { return f.model.folder === el.dataset.model; });
+        if (first >= 0) { cur = first; renderNav(); renderMain(); window.scrollTo(0, 0); }
+      };
+    });
+  }
+
+  // ---------- 1. 실험 설계 ----------
+  function designSection(sel) {
+    var g = D.design, meta = sel.run.meta, o = (meta && meta.options) || (sel.run.records[0] || {}).options || {};
+    var h = ['<div class="step">1 · 실험 설계</div>'];
+    h.push("<h2>무엇을 시켰나</h2>");
+    h.push('<p class="sub">' + esc(g.task) + "</p>");
+
+    h.push("<div class='card'><h3>모델에 넣은 지시문</h3>");
+    h.push('<p class="note">10개 세트와 모든 후보가 글자 하나까지 같은 것을 받습니다. 뒤에 명부만 바뀝니다.</p>');
+    h.push("<pre>" + esc(meta && meta.instruction ? meta.instruction : g.instruction) + "</pre>");
+    h.push("<details><summary>명부까지 붙인 프롬프트 전문 보기 (" + esc(g.sample_set) + ", " +
+           g.sample_prompt.length.toLocaleString() + "자)</summary><pre>" +
+           esc(g.sample_prompt) + "</pre></details></div>");
+
+    h.push("<div class='card'><h3>평가 세트</h3>");
+    h.push('<p class="note">고정 문제 ' + g.sets.length + "개는 명부 " + g.sets.length +
+           "개입니다. 세트마다 정답이 정해져 있고, 명부 자체에는 정답 표시가 없습니다.</p>");
+    h.push("<table><tr><th>세트</th><th class='num'>인원</th><th class='num'>반드시 포함</th>" +
+           "<th class='num'>반드시 제외</th><th class='num'>명부 크기</th></tr>");
+    g.sets.forEach(function (s) {
+      h.push("<tr><td>" + esc(s.name) + "</td><td class='num'>" + s.members + "</td><td class='num'>" +
+             s.must_include + "</td><td class='num'>" + s.must_exclude + "</td><td class='num'>" +
+             s.chars.toLocaleString() + "자</td></tr>");
+    });
+    h.push("</table></div>");
+
+    var sampleKey = g.answer_key[g.sample_set];
+    h.push("<div class='card'><h3>정답은 이렇게 생겼습니다 (" + esc(g.sample_set) + ")</h3>");
+    h.push("<table><tr><th>구분</th><th>교인</th><th>사유</th></tr>");
+    sampleKey.must_include.forEach(function (x) {
+      h.push("<tr><td>포함</td><td>" + esc(x.name) + "</td><td>" + esc(x.case) +
+             " <span class='note'>(" + esc(x.kind) + ")</span></td></tr>");
+    });
+    sampleKey.must_exclude.forEach(function (x) {
+      h.push("<tr><td>제외</td><td>" + esc(x.name) + "</td><td>" + esc(x.case) + "</td></tr>");
+    });
+    h.push("</table></div>");
+
+    h.push("<div class='card'><h3>실행 환경</h3><table>");
+    var rows = [["모델", "<code>" + esc(sel.model.model) + "</code>"],
+                ["실행 시각", esc(sel.run.label)],
+                ["num_ctx", o.num_ctx == null ? "—" : o.num_ctx.toLocaleString()],
+                ["temperature", String(o.temperature)],
+                ["출력 한도", o.num_predict == null ? "지정 안 함" : o.num_predict],
+                ["프롬프트 크기", (sel.run.records[0] || {}).prompt_chars ?
+                  (sel.run.records[0].prompt_chars).toLocaleString() + "자" : "—"]];
+    if (meta && meta.profile) {
+      var p = meta.profile;
+      rows.push(["digest", p.digest ? "<code>" + esc(String(p.digest).slice(0, 16)) + "…</code>" : "—"]);
+      rows.push(["양자화", esc(p.quantization_level || "—")]);
+      rows.push(["파라미터", esc(p.parameter_size || "—")]);
+      rows.push(["모델 context_length", p.context_length ? p.context_length.toLocaleString() : "—"]);
+    }
+    if (meta && meta.vram) {
+      var v = meta.vram;
+      rows.push(["VRAM", v.size_vram_mib == null ? esc(v.note || "—")
+                        : v.size_vram_mib + " MiB / " + v.size_mib + " MiB"]);
+      rows.push(["CPU·GPU 적재", esc(v.processor || v.note || "—")]);
+    }
+    if (meta && meta.repeat) rows.push(["반복", "세트당 " + meta.repeat + "회"]);
+    rows.forEach(function (r) { h.push("<tr><td>" + esc(r[0]) + "</td><td>" + r[1] + "</td></tr>"); });
+    h.push("</table>");
+    if (meta && meta.captured && meta.captured.indexOf("실행 시점") !== 0) {
+      h.push('<p class="note">환경 기록: ' + esc(meta.captured) + "</p>");
+    }
+    if (!meta) h.push('<p class="note">이 실행에는 환경 기록 파일이 없습니다.</p>');
+    h.push("</div>");
+
+    h.push("<div class='card'><h3>어떻게 채점하나</h3><table>");
+    [["정답을 골랐는가", "반드시 포함 " + sampleKey.must_include.length + "명 중 " +
+        g.pass_line.include + "명 이상이 top 10에"],
+     ["가면 안 될 사람을 넣었는가", "반드시 제외 " + sampleKey.must_exclude.length + "명이 한 명도 없을 것"],
+     ["형식을 지켰는가", "10명, 명부에 있는 id, 이름 일치, 중복 없음"],
+     ["같은 답을 내는가", "같은 명부를 다시 넣으면 같은 10명"],
+     ["시간", g.pass_line.elapsed + "초 이내"]].forEach(function (r) {
+      h.push("<tr><td>" + esc(r[0]) + "</td><td>" + esc(r[1]) + "</td></tr>");
+    });
+    h.push("</table><p class='note'>순위는 누가 들어왔는지만 보고, 급성이 만성보다 위에 왔는지를 따로 봅니다.</p></div>");
+    return h.join("");
+  }
+
+  // ---------- 2. 결과 ----------
+  function resultSection(sel) {
+    var rows = sel.run.records, warm = sel.run.warmup || [];
+    var ok = rows.filter(function (r) { return !r.error && r.validation; });
+    var h = ['<div class="step">2 · 결과</div>'];
+    if (!ok.length) return h.join("") + "<p class='placeholder'>성공한 호출이 없습니다.</p>";
+
+    var includeMax = ok[0].validation.include_total;
+    var incAvg = mean(ok.map(function (r) { return r.validation.hit_include; }));
+    var excAvg = mean(ok.map(function (r) { return r.validation.miss_exclude; }));
+    var elList = ok.map(function (r) { return r.perf.elapsed_sec; });
+    var tpsList = ok.map(function (r) { return r.perf.tokens_per_sec; });
+    var formatNg = ok.filter(function (r) { return !r.validation.format_ok; }).length;
+
+    var bySet = {};
+    ok.forEach(function (r) { (bySet[r.set] = bySet[r.set] || []).push(r); });
+    var setNames = Object.keys(bySet).sort();
+    var stable = setNames.filter(function (s) {
+      var seen = {};
+      bySet[s].forEach(function (r) { seen[r.validation.picked_ids.slice().sort().join(",")] = 1; });
+      return Object.keys(seen).length === 1;
+    }).length;
+
+    var L = D.design.pass_line;
+    var checks = [
+      { label: "정답을 골랐는가", value: incAvg + "명 / " + includeMax + "명",
+        limit: L.include + "명 이상", pass: (incAvg || 0) >= L.include },
+      { label: "가면 안 될 사람을 넣었는가", value: excAvg + "명", limit: "0명", pass: excAvg === L.exclude },
+      { label: "형식을 지켰는가", value: (ok.length - formatNg) + " / " + ok.length + "회",
+        limit: "전부", pass: formatNg === 0 },
+      { label: "같은 명부에 같은 답을 내는가", value: stable + " / " + setNames.length + " 세트",
+        limit: "전부", pass: stable === setNames.length },
+      { label: "제한 시간 안에 답하는가", value: mean(elList) + "초",
+        limit: L.elapsed + "초 이내", pass: (mean(elList) || 1e9) <= L.elapsed }
+    ];
+    var passed = checks.every(function (c) { return c.pass; });
+
+    h.push("<h2>판정</h2>");
+    h.push('<div class="banner ' + (passed ? "pass" : "fail") + '"><b>' + (passed ? "통과" : "미달") +
+           "</b><span>호출 " + rows.length + "회 중 성공 " + ok.length + "회. " +
+           (passed ? "필수 조건을 모두 넘었습니다." : "필수 조건 중 넘지 못한 항목이 있습니다.") + "</span></div>");
+    h.push("<div class='card'><table><tr><th>조건</th><th>결과</th><th>기준</th><th></th></tr>");
+    checks.forEach(function (c) {
+      h.push("<tr><td>" + esc(c.label) + "</td><td>" + esc(c.value) + "</td><td>" + esc(c.limit) +
+             "</td><td>" + tag(c.pass) + "</td></tr>");
+    });
+    h.push("</table></div>");
+
+    h.push("<h2>세트별</h2>");
+    h.push('<p class="sub">정답 ' + includeMax + "명 중 몇 명을 골랐는지. 괄호는 넣지 말았어야 할 사람 수.</p>");
+    h.push("<div class='card'><table><tr><th>세트</th><th class='num'>1회차</th><th class='num'>2회차</th>" +
+           "<th>같은 답인가</th><th class='num'>시간</th></tr>");
+    setNames.forEach(function (s) {
+      var rs = bySet[s].slice().sort(function (a, b) { return a.attempt - b.attempt; });
+      function cell(i) {
+        var a = rs[i];
+        if (!a) return "—";
+        var x = a.validation.hit_include + "명";
+        if (a.validation.miss_exclude > 0) x += ' <span class="miss">(' + a.validation.miss_exclude + ")</span>";
+        return x;
+      }
+      var seen = {};
+      rs.forEach(function (r) { seen[r.validation.picked_ids.slice().sort().join(",")] = 1; });
+      h.push("<tr><td>" + esc(s) + "</td><td class='num'>" + cell(0) + "</td><td class='num'>" + cell(1) +
+             "</td><td>" + (Object.keys(seen).length === 1 ? "같음" : '<span class="miss">다름</span>') +
+             "</td><td class='num'>" + mean(rs.map(function (r) { return r.perf.elapsed_sec; })) + "초</td></tr>");
+    });
+    h.push("</table></div>");
+
+    var acute = 0, at = 0, chronic = 0, ct = 0;
+    ok.forEach(function (r) {
+      var picked = {}; r.validation.picked_ids.forEach(function (i) { picked[i] = 1; });
+      ((D.design.answer_key[r.set] || {}).must_include || []).forEach(function (x) {
+        if (x.kind === "급성") { at++; if (picked[x.id]) acute++; }
+        else { ct++; if (picked[x.id]) chronic++; }
+      });
+    });
+    if (at || ct) {
+      h.push("<h2>급한 사람을 알아보는가</h2><div class='card'>");
+      [["급성 — 지난주 상, 3주 전 수술 등", acute, at],
+       ["만성 — 장기 입원, 발길 끊김 등", chronic, ct]].forEach(function (r) {
+        h.push("<div style='margin-bottom:14px'><div>" + esc(r[0]) + " <b>" + r[1] + "/" + r[2] +
+               "</b> (" + pct(r[1], r[2]) + "%)</div><div class='bar'><i style='width:" +
+               pct(r[1], r[2]) + "%'></i></div></div>");
+      });
+      h.push('<p class="note">' + (Math.abs(pct(acute, at) - pct(chronic, ct)) <= 8
+        ? "두 값이 비슷합니다. 시점 조건을 답에 반영하지 못했다는 뜻입니다."
+        : "급성을 더 잘 골라냅니다.") + "</p></div>");
+    }
+
+    var best = ok.reduce(function (a, b) { return !a || b.validation.hit_include > a.validation.hit_include ? b : a; }, null);
+    var worst = ok.reduce(function (a, b) { return !a || b.validation.miss_exclude > a.validation.miss_exclude ? b : a; }, null);
+    h.push("<h2>실제 응답</h2>");
+    if (best) {
+      var keyed = {};
+      ((D.design.answer_key[best.set] || {}).must_include || []).forEach(function (x) { keyed[x.id] = x; });
+      entriesOf(best).some(function (e) {
+        var id = normId(e.id);
+        if (!keyed[id]) return false;
+        h.push("<div class='card'><b>잘 고른 예</b> — " + esc(best.set) + " " + best.attempt + "회차, " +
+               best.validation.hit_include + "명 적중<blockquote><span class='who'>" + esc(e.rank) +
+               "위 " + esc(e.name) + "</span><br>" + esc(e.reason) + "<div class='meta'>정답 사유: " +
+               esc(keyed[id].case) + " (" + esc(keyed[id].kind) + ")</div></blockquote></div>");
+        return true;
+      });
+    }
+    if (worst && worst.validation.miss_exclude) {
+      var k = D.design.answer_key[worst.set] || {};
+      var bad = {}; (k.must_exclude || []).forEach(function (x) { bad[x.id] = 1; });
+      entriesOf(worst).some(function (e) {
+        var id = normId(e.id);
+        if (!bad[id]) return false;
+        var m = (k.members || {})[id] || {};
+        h.push("<div class='card'><b>잘못 고른 예</b> — " + esc(worst.set) + " " + worst.attempt +
+               "회차, 가면 안 될 사람 " + worst.validation.miss_exclude +
+               "명 포함<blockquote><span class='who'>" + esc(e.rank) + "위 " + esc(e.name) +
+               "</span><br>" + esc(e.reason) + "<div class='meta'>명부: " + esc(m.recent_attendance) +
+               " / 건강 " + esc(m.health_note) + " / 비고 " + esc(m.special_note) +
+               " / 마지막 심방 " + esc(m.last_visitation_date) + "</div></blockquote></div>");
+        return true;
+      });
+    }
+    var issues = {};
+    ok.forEach(function (r) {
+      r.validation.issues.forEach(function (i) { var t = i.split(":")[0]; issues[t] = (issues[t] || 0) + 1; });
+    });
+    var il = Object.keys(issues).map(function (k2) { return [k2, issues[k2]]; })
+              .sort(function (a, b) { return b[1] - a[1]; });
+    if (il.length) {
+      h.push("<div class='card'><b>형식 문제</b><table><tr><th>유형</th><th class='num'>건수</th></tr>");
+      il.forEach(function (p) { h.push("<tr><td>" + esc(p[0]) + "</td><td class='num'>" + p[1] + "</td></tr>"); });
+      h.push("</table></div>");
+    }
+
+    h.push("<h2>성능</h2><div class='card'><table>");
+    h.push("<tr><td>응답 시간 (평균)</td><td class='num'>" + val(mean(elList), "초") +
+           "</td><td class='num'>n=" + nOf(elList) + "</td></tr>");
+    h.push("<tr><td>생성 속도 (평균)</td><td class='num'>" + val(mean(tpsList), " tok/s") +
+           "</td><td class='num'>n=" + nOf(tpsList) + "</td></tr>");
+    h.push("<tr><td>출력 토큰 (평균)</td><td class='num'>" +
+           val(mean(ok.map(function (r) { return r.perf.eval_count; })), "개") + "</td><td></td></tr>");
+    h.push("<tr><td>모델 로딩 (워밍업 1회)</td><td class='num'>" +
+           val(warm.length ? warm[0].perf.load_sec : null, "초") + "</td><td></td></tr>");
+    h.push("<tr><td>속도 계산 불가</td><td class='num'>" +
+           ok.filter(function (r) { return r.perf.speed_note; }).length + "건</td><td></td></tr>");
+    h.push("</table><p class='note'>워밍업 1회는 위 평균에 넣지 않았습니다. 첫 호출에는 모델 로딩 시간이 " +
+           "섞입니다.<br>첫 토큰 지연은 측정하지 않았습니다. 위 응답 시간은 TTFT가 아닙니다.</p></div>");
+
+    var fails = rows.filter(function (r) { return r.error; });
+    if (fails.length) {
+      h.push("<div class='card'><b>호출 실패 " + fails.length +
+             "건</b><p class='note'>품질 점수와 별도로 셉니다. 성공 응답으로 대체하지 않습니다.</p><table>");
+      fails.forEach(function (r) {
+        h.push("<tr><td>" + esc(r.set) + " #" + r.attempt + "</td><td>" + esc(r.error) + "</td></tr>");
+      });
+      h.push("</table></div>");
+    }
+    return h.join("");
+  }
+
+  function renderMain() {
+    var el = document.getElementById("main");
+    if (cur < 0) {
+      el.innerHTML = "<p class='placeholder'>results/local 과 results/cloud 아래에 실험 기록이 없습니다.</p>";
+      return;
+    }
+    var sel = flat[cur];
+    el.innerHTML = "<h2>" + esc(sel.model.model) + "</h2>" +
+      '<p class="sub">' + esc(sel.scope.label) + " · " + esc(sel.run.label) + " · " +
+      esc(sel.run.file) + "</p>" + designSection(sel) + resultSection(sel);
+    document.title = sel.model.model + " — 실험 결과";
+  }
+
+  renderNav();
+  renderMain();
+})();
+</script>
+</body>
+</html>
