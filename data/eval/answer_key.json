@@ -1,0 +1,584 @@
+{
+  "sets": [
+    {
+      "set": "set01",
+      "file": "data/eval/set01.json",
+      "must_include": [
+        {
+          "id": "xgeNvH",
+          "name": "오원원",
+          "case": "지난주 응급실 이송"
+        },
+        {
+          "id": "Xvm27X",
+          "name": "전가우",
+          "case": "낙상 후 자택 요양"
+        },
+        {
+          "id": "eCpmTV",
+          "name": "조서수",
+          "case": "3주 전 본인 수술"
+        },
+        {
+          "id": "evrVNt",
+          "name": "백온규",
+          "case": "격주 투석"
+        },
+        {
+          "id": "tG3IvT",
+          "name": "신진도",
+          "case": "2주 전 출산"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "TV7FTS",
+          "name": "김나하",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "Fm1JH5",
+          "name": "홍온다",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "C7Oe7Y",
+          "name": "신가우",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "xU95JX",
+          "name": "임지하",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "1iIC4n",
+          "name": "임름재",
+          "case": "7주 출석, 봉사팀 활동"
+        }
+      ]
+    },
+    {
+      "set": "set02",
+      "file": "data/eval/set02.json",
+      "must_include": [
+        {
+          "id": "pu12zO",
+          "name": "임서은",
+          "case": "한 달 전 실직"
+        },
+        {
+          "id": "uOzEYk",
+          "name": "안우호",
+          "case": "지난주 응급실 이송"
+        },
+        {
+          "id": "O2u0It",
+          "name": "손나서",
+          "case": "2주 전 배우자 별세"
+        },
+        {
+          "id": "okMZgl",
+          "name": "정율온",
+          "case": "3주 전 본인 수술"
+        },
+        {
+          "id": "Pezu8Z",
+          "name": "한인경",
+          "case": "요양병원 장기 입원"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "fu4I1f",
+          "name": "송이경",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "s4mzI8",
+          "name": "배하우",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "Xg7EvM",
+          "name": "정도인",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "wzrqYk",
+          "name": "임시은",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "AcJyvT",
+          "name": "이지온",
+          "case": "만근, 요청 사항 없음"
+        }
+      ]
+    },
+    {
+      "set": "set03",
+      "file": "data/eval/set03.json",
+      "must_include": [
+        {
+          "id": "WRi2iL",
+          "name": "고나은",
+          "case": "낙상 후 자택 요양"
+        },
+        {
+          "id": "gydMuq",
+          "name": "유유하",
+          "case": "한 달 전 실직"
+        },
+        {
+          "id": "YynTzt",
+          "name": "김건연",
+          "case": "3주 전 배우자 수술"
+        },
+        {
+          "id": "7OkpyG",
+          "name": "양진엘",
+          "case": "지난주 모친상"
+        },
+        {
+          "id": "veEGCG",
+          "name": "이진호",
+          "case": "출석 0회, 연락 두절"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "oImSvz",
+          "name": "박로원",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "LetGgE",
+          "name": "고민현",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "A0Pul8",
+          "name": "강하서",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "aizvcI",
+          "name": "신건솔",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "fYH8lE",
+          "name": "오현솔",
+          "case": "7주 출석, 특이사항 없음"
+        }
+      ]
+    },
+    {
+      "set": "set04",
+      "file": "data/eval/set04.json",
+      "must_include": [
+        {
+          "id": "ijf1Gu",
+          "name": "배태서",
+          "case": "출석 0회, 연락 두절"
+        },
+        {
+          "id": "FJdgnr",
+          "name": "전나도",
+          "case": "2주 전 출산"
+        },
+        {
+          "id": "7RNw2Y",
+          "name": "정진이",
+          "case": "3주 전 본인 수술"
+        },
+        {
+          "id": "4Sys8C",
+          "name": "배빈호",
+          "case": "격주 투석"
+        },
+        {
+          "id": "HbmYSu",
+          "name": "권서결",
+          "case": "3주 전 배우자 수술"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "NxtGbY",
+          "name": "유로아",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "0obGIt",
+          "name": "송람아",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "pMAeKJ",
+          "name": "송채름",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "ElVkbD",
+          "name": "백온채",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "ZBKg9C",
+          "name": "김가름",
+          "case": "7주 출석, 특이사항 없음"
+        }
+      ]
+    },
+    {
+      "set": "set05",
+      "file": "data/eval/set05.json",
+      "must_include": [
+        {
+          "id": "4En3WM",
+          "name": "송채솔",
+          "case": "요양병원 장기 입원"
+        },
+        {
+          "id": "rAMEDC",
+          "name": "이다연",
+          "case": "지난주 부친상"
+        },
+        {
+          "id": "JQlFhK",
+          "name": "배름솔",
+          "case": "2주 전 출산"
+        },
+        {
+          "id": "niCep5",
+          "name": "권담선",
+          "case": "2주 전 배우자 별세"
+        },
+        {
+          "id": "IcBBIp",
+          "name": "한지규",
+          "case": "한 달 전 실직"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "hcZrDP",
+          "name": "고준건",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "zsJZx0",
+          "name": "양람준",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "7RQt27",
+          "name": "배우나",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "SRofjq",
+          "name": "전람윤",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "EY5zIA",
+          "name": "오서하",
+          "case": "만근, 봉사 참여"
+        }
+      ]
+    },
+    {
+      "set": "set06",
+      "file": "data/eval/set06.json",
+      "must_include": [
+        {
+          "id": "dFSeTy",
+          "name": "전채태",
+          "case": "지난주 모친상"
+        },
+        {
+          "id": "7KuQaX",
+          "name": "임민연",
+          "case": "3주 전 배우자 수술"
+        },
+        {
+          "id": "qYs73f",
+          "name": "황은민",
+          "case": "출석 0회, 연락 두절"
+        },
+        {
+          "id": "98qJMH",
+          "name": "안온솔",
+          "case": "격주 투석"
+        },
+        {
+          "id": "gHXA4O",
+          "name": "오재유",
+          "case": "한 달 전 실직"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "2wDanr",
+          "name": "정하재",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "YbWuqy",
+          "name": "김엘나",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "s1mk8C",
+          "name": "한솔건",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "4SFfgm",
+          "name": "한온영",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "jp5czf",
+          "name": "양수담",
+          "case": "7주 출석, 봉사팀 활동"
+        }
+      ]
+    },
+    {
+      "set": "set07",
+      "file": "data/eval/set07.json",
+      "must_include": [
+        {
+          "id": "lisbXU",
+          "name": "권지재",
+          "case": "낙상 후 자택 요양"
+        },
+        {
+          "id": "7y9n43",
+          "name": "신결규",
+          "case": "출석 0회, 연락 두절"
+        },
+        {
+          "id": "p7T5eh",
+          "name": "전원시",
+          "case": "3주 전 본인 수술"
+        },
+        {
+          "id": "qvVHER",
+          "name": "강영율",
+          "case": "2주 전 배우자 별세"
+        },
+        {
+          "id": "pVhKnv",
+          "name": "전람율",
+          "case": "지난주 부친상"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "mtUDca",
+          "name": "홍윤유",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "68ufme",
+          "name": "안선지",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "Q63Od5",
+          "name": "전준율",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "syU6Fi",
+          "name": "박경율",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "YdIhDD",
+          "name": "백재온",
+          "case": "만근, 요청 사항 없음"
+        }
+      ]
+    },
+    {
+      "set": "set08",
+      "file": "data/eval/set08.json",
+      "must_include": [
+        {
+          "id": "CUCtvX",
+          "name": "신민온",
+          "case": "격주 투석"
+        },
+        {
+          "id": "wdIGpF",
+          "name": "송시진",
+          "case": "지난주 응급실 이송"
+        },
+        {
+          "id": "z1Ggtj",
+          "name": "손름람",
+          "case": "요양병원 장기 입원"
+        },
+        {
+          "id": "bwOQS2",
+          "name": "손태규",
+          "case": "3주 전 배우자 수술"
+        },
+        {
+          "id": "NDkGBg",
+          "name": "조현서",
+          "case": "낙상 후 자택 요양"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "XEqcfj",
+          "name": "정온나",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "L2qdTQ",
+          "name": "홍우인",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "rMyM9C",
+          "name": "고진연",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "jtdoFr",
+          "name": "임재우",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "Vgoywg",
+          "name": "백우원",
+          "case": "7주 출석, 봉사팀 활동"
+        }
+      ]
+    },
+    {
+      "set": "set09",
+      "file": "data/eval/set09.json",
+      "must_include": [
+        {
+          "id": "1XGQsb",
+          "name": "오재람",
+          "case": "출석 0회, 연락 두절"
+        },
+        {
+          "id": "gKvDaG",
+          "name": "장현솔",
+          "case": "한 달 전 실직"
+        },
+        {
+          "id": "uZSK22",
+          "name": "양태다",
+          "case": "2주 전 출산"
+        },
+        {
+          "id": "xGe5pG",
+          "name": "손결태",
+          "case": "3주 전 배우자 수술"
+        },
+        {
+          "id": "rgHH3x",
+          "name": "권지람",
+          "case": "격주 투석"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "bAs062",
+          "name": "권수결",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "i3MwOi",
+          "name": "강솔경",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "cy5MBn",
+          "name": "황율진",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "rjz61I",
+          "name": "정람재",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "hMei2C",
+          "name": "임름서",
+          "case": "만근, 요청 사항 없음"
+        }
+      ]
+    },
+    {
+      "set": "set10",
+      "file": "data/eval/set10.json",
+      "must_include": [
+        {
+          "id": "MXUxHe",
+          "name": "신도수",
+          "case": "3주 전 본인 수술"
+        },
+        {
+          "id": "QM20pI",
+          "name": "권담아",
+          "case": "한 달 전 실직"
+        },
+        {
+          "id": "8DVAwg",
+          "name": "유진율",
+          "case": "2주 전 배우자 별세"
+        },
+        {
+          "id": "tUgGal",
+          "name": "장지름",
+          "case": "낙상 후 자택 요양"
+        },
+        {
+          "id": "viu9Pf",
+          "name": "손엘진",
+          "case": "지난주 모친상"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "3C46wc",
+          "name": "배태원",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "RWfN9H",
+          "name": "이온윤",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "av2RyM",
+          "name": "양현율",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "EK5Zi1",
+          "name": "이채담",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "fFoQiC",
+          "name": "정하연",
+          "case": "7주 출석, 특이사항 없음"
+        }
+      ]
+    }
+  ]
+}

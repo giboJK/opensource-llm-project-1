@@ -1,0 +1,6244 @@
+{
+  "communities": {
+    "교육부": [
+      "유치부",
+      "초등부",
+      "중고등부",
+      "대학청년부"
+    ],
+    "행정부": [
+      "재정팀",
+      "홍보팀",
+      "시설관리팀",
+      "서기팀"
+    ],
+    "봉사부": [
+      "주방봉사팀",
+      "안내팀",
+      "찬양팀",
+      "미디어팀"
+    ]
+  },
+  "members": [
+    {
+      "id": "rp8vdk",
+      "name": "윤온진",
+      "age": 73,
+      "gender": "여",
+      "faith_years": 54,
+      "last_visitation_date": "2025-09-09",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "고혈압으로 정기 통원 중",
+      "family_event": "배우자 별세",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "eqH3a8",
+          "name": "홍결재",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p02",
+          "content": "질병 치유 감사",
+          "added_date": "2023-10-04",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p03",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2025-06-04",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "가족 관계 회복",
+          "added_date": "2025-08-16",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "재정적 어려움 해결",
+          "added_date": "2026-09-01",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-11-21",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-01-23",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-05-03",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-04",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-22",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2023-12-22",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2024-04-20",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2024-08-01",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2024-11-28",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-02-20",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-22",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-07-09",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-09-09",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            },
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "syU6Fi",
+      "name": "박경율",
+      "age": 78,
+      "gender": "남",
+      "faith_years": 19,
+      "last_visitation_date": "2026-06-26",
+      "recent_attendance": "최근 8주 중 7주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "봉사팀에서 활동 중",
+      "family": [
+        {
+          "member_id": "MiAf2F",
+          "name": "전인하",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "PMLKIG",
+          "name": "장결담",
+          "relation": "손녀"
+        },
+        {
+          "member_id": "E3GmLF",
+          "name": "홍진건",
+          "relation": "손자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p03",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-06-10",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p05",
+          "content": "자녀 신앙 성장",
+          "added_date": "2026-03-13",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "질병 치유 감사",
+          "added_date": "2026-03-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "우울감 극복",
+          "added_date": "2026-04-01",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2026-06-06",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-06-28",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-04",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-03",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-11",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-01",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-16",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-12-01",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-03-17",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-05-29",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-09-23",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-01-10",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-04-14",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2026-06-26",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "시설관리팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "시설관리팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "lisbXU",
+      "name": "권지재",
+      "age": 84,
+      "gender": "남",
+      "faith_years": 1,
+      "last_visitation_date": "2025-09-15",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "지난달 낙상으로 입원, 현재 자택 요양 중",
+      "family_event": "없음",
+      "special_note": "거동이 불편해 혼자 예배 참석이 어려움",
+      "family": [
+        {
+          "member_id": "qvVHER",
+          "name": "강영율",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "재정적 어려움 해결",
+          "added_date": "2026-04-05",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-05-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "은퇴 후 삶에 대한 인도하심",
+          "added_date": "2026-06-03",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-07-30",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-10-11",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-01-27",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-04-07",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-07-20",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-05",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-19",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-05",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-23",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-11-01",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-25",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-06-16",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-09-15",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mtUDca",
+      "name": "홍윤유",
+      "age": 29,
+      "gender": "여",
+      "faith_years": 1,
+      "last_visitation_date": "2026-07-21",
+      "recent_attendance": "최근 8주 중 7주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "pVhKnv",
+          "name": "전람율",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "이사/거주 문제",
+          "added_date": "2025-09-30",
+          "status": "응답됨"
+        },
+        {
+          "id": "p07",
+          "content": "취업/이직",
+          "added_date": "2025-11-26",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "시험 합격",
+          "added_date": "2026-01-05",
+          "status": "응답됨"
+        },
+        {
+          "id": "p04",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2026-03-14",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "취업/이직",
+          "added_date": "2026-04-23",
+          "status": "진행 중"
+        },
+        {
+          "id": "p09",
+          "content": "임신과 순산",
+          "added_date": "2026-05-05",
+          "status": "진행 중"
+        },
+        {
+          "id": "p10",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-08-14",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p08",
+          "content": "임신과 순산",
+          "added_date": "2026-08-20",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "가족 관계 회복",
+          "added_date": "2026-08-25",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-09-12",
+          "status": "계속 기도 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-08-30",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-28",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-27",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-20",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-10-08",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-12-09",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-07",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-25",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-07-10",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-09-14",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-12-21",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-04-19",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p04",
+            "p07"
+          ]
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            },
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3U5CEF",
+      "name": "손로규",
+      "age": 31,
+      "gender": "여",
+      "faith_years": 17,
+      "last_visitation_date": "2025-06-06",
+      "recent_attendance": "최근 8주 중 4주 출석",
+      "health_note": "만성 질환으로 정기 검진 중",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "9oXtgS",
+          "name": "박서결",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "qdzzsR",
+          "name": "손솔영",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "BUilWS",
+          "name": "임연아",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p02",
+          "content": "임신과 순산",
+          "added_date": "2025-01-19",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2025-05-11",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "시험 합격",
+          "added_date": "2025-12-14",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-08-25",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-11-05",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-03-01",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-06-02",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-09",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-19",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-30",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-05-18",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-01",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-10-30",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-01",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-03-12",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-06-06",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            },
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            },
+            {
+              "department": "행정부",
+              "community": "재정팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "87tZvd",
+      "name": "강결로",
+      "age": 36,
+      "gender": "여",
+      "faith_years": 23,
+      "last_visitation_date": "2026-07-27",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "배우자 별세",
+      "special_note": "봉사팀 리더로 활동 중",
+      "family": [
+        {
+          "member_id": "CvcsCk",
+          "name": "이하재",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "qq6zHa",
+          "name": "임진하",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p04",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-04-18",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "자녀 신앙 성장",
+          "added_date": "2024-05-10",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-10-24",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2025-08-28",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-09-06",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-11",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-31",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-20",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2024-11-10",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-03",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p04",
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-04-26",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-08-14",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-11-04",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p02",
+            "p03"
+          ]
+        },
+        {
+          "date": "2026-01-05",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-05-03",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-07-27",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "시설관리팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "L1m19b",
+      "name": "손아우",
+      "age": 11,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 3주 출석",
+      "health_note": "최근 건강검진에서 이상 소견 발견",
+      "family_event": "손주 출생",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "LNes8O",
+          "name": "문율수",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p06",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2023-09-18",
+          "status": "응답됨"
+        },
+        {
+          "id": "p14",
+          "content": "건강 회복",
+          "added_date": "2024-01-18",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "부모님 건강",
+          "added_date": "2024-01-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "학업 성취",
+          "added_date": "2024-01-24",
+          "status": "진행 중"
+        },
+        {
+          "id": "p09",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-05-02",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p13",
+          "content": "학업 성취",
+          "added_date": "2024-05-07",
+          "status": "응답됨"
+        },
+        {
+          "id": "p11",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-12-26",
+          "status": "진행 중"
+        },
+        {
+          "id": "p10",
+          "content": "건강 회복",
+          "added_date": "2025-06-17",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-07-31",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-10-14",
+          "status": "진행 중"
+        },
+        {
+          "id": "p12",
+          "content": "부모님 건강",
+          "added_date": "2026-04-18",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "시험 합격",
+          "added_date": "2026-05-02",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "건강 회복",
+          "added_date": "2026-05-25",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "건강 회복",
+          "added_date": "2026-08-30",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "YB1GXV",
+      "name": "손유름",
+      "age": 53,
+      "gender": "남",
+      "faith_years": 16,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "최근 8주 중 3주 출석",
+      "health_note": "최근 건강검진에서 이상 소견 발견",
+      "family_event": "가족 간 갈등을 최근 언급함",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "68ufme",
+          "name": "안선지",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2024-05-04",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "이사/거주 문제",
+          "added_date": "2024-06-26",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "직장 내 어려움",
+          "added_date": "2025-11-13",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "시설관리팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "안내팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2IFrC2",
+      "name": "한율름",
+      "age": 17,
+      "gender": "남",
+      "faith_years": 7,
+      "last_visitation_date": "2025-05-07",
+      "recent_attendance": "최근 8주 중 5주 출석",
+      "health_note": "만성 질환으로 정기 검진 중",
+      "family_event": "반려동물 사망",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "LNes8O",
+          "name": "문율수",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p10",
+          "content": "가족 관계 회복",
+          "added_date": "2024-02-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p11",
+          "content": "건강 회복",
+          "added_date": "2024-03-05",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-03-28",
+          "status": "응답됨"
+        },
+        {
+          "id": "p08",
+          "content": "건강 회복",
+          "added_date": "2024-06-01",
+          "status": "응답됨"
+        },
+        {
+          "id": "p13",
+          "content": "가족 관계 회복",
+          "added_date": "2024-07-14",
+          "status": "진행 중"
+        },
+        {
+          "id": "p09",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-04-18",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "질병 치유 감사",
+          "added_date": "2025-11-04",
+          "status": "진행 중"
+        },
+        {
+          "id": "p12",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-11-23",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "시험 합격",
+          "added_date": "2026-03-12",
+          "status": "응답됨"
+        },
+        {
+          "id": "p06",
+          "content": "부모님 건강",
+          "added_date": "2026-04-08",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p07",
+          "content": "질병 치유 감사",
+          "added_date": "2026-04-25",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "시험 합격",
+          "added_date": "2026-08-08",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "선교지를 위한 기도",
+          "added_date": "2026-08-18",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p14",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-08-20",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-06-07",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-09-10",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-12-22",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-04-07",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-07-08",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-17",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-24",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-19",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p10"
+          ]
+        },
+        {
+          "date": "2024-06-05",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p10",
+            "p11"
+          ]
+        },
+        {
+          "date": "2024-09-29",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-01-23",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-05-07",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p09",
+            "p13"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soObvK",
+      "name": "임서가",
+      "age": 5,
+      "gender": "남",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 4주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "반려동물 사망",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "p7T5eh",
+          "name": "전원시",
+          "relation": "어머니"
+        },
+        {
+          "member_id": "Q63Od5",
+          "name": "전준율",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2023-10-31",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xNiDdt",
+      "name": "임우가",
+      "age": 52,
+      "gender": "남",
+      "faith_years": 35,
+      "last_visitation_date": "2025-11-13",
+      "recent_attendance": "최근 8주 중 4주 출석",
+      "health_note": "당뇨 관리 중",
+      "family_event": "손주 출생",
+      "special_note": "연락처가 최근 변경됨",
+      "family": [],
+      "family_note": "정보 없음",
+      "prayer_requests": [
+        {
+          "id": "p10",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-03-24",
+          "status": "응답됨"
+        },
+        {
+          "id": "p07",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-04-20",
+          "status": "응답됨"
+        },
+        {
+          "id": "p08",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2024-05-23",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "부모님 건강",
+          "added_date": "2024-07-13",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "직장 내 어려움",
+          "added_date": "2024-07-15",
+          "status": "응답됨"
+        },
+        {
+          "id": "p06",
+          "content": "직장 내 어려움",
+          "added_date": "2025-02-15",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-03-07",
+          "status": "진행 중"
+        },
+        {
+          "id": "p11",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-03-18",
+          "status": "응답됨"
+        },
+        {
+          "id": "p09",
+          "content": "건강 회복",
+          "added_date": "2025-04-07",
+          "status": "응답됨"
+        },
+        {
+          "id": "p05",
+          "content": "우울감 극복",
+          "added_date": "2025-11-02",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "건강 회복",
+          "added_date": "2026-06-27",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-01-09",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-03-16",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-06-05",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-08",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-14",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-16",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-23",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-05-28",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p07"
+          ]
+        },
+        {
+          "date": "2024-08-15",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p07",
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-11-13",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-02-28",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-05-28",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-09-09",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-11-13",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "YdIhDD",
+      "name": "백재온",
+      "age": 46,
+      "gender": "여",
+      "faith_years": 31,
+      "last_visitation_date": "2026-07-04",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "특별한 요청 사항 없음",
+      "family": [
+        {
+          "member_id": "uMPp9x",
+          "name": "전훈진",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "YzuD4n",
+          "name": "안솔우",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "선교지를 위한 기도",
+          "added_date": "2024-03-31",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "취업/이직",
+          "added_date": "2024-04-23",
+          "status": "응답됨"
+        },
+        {
+          "id": "p05",
+          "content": "우울감 극복",
+          "added_date": "2024-08-30",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "자녀 신앙 성장",
+          "added_date": "2024-09-03",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "부모님 건강",
+          "added_date": "2025-06-15",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-08-27",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-21",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-18",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-05",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p03",
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-09-06",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p03",
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-12-16",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-03-17",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-06-18",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-09-01",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p03",
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-11-29",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-03-06",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-07-04",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "pVhKnv",
+      "name": "전람율",
+      "age": 28,
+      "gender": "남",
+      "faith_years": 9,
+      "last_visitation_date": "2025-08-14",
+      "recent_attendance": "최근 8주 중 7주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "지난주 부친상",
+      "special_note": "장례 이후 첫 예배 참석 예정",
+      "family": [
+        {
+          "member_id": "mtUDca",
+          "name": "홍윤유",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [],
+      "visitation_records": [
+        {
+          "date": "2022-11-01",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-02-03",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-05-29",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-22",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-13",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-17",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-17",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-23",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-25",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-11",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-25",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-08-14",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E3GmLF",
+      "name": "홍진건",
+      "age": 9,
+      "gender": "남",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 7주 출석",
+      "health_note": "당뇨 관리 중",
+      "family_event": "배우자 별세",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "MiAf2F",
+          "name": "전인하",
+          "relation": "어머니"
+        },
+        {
+          "member_id": "j5hJgb",
+          "name": "문서도",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "syU6Fi",
+          "name": "박경율",
+          "relation": "할아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "학업 성취",
+          "added_date": "2025-06-16",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-09-01",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "건강 회복",
+          "added_date": "2026-05-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "시험 합격",
+          "added_date": "2026-06-11",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "건강 회복",
+          "added_date": "2026-07-01",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "질병 치유 감사",
+          "added_date": "2026-08-28",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CvcsCk",
+      "name": "이하재",
+      "age": 31,
+      "gender": "남",
+      "faith_years": 15,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "정보 없음",
+      "health_note": "정보 없음",
+      "family_event": "정보 없음",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "87tZvd",
+          "name": "강결로",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "qq6zHa",
+          "name": "임진하",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [],
+      "visitation_records": [],
+      "community_history": []
+    },
+    {
+      "id": "oHdOmJ",
+      "name": "임훈이",
+      "age": 13,
+      "gender": "여",
+      "faith_years": 0,
+      "last_visitation_date": "2025-10-11",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "자녀 입시로 가정 내 스트레스",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "2cZ1Ml",
+          "name": "손하다",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-09-14",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-01-24",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-04-18",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-07-20",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-01",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-04",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-06",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-05-11",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-17",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-15",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-11-21",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-20",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-05-10",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-07-21",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-10-11",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "j5hJgb",
+      "name": "문서도",
+      "age": 30,
+      "gender": "남",
+      "faith_years": 6,
+      "last_visitation_date": "2026-06-12",
+      "recent_attendance": "최근 8주 중 5주 출석",
+      "health_note": "최근 건강검진에서 이상 소견 발견",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "MiAf2F",
+          "name": "전인하",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "PMLKIG",
+          "name": "장결담",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "E3GmLF",
+          "name": "홍진건",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p09",
+          "content": "자녀 신앙 성장",
+          "added_date": "2023-10-13",
+          "status": "진행 중"
+        },
+        {
+          "id": "p10",
+          "content": "부모님 건강",
+          "added_date": "2024-01-13",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "취업/이직",
+          "added_date": "2024-02-18",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "재정적 어려움 해결",
+          "added_date": "2024-12-08",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "부모님 건강",
+          "added_date": "2025-01-06",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "건강 회복",
+          "added_date": "2025-05-31",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "재정적 어려움 해결",
+          "added_date": "2025-09-04",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "우울감 극복",
+          "added_date": "2025-11-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "재정적 어려움 해결",
+          "added_date": "2026-02-22",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p01",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-02-27",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-06-30",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-27",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-10",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-03",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p04",
+            "p10"
+          ]
+        },
+        {
+          "date": "2024-06-06",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p04",
+            "p09"
+          ]
+        },
+        {
+          "date": "2024-08-21",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p04",
+            "p10"
+          ]
+        },
+        {
+          "date": "2024-10-24",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-13",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-03-24",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p10",
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-06-27",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-10-03",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-01-02",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p04",
+            "p07"
+          ]
+        },
+        {
+          "date": "2026-03-29",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p08",
+            "p02"
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            },
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "qvVHER",
+      "name": "강영율",
+      "age": 79,
+      "gender": "여",
+      "faith_years": 25,
+      "last_visitation_date": "2025-08-29",
+      "recent_attendance": "최근 8주 중 6주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "2주 전 배우자 별세",
+      "special_note": "혼자 지내게 되어 식사를 거르는 날이 많다고 함",
+      "family": [
+        {
+          "member_id": "lisbXU",
+          "name": "권지재",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "이사/거주 문제",
+          "added_date": "2024-10-16",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-07-06",
+          "status": "응답됨"
+        },
+        {
+          "id": "p07",
+          "content": "질병 치유 감사",
+          "added_date": "2025-07-28",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-11-12",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "이사/거주 문제",
+          "added_date": "2026-01-21",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "선교지를 위한 기도",
+          "added_date": "2026-03-12",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "은퇴 후 삶에 대한 인도하심",
+          "added_date": "2026-08-07",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-11-01",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-02-09",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-05-18",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-26",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-12",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-26",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-12",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-23",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-21",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-09",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2025-03-25",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-06-13",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-08-29",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            },
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "9oXtgS",
+      "name": "박서결",
+      "age": 32,
+      "gender": "남",
+      "faith_years": 14,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "정보 없음",
+      "health_note": "정보 없음",
+      "family_event": "정보 없음",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "3U5CEF",
+          "name": "손로규",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "qdzzsR",
+          "name": "손솔영",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "BUilWS",
+          "name": "임연아",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [],
+      "visitation_records": [],
+      "community_history": []
+    },
+    {
+      "id": "r9364A",
+      "name": "손준윤",
+      "age": 51,
+      "gender": "남",
+      "faith_years": 13,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "정보 없음",
+      "health_note": "정보 없음",
+      "family_event": "정보 없음",
+      "special_note": "정보 없음",
+      "family": [],
+      "family_note": "정보 없음",
+      "prayer_requests": [],
+      "visitation_records": [],
+      "community_history": []
+    },
+    {
+      "id": "uMPp9x",
+      "name": "전훈진",
+      "age": 41,
+      "gender": "남",
+      "faith_years": 21,
+      "last_visitation_date": "2025-05-30",
+      "recent_attendance": "최근 8주 중 1주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "배우자 별세",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "YdIhDD",
+          "name": "백재온",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "YzuD4n",
+          "name": "안솔우",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p02",
+          "content": "가족 관계 회복",
+          "added_date": "2024-12-13",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-08-28",
+          "status": "계속 기도 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-09-13",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-11-18",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-02-26",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-05-31",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-24",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-22",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-20",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-16",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-29",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-12-12",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-03-01",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-05-30",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            },
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "qdzzsR",
+      "name": "손솔영",
+      "age": 1,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 8주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "자녀 결혼",
+      "special_note": "교육부 소속으로 활동 중",
+      "family": [
+        {
+          "member_id": "9oXtgS",
+          "name": "박서결",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "3U5CEF",
+          "name": "손로규",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2023-10-29",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BUilWS",
+      "name": "임연아",
+      "age": 10,
+      "gender": "남",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 5주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "보호자와 함께 출석",
+      "family": [
+        {
+          "member_id": "9oXtgS",
+          "name": "박서결",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "3U5CEF",
+          "name": "손로규",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p04",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2023-11-13",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-02-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "건강 회복",
+          "added_date": "2024-12-09",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-05-12",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HjOqTN",
+      "name": "한결로",
+      "age": 40,
+      "gender": "남",
+      "faith_years": 29,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "최근 8주 중 4주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "장기 결석 중, 사유 확인 필요",
+      "family": [
+        {
+          "member_id": "7y9n43",
+          "name": "신결규",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "Js3g0W",
+          "name": "유결규",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "ZRqdol",
+          "name": "최인담",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p02",
+          "content": "취업/이직",
+          "added_date": "2024-03-30",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "취업/이직",
+          "added_date": "2024-05-03",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "이사/거주 문제",
+          "added_date": "2024-05-21",
+          "status": "응답됨"
+        },
+        {
+          "id": "p05",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2024-08-08",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "가족 관계 회복",
+          "added_date": "2025-05-06",
+          "status": "응답됨"
+        },
+        {
+          "id": "p06",
+          "content": "우울감 극복",
+          "added_date": "2025-12-07",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "재정팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4tVTZl",
+      "name": "이결율",
+      "age": 19,
+      "gender": "남",
+      "faith_years": 3,
+      "last_visitation_date": "2026-06-27",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "고혈압으로 정기 통원 중",
+      "family_event": "반려동물 사망",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "2cZ1Ml",
+          "name": "손하다",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "건강 회복",
+          "added_date": "2024-02-06",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "부모님 건강",
+          "added_date": "2024-02-16",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "학업 성취",
+          "added_date": "2025-03-01",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "우울감 극복",
+          "added_date": "2025-12-14",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "우울감 극복",
+          "added_date": "2026-01-10",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "부모님 건강",
+          "added_date": "2026-05-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "부모님 건강",
+          "added_date": "2026-07-01",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-08-22",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-24",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-03-04",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2024-06-18",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-09-16",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2024-11-29",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p05",
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-02-05",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2025-04-12",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p06",
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-08-09",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-10-09",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-01-11",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-03-19",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2026-06-27",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p06"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "대학청년부"
+            },
+            {
+              "department": "행정부",
+              "community": "재정팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nKdT89",
+      "name": "정율시",
+      "age": 24,
+      "gender": "남",
+      "faith_years": 13,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "정보 없음",
+      "health_note": "정보 없음",
+      "family_event": "정보 없음",
+      "special_note": "정보 없음",
+      "family": [],
+      "family_note": "정보 없음",
+      "prayer_requests": [],
+      "visitation_records": [],
+      "community_history": []
+    },
+    {
+      "id": "qq6zHa",
+      "name": "임진하",
+      "age": 8,
+      "gender": "남",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 1주 출석",
+      "health_note": "고혈압으로 정기 통원 중",
+      "family_event": "손주 출생",
+      "special_note": "최근 출석이 줄어듦",
+      "family": [
+        {
+          "member_id": "CvcsCk",
+          "name": "이하재",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "87tZvd",
+          "name": "강결로",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p03",
+          "content": "건강 회복",
+          "added_date": "2025-07-04",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "시험 합격",
+          "added_date": "2025-08-03",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "건강 회복",
+          "added_date": "2026-03-15",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "학업 성취",
+          "added_date": "2026-04-07",
+          "status": "응답됨"
+        },
+        {
+          "id": "p05",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-04-12",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p06",
+          "content": "질병 치유 감사",
+          "added_date": "2026-04-28",
+          "status": "계속 기도 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "68ufme",
+      "name": "안선지",
+      "age": 55,
+      "gender": "여",
+      "faith_years": 25,
+      "last_visitation_date": "2026-07-13",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "YB1GXV",
+          "name": "손유름",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p07",
+          "content": "질병 치유 감사",
+          "added_date": "2023-11-16",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "자녀 진로 결정",
+          "added_date": "2024-03-11",
+          "status": "응답됨"
+        },
+        {
+          "id": "p04",
+          "content": "자녀 진로 결정",
+          "added_date": "2025-03-17",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "우울감 극복",
+          "added_date": "2025-07-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-10-09",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-11-21",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "선교지를 위한 기도",
+          "added_date": "2026-04-28",
+          "status": "응답됨"
+        },
+        {
+          "id": "p05",
+          "content": "이사/거주 문제",
+          "added_date": "2026-05-08",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-09-07",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-27",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p07"
+          ]
+        },
+        {
+          "date": "2024-03-25",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-16",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2024-10-11",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p07",
+            "p03"
+          ]
+        },
+        {
+          "date": "2024-12-29",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-21",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-07-31",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-10-15",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p08",
+            "p03"
+          ]
+        },
+        {
+          "date": "2026-02-03",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-04-29",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-07-13",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p04",
+            "p06"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Js3g0W",
+      "name": "유결규",
+      "age": 12,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 0주 출석",
+      "health_note": "고혈압으로 정기 통원 중",
+      "family_event": "반려동물 사망",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "HjOqTN",
+          "name": "한결로",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "7y9n43",
+          "name": "신결규",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "시험 합격",
+          "added_date": "2024-01-03",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p02",
+          "content": "건강 회복",
+          "added_date": "2024-11-22",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0ChDzs",
+      "name": "전시서",
+      "age": 37,
+      "gender": "남",
+      "faith_years": 20,
+      "last_visitation_date": "2025-02-05",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "자녀 입시로 가정 내 스트레스",
+      "special_note": "연락처가 최근 변경됨",
+      "family": [
+        {
+          "member_id": "WBr2cy",
+          "name": "손태우",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "취업/이직",
+          "added_date": "2025-09-16",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "질병 치유 감사",
+          "added_date": "2025-11-04",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "건강 회복",
+          "added_date": "2026-03-02",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-03-11",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-05-12",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-07-19",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-10-10",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-01-22",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-05-04",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-07-03",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-01",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-16",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-29",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-14",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-11-11",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-05",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            },
+            {
+              "department": "행정부",
+              "community": "재정팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p7T5eh",
+      "name": "전원시",
+      "age": 48,
+      "gender": "여",
+      "faith_years": 16,
+      "last_visitation_date": "2026-02-14",
+      "recent_attendance": "최근 8주 중 3주 출석",
+      "health_note": "3주 전 수술, 현재 재활 중",
+      "family_event": "본인 수술",
+      "special_note": "회복 중이라 거동이 불편함",
+      "family": [
+        {
+          "member_id": "Q63Od5",
+          "name": "전준율",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "r8SPBs",
+          "name": "전태연",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "soObvK",
+          "name": "임서가",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "ufpadL",
+          "name": "안재지",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "취업/이직",
+          "added_date": "2023-12-20",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2024-02-12",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "취업/이직",
+          "added_date": "2024-10-09",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2025-10-03",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "취업/이직",
+          "added_date": "2025-10-19",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-04-28",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-13",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-14",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-03",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-05-15",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-07",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p05",
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-11-18",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p01",
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-02-11",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-04-23",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2025-07-25",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-10-24",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-02-14",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "FDMY5l",
+      "name": "강진다",
+      "age": 38,
+      "gender": "여",
+      "faith_years": 1,
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "정보 없음",
+      "health_note": "정보 없음",
+      "family_event": "정보 없음",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "Y8Emhp",
+          "name": "신엘다",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "exuxal",
+          "name": "고로하",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [],
+      "visitation_records": [],
+      "community_history": []
+    },
+    {
+      "id": "dCLsU5",
+      "name": "신원결",
+      "age": 35,
+      "gender": "여",
+      "faith_years": 0,
+      "last_visitation_date": "2026-08-05",
+      "recent_attendance": "최근 8주 중 6주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "최근 새신자로 등록",
+      "family": [
+        {
+          "member_id": "NccB1m",
+          "name": "유온은",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "건강 회복",
+          "added_date": "2026-09-15",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-11-13",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-20",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-06-15",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-29",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-11-01",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-06",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-05-30",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-09-08",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-12-12",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-03-08",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-06-04",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-08-05",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "eqH3a8",
+      "name": "홍결재",
+      "age": 77,
+      "gender": "남",
+      "faith_years": 10,
+      "last_visitation_date": "2025-07-07",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "최근 무릎 수술 후 재활 중",
+      "family_event": "가족 간 갈등을 최근 언급함",
+      "special_note": "연락처가 최근 변경됨",
+      "family": [
+        {
+          "member_id": "rp8vdk",
+          "name": "윤온진",
+          "relation": "배우자"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p06",
+          "content": "재정적 어려움 해결",
+          "added_date": "2023-11-06",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-04-10",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-12-19",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "가족 관계 회복",
+          "added_date": "2025-02-17",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "은퇴 후 삶에 대한 인도하심",
+          "added_date": "2025-10-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "건강 회복",
+          "added_date": "2026-01-12",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "재정적 어려움 해결",
+          "added_date": "2026-04-12",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-04-29",
+          "status": "응답됨"
+        },
+        {
+          "id": "p09",
+          "content": "자녀 신앙 성장",
+          "added_date": "2026-09-01",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-07-22",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-09-26",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2022-12-03",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-04-01",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-06-08",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-11",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-25",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-26",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p06"
+          ]
+        },
+        {
+          "date": "2024-04-11",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2024-06-23",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p06"
+          ]
+        },
+        {
+          "date": "2024-10-15",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-03",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p06",
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-03-09",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-07-07",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p06"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q63Od5",
+      "name": "전준율",
+      "age": 47,
+      "gender": "남",
+      "faith_years": 29,
+      "last_visitation_date": "2026-07-17",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "정기적으로 봉사에 참여, 최근 특별한 이슈 없음",
+      "family": [
+        {
+          "member_id": "p7T5eh",
+          "name": "전원시",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "r8SPBs",
+          "name": "전태연",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "soObvK",
+          "name": "임서가",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "ufpadL",
+          "name": "안재지",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "직장 내 어려움",
+          "added_date": "2023-11-27",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2024-09-14",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "자녀 진로 결정",
+          "added_date": "2024-11-09",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "취업/이직",
+          "added_date": "2024-12-02",
+          "status": "응답됨"
+        },
+        {
+          "id": "p04",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2025-12-17",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "이사/거주 문제",
+          "added_date": "2026-04-16",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "이사/거주 문제",
+          "added_date": "2026-08-20",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-09-03",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-09",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-11",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2024-04-05",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2024-07-15",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2024-10-04",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-21",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2025-05-08",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-07-10",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        },
+        {
+          "date": "2025-10-24",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p06"
+          ]
+        },
+        {
+          "date": "2026-01-12",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-03-31",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p02",
+            "p06"
+          ]
+        },
+        {
+          "date": "2026-07-17",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p05",
+            "p04"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "서기팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7y9n43",
+      "name": "신결규",
+      "age": 40,
+      "gender": "여",
+      "faith_years": 30,
+      "last_visitation_date": "2025-11-23",
+      "recent_attendance": "최근 8주 중 0주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "연락이 잘 닿지 않음, 이유 불명",
+      "family": [
+        {
+          "member_id": "HjOqTN",
+          "name": "한결로",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "Js3g0W",
+          "name": "유결규",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "ZRqdol",
+          "name": "최인담",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "자녀 신앙 성장",
+          "added_date": "2023-11-10",
+          "status": "응답됨"
+        },
+        {
+          "id": "p06",
+          "content": "가족 관계 회복",
+          "added_date": "2024-05-05",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "우울감 극복",
+          "added_date": "2024-09-06",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "자녀 진로 결정",
+          "added_date": "2025-05-26",
+          "status": "응답됨"
+        },
+        {
+          "id": "p07",
+          "content": "이사/거주 문제",
+          "added_date": "2025-11-23",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2026-03-11",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "자녀 진로 결정",
+          "added_date": "2026-05-20",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "우울감 극복",
+          "added_date": "2026-08-02",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-12-17",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-03-12",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-06-15",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-06",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-08",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-19",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-06-13",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-27",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-10-28",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p05",
+            "p06"
+          ]
+        },
+        {
+          "date": "2025-02-17",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-04-24",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p06",
+            "p05"
+          ]
+        },
+        {
+          "date": "2025-08-02",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-11-23",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "시설관리팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "재정팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PMLKIG",
+      "name": "장결담",
+      "age": 6,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "정보 없음",
+      "recent_attendance": "정보 없음",
+      "health_note": "정보 없음",
+      "family_event": "정보 없음",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "MiAf2F",
+          "name": "전인하",
+          "relation": "어머니"
+        },
+        {
+          "member_id": "j5hJgb",
+          "name": "문서도",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "syU6Fi",
+          "name": "박경율",
+          "relation": "할아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [],
+      "visitation_records": [],
+      "community_history": []
+    },
+    {
+      "id": "l9mbH6",
+      "name": "임온결",
+      "age": 65,
+      "gender": "남",
+      "faith_years": 53,
+      "last_visitation_date": "2025-10-20",
+      "recent_attendance": "최근 8주 중 4주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [],
+      "family_note": "정보 없음",
+      "prayer_requests": [
+        {
+          "id": "p03",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-01-11",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "재정적 어려움 해결",
+          "added_date": "2025-02-14",
+          "status": "응답됨"
+        },
+        {
+          "id": "p09",
+          "content": "부모님 건강",
+          "added_date": "2025-02-15",
+          "status": "응답됨"
+        },
+        {
+          "id": "p08",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-07-08",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "직장 내 어려움",
+          "added_date": "2025-07-28",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "재정적 어려움 해결",
+          "added_date": "2025-12-19",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "질병 치유 감사",
+          "added_date": "2026-02-09",
+          "status": "응답됨"
+        },
+        {
+          "id": "p07",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-03-12",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "부모님 건강",
+          "added_date": "2026-06-16",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-01-05",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-04-29",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-08-23",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-11-03",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-04",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-04",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-08",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-27",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-12-17",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-17",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-24",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-07-17",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-10-20",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p08"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "재정팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LNes8O",
+      "name": "문율수",
+      "age": 47,
+      "gender": "남",
+      "faith_years": 4,
+      "last_visitation_date": "2026-03-05",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "최근 무릎 수술 후 재활 중",
+      "family_event": "반려동물 사망",
+      "special_note": "장기 결석 중, 사유 확인 필요",
+      "family": [
+        {
+          "member_id": "L1m19b",
+          "name": "손아우",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "2IFrC2",
+          "name": "한율름",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2024-02-01",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "자녀 신앙 성장",
+          "added_date": "2024-09-06",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2026-08-13",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "군 복무 중인 자녀",
+          "added_date": "2026-09-05",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-05-07",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-07-20",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-19",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-13",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-05-24",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-09-09",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2024-12-19",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-02-19",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-22",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-06-26",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-08-25",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-12-06",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-03-05",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p02",
+            "p01"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "안내팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exuxal",
+      "name": "고로하",
+      "age": 11,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 5주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "자녀 입시로 가정 내 스트레스",
+      "special_note": "최근 출석이 줄어듦",
+      "family": [
+        {
+          "member_id": "FDMY5l",
+          "name": "강진다",
+          "relation": "어머니"
+        },
+        {
+          "member_id": "Y8Emhp",
+          "name": "신엘다",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p06",
+          "content": "학업 성취",
+          "added_date": "2024-04-05",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-07-06",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-07-14",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "질병 치유 감사",
+          "added_date": "2024-07-26",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "질병 치유 감사",
+          "added_date": "2024-07-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-02-25",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "부모님 건강",
+          "added_date": "2026-01-21",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p08",
+          "content": "시험 합격",
+          "added_date": "2026-08-14",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "ufpadL",
+      "name": "안재지",
+      "age": 14,
+      "gender": "여",
+      "faith_years": 3,
+      "last_visitation_date": "2025-06-29",
+      "recent_attendance": "최근 8주 중 2주 출석",
+      "health_note": "만성 질환으로 정기 검진 중",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "p7T5eh",
+          "name": "전원시",
+          "relation": "어머니"
+        },
+        {
+          "member_id": "Q63Od5",
+          "name": "전준율",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "부모님 건강",
+          "added_date": "2025-02-06",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-09-26",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-01-06",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-03-08",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-05-30",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-25",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-12",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-16",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-04",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-24",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-12-10",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-07",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-06-29",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MiAf2F",
+      "name": "전인하",
+      "age": 31,
+      "gender": "여",
+      "faith_years": 14,
+      "last_visitation_date": "2026-01-31",
+      "recent_attendance": "최근 8주 중 5주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "j5hJgb",
+          "name": "문서도",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "PMLKIG",
+          "name": "장결담",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "E3GmLF",
+          "name": "홍진건",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "syU6Fi",
+          "name": "박경율",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p04",
+          "content": "재정적 어려움 해결",
+          "added_date": "2023-11-21",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-04-25",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-07-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-09-12",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p01",
+          "content": "우울감 극복",
+          "added_date": "2026-02-05",
+          "status": "계속 기도 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-04-14",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-06-21",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-12",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-04",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-12",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-08",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": [
+            "p03",
+            "p02"
+          ]
+        },
+        {
+          "date": "2024-10-21",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p02",
+            "p03"
+          ]
+        },
+        {
+          "date": "2024-12-28",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p02",
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-03-17",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-06-22",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-08-27",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-11-25",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2026-01-31",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "WBr2cy",
+      "name": "손태우",
+      "age": 9,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 5주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "보호자와 함께 출석",
+      "family": [
+        {
+          "member_id": "0ChDzs",
+          "name": "전시서",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p09",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2023-10-28",
+          "status": "진행 중"
+        },
+        {
+          "id": "p11",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-02-07",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "시험 합격",
+          "added_date": "2024-08-06",
+          "status": "응답됨"
+        },
+        {
+          "id": "p08",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-09-12",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "질병 치유 감사",
+          "added_date": "2025-02-01",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "학업 성취",
+          "added_date": "2025-04-22",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "시험 합격",
+          "added_date": "2025-05-06",
+          "status": "응답됨"
+        },
+        {
+          "id": "p06",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2025-07-06",
+          "status": "응답됨"
+        },
+        {
+          "id": "p10",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-09-19",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-02-25",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "건강 회복",
+          "added_date": "2026-03-01",
+          "status": "응답됨"
+        },
+        {
+          "id": "p12",
+          "content": "학업 성취",
+          "added_date": "2026-07-29",
+          "status": "계속 기도 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2cZ1Ml",
+      "name": "손하다",
+      "age": 39,
+      "gender": "여",
+      "faith_years": 5,
+      "last_visitation_date": "2026-07-11",
+      "recent_attendance": "최근 8주 중 7주 출석",
+      "health_note": "당뇨 관리 중",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "4tVTZl",
+          "name": "이결율",
+          "relation": "자녀"
+        },
+        {
+          "member_id": "oHdOmJ",
+          "name": "임훈이",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p06",
+          "content": "부모님 건강",
+          "added_date": "2023-10-15",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "직장 내 어려움",
+          "added_date": "2024-01-04",
+          "status": "응답됨"
+        },
+        {
+          "id": "p01",
+          "content": "직장 내 어려움",
+          "added_date": "2024-03-11",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "시험 합격",
+          "added_date": "2025-03-18",
+          "status": "응답됨"
+        },
+        {
+          "id": "p07",
+          "content": "이사/거주 문제",
+          "added_date": "2025-05-10",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "질병 치유 감사",
+          "added_date": "2025-06-04",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "재정적 어려움 해결",
+          "added_date": "2026-03-10",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-03-15",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p09",
+          "content": "직장 내 어려움",
+          "added_date": "2026-08-06",
+          "status": "계속 기도 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-10-20",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p06"
+          ]
+        },
+        {
+          "date": "2024-01-16",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p06",
+            "p08"
+          ]
+        },
+        {
+          "date": "2024-04-24",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-08-12",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p01",
+            "p08"
+          ]
+        },
+        {
+          "date": "2024-11-21",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p08",
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-02-20",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p01"
+          ]
+        },
+        {
+          "date": "2025-05-12",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-09-09",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-12-10",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-03-18",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": [
+            "p02",
+            "p01"
+          ]
+        },
+        {
+          "date": "2026-07-11",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "찬양팀"
+            },
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "미디어팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t8hXlX",
+      "name": "안영결",
+      "age": 71,
+      "gender": "남",
+      "faith_years": 1,
+      "last_visitation_date": "2025-11-03",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "최근 건강검진에서 이상 소견 발견",
+      "family_event": "없음",
+      "special_note": "최근 새신자로 등록",
+      "family": [],
+      "family_note": "정보 없음",
+      "prayer_requests": [
+        {
+          "id": "p05",
+          "content": "선교지를 위한 기도",
+          "added_date": "2025-10-27",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-10-31",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2025-11-18",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2025-12-23",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "자녀 신앙 성장",
+          "added_date": "2026-04-15",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2022-11-14",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-01-13",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-04-29",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-06-30",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-16",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-12-18",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-11",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-01",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-09-07",
+          "summary": "감사한 일들을 함께 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-04",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-03-08",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-05-20",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-07-22",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-11-03",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ZRqdol",
+      "name": "최인담",
+      "age": 14,
+      "gender": "남",
+      "faith_years": 0,
+      "last_visitation_date": "2026-06-08",
+      "recent_attendance": "최근 8주 중 5주 출석",
+      "health_note": "만성 질환으로 정기 검진 중",
+      "family_event": "없음",
+      "special_note": "타 지역 이주 예정",
+      "family": [
+        {
+          "member_id": "HjOqTN",
+          "name": "한결로",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "7y9n43",
+          "name": "신결규",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p01",
+          "content": "부모님 건강",
+          "added_date": "2026-09-14",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p03",
+          "content": "가족 관계 회복",
+          "added_date": "2026-09-14",
+          "status": "응답됨"
+        },
+        {
+          "id": "p06",
+          "content": "학업 성취",
+          "added_date": "2026-09-14",
+          "status": "응답됨"
+        },
+        {
+          "id": "p08",
+          "content": "학업 성취",
+          "added_date": "2026-09-14",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-09-15",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p04",
+          "content": "부모님 건강",
+          "added_date": "2026-09-15",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "질병 치유 감사",
+          "added_date": "2026-09-15",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "학업 성취",
+          "added_date": "2026-09-15",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-07-05",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-09-30",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-01-25",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-04-17",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-07-28",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-11-14",
+          "summary": "안부 인사와 근황을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-01-14",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-04-24",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-07-31",
+          "summary": "신앙생활에 대해 격려함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-11-24",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-02-08",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-06-08",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": []
+        },
+        {
+          "year": 2026,
+          "affiliations": []
+        }
+      ]
+    },
+    {
+      "id": "YzuD4n",
+      "name": "안솔우",
+      "age": 11,
+      "gender": "여",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 2주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "정보 없음",
+      "family": [
+        {
+          "member_id": "uMPp9x",
+          "name": "전훈진",
+          "relation": "아버지"
+        },
+        {
+          "member_id": "YdIhDD",
+          "name": "백재온",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p04",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2023-10-06",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2023-10-11",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "건강 회복",
+          "added_date": "2024-07-17",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-09-23",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "건강 회복",
+          "added_date": "2025-02-01",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "질병 치유 감사",
+          "added_date": "2026-03-30",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": []
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "초등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NccB1m",
+      "name": "유온은",
+      "age": 15,
+      "gender": "여",
+      "faith_years": 3,
+      "last_visitation_date": "2026-01-08",
+      "recent_attendance": "최근 8주 중 5주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "없음",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "dCLsU5",
+          "name": "신원결",
+          "relation": "어머니"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p03",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-01-29",
+          "status": "진행 중"
+        },
+        {
+          "id": "p04",
+          "content": "선교지를 위한 기도",
+          "added_date": "2024-08-21",
+          "status": "진행 중"
+        },
+        {
+          "id": "p02",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2024-09-13",
+          "status": "진행 중"
+        },
+        {
+          "id": "p09",
+          "content": "부모님 건강",
+          "added_date": "2025-03-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "질병 치유 감사",
+          "added_date": "2025-06-03",
+          "status": "진행 중"
+        },
+        {
+          "id": "p05",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2025-08-17",
+          "status": "진행 중"
+        },
+        {
+          "id": "p08",
+          "content": "우울감 극복",
+          "added_date": "2026-06-27",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p07",
+          "content": "시험 합격",
+          "added_date": "2026-07-24",
+          "status": "계속 기도 중"
+        },
+        {
+          "id": "p01",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-08-15",
+          "status": "진행 중"
+        },
+        {
+          "id": "p10",
+          "content": "선교지를 위한 기도",
+          "added_date": "2026-08-28",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [
+        {
+          "date": "2023-03-20",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-07-17",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2023-10-19",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-02-14",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2024-05-06",
+          "summary": "최근 겪은 어려움에 대해 위로함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2024-08-05",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2024-10-04",
+          "summary": "공동체 참여에 대해 이야기함",
+          "prayer_requests_discussed": [
+            "p04"
+          ]
+        },
+        {
+          "date": "2025-01-16",
+          "summary": "기도제목을 나누고 함께 기도함",
+          "prayer_requests_discussed": [
+            "p02"
+          ]
+        },
+        {
+          "date": "2025-04-26",
+          "summary": "최근 건강 상태를 확인함",
+          "prayer_requests_discussed": [
+            "p03"
+          ]
+        },
+        {
+          "date": "2025-08-12",
+          "summary": "가정 형편에 대해 이야기함",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2025-10-12",
+          "summary": "특별한 이슈 없이 짧게 인사만 나눔",
+          "prayer_requests_discussed": []
+        },
+        {
+          "date": "2026-01-08",
+          "summary": "자녀 양육에 대한 고민을 나눔",
+          "prayer_requests_discussed": [
+            "p05"
+          ]
+        }
+      ],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "중고등부"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Y8Emhp",
+      "name": "신엘다",
+      "age": 33,
+      "gender": "남",
+      "faith_years": 20,
+      "last_visitation_date": "기록 없음",
+      "recent_attendance": "최근 8주 중 8주 출석",
+      "health_note": "특이사항 없음",
+      "family_event": "자녀 결혼",
+      "special_note": "특이사항 없음",
+      "family": [
+        {
+          "member_id": "FDMY5l",
+          "name": "강진다",
+          "relation": "배우자"
+        },
+        {
+          "member_id": "exuxal",
+          "name": "고로하",
+          "relation": "자녀"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p04",
+          "content": "결혼/배우자를 위한 기도",
+          "added_date": "2024-05-29",
+          "status": "진행 중"
+        },
+        {
+          "id": "p06",
+          "content": "가족 관계 회복",
+          "added_date": "2024-11-29",
+          "status": "응답됨"
+        },
+        {
+          "id": "p03",
+          "content": "가족 관계 회복",
+          "added_date": "2025-02-09",
+          "status": "응답됨"
+        },
+        {
+          "id": "p02",
+          "content": "질병 치유 감사",
+          "added_date": "2026-01-11",
+          "status": "응답됨"
+        },
+        {
+          "id": "p05",
+          "content": "관계 회복(친구/가족)",
+          "added_date": "2026-01-11",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "가족 관계 회복",
+          "added_date": "2026-03-07",
+          "status": "진행 중"
+        },
+        {
+          "id": "p07",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2026-05-06",
+          "status": "응답됨"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "시설관리팀"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "봉사부",
+              "community": "주방봉사팀"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "행정부",
+              "community": "홍보팀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r8SPBs",
+      "name": "전태연",
+      "age": 6,
+      "gender": "남",
+      "faith_years": "해당없음(자녀)",
+      "last_visitation_date": "해당없음",
+      "recent_attendance": "부모와 함께 최근 8주 중 5주 출석",
+      "health_note": "최근 건강검진에서 이상 소견 발견",
+      "family_event": "배우자 별세",
+      "special_note": "교육부 소속으로 활동 중",
+      "family": [
+        {
+          "member_id": "p7T5eh",
+          "name": "전원시",
+          "relation": "어머니"
+        },
+        {
+          "member_id": "Q63Od5",
+          "name": "전준율",
+          "relation": "아버지"
+        }
+      ],
+      "family_note": "",
+      "prayer_requests": [
+        {
+          "id": "p02",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-03-27",
+          "status": "진행 중"
+        },
+        {
+          "id": "p03",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-08-10",
+          "status": "진행 중"
+        },
+        {
+          "id": "p01",
+          "content": "교회 공동체를 위한 기도",
+          "added_date": "2024-09-01",
+          "status": "진행 중"
+        }
+      ],
+      "visitation_records": [],
+      "community_history": [
+        {
+          "year": 2024,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "affiliations": [
+            {
+              "department": "교육부",
+              "community": "유치부"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
