@@ -151,7 +151,9 @@ class TopTen:
     entries: list = field(default_factory=list)   # [{rank, id, name, reason}]
     issues: list = field(default_factory=list)
     hit_include: int = 0
+    include_total: int = 0
     miss_exclude: int = 0
+    exclude_total: int = 0
 
     @property
     def format_ok(self) -> bool:
@@ -159,7 +161,8 @@ class TopTen:
 
     @classmethod
     def parse(cls, text: str, eval_set: EvalSet) -> "TopTen":
-        result = cls()
+        result = cls(include_total=len(eval_set.must_include),
+                     exclude_total=len(eval_set.must_exclude))
         block = _JSON_BLOCK.search(text or "")
         if not block:
             result.issues.append("JSON 없음")
@@ -204,7 +207,9 @@ class TopTen:
             "format_ok": self.format_ok,
             "issues": self.issues,
             "hit_include": self.hit_include,
+            "include_total": self.include_total,
             "miss_exclude": self.miss_exclude,
+            "exclude_total": self.exclude_total,
             "picked_ids": [e.get("id") for e in self.entries if isinstance(e, dict)],
         }
 

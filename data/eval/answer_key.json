@@ -5,56 +5,91 @@
       "file": "data/eval/set01.json",
       "must_include": [
         {
-          "id": "xgeNvH",
-          "name": "오원원",
-          "case": "지난주 응급실 이송"
+          "id": "dn4vYH",
+          "name": "양규온",
+          "case": "3주 전 배우자 수술",
+          "kind": "급성"
         },
         {
-          "id": "Xvm27X",
-          "name": "전가우",
-          "case": "낙상 후 자택 요양"
+          "id": "xU95JX",
+          "name": "황우인",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
         },
         {
-          "id": "eCpmTV",
-          "name": "조서수",
-          "case": "3주 전 본인 수술"
+          "id": "TV7FTS",
+          "name": "김나하",
+          "case": "2주 전 출산",
+          "kind": "급성"
         },
         {
-          "id": "evrVNt",
-          "name": "백온규",
-          "case": "격주 투석"
+          "id": "HLxEbU",
+          "name": "손은영",
+          "case": "지난주 부친상",
+          "kind": "급성"
         },
         {
-          "id": "tG3IvT",
-          "name": "신진도",
-          "case": "2주 전 출산"
+          "id": "MnaBL1",
+          "name": "손서가",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
+        },
+        {
+          "id": "GleXnY",
+          "name": "장민온",
+          "case": "요양병원 장기 입원",
+          "kind": "만성"
+        },
+        {
+          "id": "8qJ43t",
+          "name": "정시원",
+          "case": "출석 0회, 연락 두절",
+          "kind": "만성"
+        },
+        {
+          "id": "9UDb6k",
+          "name": "임우아",
+          "case": "항암 통원 치료",
+          "kind": "만성"
+        },
+        {
+          "id": "M4dbV8",
+          "name": "조윤도",
+          "case": "두 달째 발길 끊음",
+          "kind": "만성"
+        },
+        {
+          "id": "ARig34",
+          "name": "최시유",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "TV7FTS",
-          "name": "김나하",
+          "id": "tG3IvT",
+          "name": "권서태",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "PQCjiM",
+          "name": "조수경",
           "case": "만근, 봉사 참여"
         },
         {
-          "id": "Fm1JH5",
-          "name": "홍온다",
-          "case": "만근, 요청 사항 없음"
-        },
-        {
-          "id": "C7Oe7Y",
-          "name": "신가우",
+          "id": "H7K3hD",
+          "name": "손담로",
           "case": "만근, 특이사항 없음"
         },
         {
-          "id": "xU95JX",
-          "name": "임지하",
+          "id": "Y7dWWm",
+          "name": "백아담",
           "case": "7주 출석, 특이사항 없음"
         },
         {
-          "id": "1iIC4n",
-          "name": "임름재",
-          "case": "7주 출석, 봉사팀 활동"
+          "id": "3ncNfo",
+          "name": "황이시",
+          "case": "만근, 요청 사항 없음"
         }
       ]
     },
@@ -63,56 +98,91 @@
       "file": "data/eval/set02.json",
       "must_include": [
         {
-          "id": "pu12zO",
-          "name": "임서은",
-          "case": "한 달 전 실직"
+          "id": "pYdoF6",
+          "name": "최솔지",
+          "case": "지난주 부친상",
+          "kind": "급성"
+        },
+        {
+          "id": "DVpQoZ",
+          "name": "권담연",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
+        },
+        {
+          "id": "B9DVav",
+          "name": "박하우",
+          "case": "2주 전 배우자 별세",
+          "kind": "급성"
+        },
+        {
+          "id": "M9jMAe",
+          "name": "강영솔",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
         },
         {
           "id": "uOzEYk",
-          "name": "안우호",
-          "case": "지난주 응급실 이송"
+          "name": "강진가",
+          "case": "2주 전 출산",
+          "kind": "급성"
         },
         {
-          "id": "O2u0It",
+          "id": "wzrqYk",
+          "name": "유시가",
+          "case": "출석 0회, 연락 두절",
+          "kind": "만성"
+        },
+        {
+          "id": "Qv0uoE",
+          "name": "송이경",
+          "case": "격주 투석",
+          "kind": "만성"
+        },
+        {
+          "id": "DYAWkn",
+          "name": "김하태",
+          "case": "거동 불편으로 외출 어려움",
+          "kind": "만성"
+        },
+        {
+          "id": "S5qfQU",
           "name": "손나서",
-          "case": "2주 전 배우자 별세"
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
         },
         {
-          "id": "okMZgl",
-          "name": "정율온",
-          "case": "3주 전 본인 수술"
-        },
-        {
-          "id": "Pezu8Z",
-          "name": "한인경",
-          "case": "요양병원 장기 입원"
+          "id": "fu4I1f",
+          "name": "배아연",
+          "case": "항암 통원 치료",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "fu4I1f",
-          "name": "송이경",
-          "case": "7주 출석, 봉사팀 활동"
-        },
-        {
-          "id": "s4mzI8",
-          "name": "배하우",
+          "id": "bM8XSB",
+          "name": "양민서",
           "case": "만근, 봉사 참여"
         },
         {
-          "id": "Xg7EvM",
-          "name": "정도인",
+          "id": "2bMBjc",
+          "name": "정경가",
           "case": "만근, 특이사항 없음"
         },
         {
-          "id": "wzrqYk",
-          "name": "임시은",
+          "id": "fWBeEd",
+          "name": "권하율",
           "case": "7주 출석, 특이사항 없음"
         },
         {
-          "id": "AcJyvT",
-          "name": "이지온",
+          "id": "irEiOL",
+          "name": "권서윤",
           "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "frK9Uv",
+          "name": "고재나",
+          "case": "7주 출석, 봉사팀 활동"
         }
       ]
     },
@@ -121,55 +191,90 @@
       "file": "data/eval/set03.json",
       "must_include": [
         {
-          "id": "WRi2iL",
-          "name": "고나은",
-          "case": "낙상 후 자택 요양"
+          "id": "qyB6mm",
+          "name": "이람유",
+          "case": "2주 전 배우자 별세",
+          "kind": "급성"
         },
         {
           "id": "gydMuq",
-          "name": "유유하",
-          "case": "한 달 전 실직"
+          "name": "오현솔",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
         },
         {
-          "id": "YynTzt",
-          "name": "김건연",
-          "case": "3주 전 배우자 수술"
+          "id": "vrtXcR",
+          "name": "고민현",
+          "case": "지난주 응급실 이송",
+          "kind": "급성"
         },
         {
-          "id": "7OkpyG",
-          "name": "양진엘",
-          "case": "지난주 모친상"
+          "id": "A0Pul8",
+          "name": "문서재",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
+        },
+        {
+          "id": "K5iJaU",
+          "name": "송현재",
+          "case": "지난주 모친상",
+          "kind": "급성"
+        },
+        {
+          "id": "aizvcI",
+          "name": "윤빈건",
+          "case": "항암 통원 치료",
+          "kind": "만성"
         },
         {
           "id": "veEGCG",
           "name": "이진호",
-          "case": "출석 0회, 연락 두절"
+          "case": "출석 0회, 연락 두절",
+          "kind": "만성"
+        },
+        {
+          "id": "5GYlky",
+          "name": "강도하",
+          "case": "요양병원 장기 입원",
+          "kind": "만성"
+        },
+        {
+          "id": "BygmdS",
+          "name": "강현민",
+          "case": "두 달째 발길 끊음",
+          "kind": "만성"
+        },
+        {
+          "id": "oImSvz",
+          "name": "이결윤",
+          "case": "한 달 전 실직",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "oImSvz",
-          "name": "박로원",
+          "id": "VN3qlb",
+          "name": "배규서",
           "case": "만근, 특이사항 없음"
         },
         {
-          "id": "LetGgE",
-          "name": "고민현",
+          "id": "2ymUvC",
+          "name": "양선솔",
           "case": "만근, 요청 사항 없음"
         },
         {
-          "id": "A0Pul8",
-          "name": "강하서",
+          "id": "rz6i29",
+          "name": "안지시",
           "case": "7주 출석, 봉사팀 활동"
         },
         {
-          "id": "aizvcI",
-          "name": "신건솔",
+          "id": "pS5Xyd",
+          "name": "권은진",
           "case": "만근, 봉사 참여"
         },
         {
-          "id": "fYH8lE",
-          "name": "오현솔",
+          "id": "Ul0tfp",
+          "name": "황나하",
           "case": "7주 출석, 특이사항 없음"
         }
       ]
@@ -179,56 +284,91 @@
       "file": "data/eval/set04.json",
       "must_include": [
         {
-          "id": "ijf1Gu",
-          "name": "배태서",
-          "case": "출석 0회, 연락 두절"
+          "id": "dTZlQF",
+          "name": "조유경",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
         },
         {
-          "id": "FJdgnr",
-          "name": "전나도",
-          "case": "2주 전 출산"
+          "id": "2H1F2v",
+          "name": "박이솔",
+          "case": "지난주 모친상",
+          "kind": "급성"
         },
         {
-          "id": "7RNw2Y",
-          "name": "정진이",
-          "case": "3주 전 본인 수술"
+          "id": "ix85ag",
+          "name": "권지결",
+          "case": "3주 전 배우자 수술",
+          "kind": "급성"
         },
         {
-          "id": "4Sys8C",
-          "name": "배빈호",
-          "case": "격주 투석"
+          "id": "cZaAVp",
+          "name": "문규이",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
         },
         {
-          "id": "HbmYSu",
-          "name": "권서결",
-          "case": "3주 전 배우자 수술"
+          "id": "VcbnkZ",
+          "name": "배온결",
+          "case": "2주 전 출산",
+          "kind": "급성"
+        },
+        {
+          "id": "QGOmX1",
+          "name": "김현하",
+          "case": "요양병원 장기 입원",
+          "kind": "만성"
+        },
+        {
+          "id": "dSXT2Z",
+          "name": "강하태",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
+        },
+        {
+          "id": "BPo6VF",
+          "name": "임서영",
+          "case": "두 달째 발길 끊음",
+          "kind": "만성"
+        },
+        {
+          "id": "qIoO4c",
+          "name": "강진인",
+          "case": "한 달 전 실직",
+          "kind": "만성"
+        },
+        {
+          "id": "62XnvP",
+          "name": "전서호",
+          "case": "거동 불편으로 외출 어려움",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "NxtGbY",
-          "name": "유로아",
+          "id": "VojBwW",
+          "name": "배태결",
           "case": "만근, 요청 사항 없음"
-        },
-        {
-          "id": "0obGIt",
-          "name": "송람아",
-          "case": "만근, 봉사 참여"
         },
         {
           "id": "pMAeKJ",
           "name": "송채름",
-          "case": "만근, 특이사항 없음"
+          "case": "만근, 봉사 참여"
         },
         {
-          "id": "ElVkbD",
-          "name": "백온채",
+          "id": "ZBFZTz",
+          "name": "전진온",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "ijf1Gu",
+          "name": "이시채",
           "case": "7주 출석, 봉사팀 활동"
         },
         {
-          "id": "ZBKg9C",
-          "name": "김가름",
-          "case": "7주 출석, 특이사항 없음"
+          "id": "ElVkbD",
+          "name": "최수영",
+          "case": "만근, 특이사항 없음"
         }
       ]
     },
@@ -237,56 +377,91 @@
       "file": "data/eval/set05.json",
       "must_include": [
         {
-          "id": "4En3WM",
-          "name": "송채솔",
-          "case": "요양병원 장기 입원"
+          "id": "83HnzM",
+          "name": "전건하",
+          "case": "2주 전 출산",
+          "kind": "급성"
         },
         {
-          "id": "rAMEDC",
-          "name": "이다연",
-          "case": "지난주 부친상"
+          "id": "vG0sMg",
+          "name": "조재율",
+          "case": "지난주 모친상",
+          "kind": "급성"
+        },
+        {
+          "id": "48KOtw",
+          "name": "문아온",
+          "case": "3주 전 배우자 수술",
+          "kind": "급성"
         },
         {
           "id": "JQlFhK",
           "name": "배름솔",
-          "case": "2주 전 출산"
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
         },
         {
-          "id": "niCep5",
-          "name": "권담선",
-          "case": "2주 전 배우자 별세"
+          "id": "uenPmy",
+          "name": "문시결",
+          "case": "지난주 응급실 이송",
+          "kind": "급성"
         },
         {
-          "id": "IcBBIp",
-          "name": "한지규",
-          "case": "한 달 전 실직"
-        }
-      ],
-      "must_exclude": [
-        {
-          "id": "hcZrDP",
-          "name": "고준건",
-          "case": "7주 출석, 봉사팀 활동"
-        },
-        {
-          "id": "zsJZx0",
-          "name": "양람준",
-          "case": "7주 출석, 특이사항 없음"
-        },
-        {
-          "id": "7RQt27",
-          "name": "배우나",
-          "case": "만근, 요청 사항 없음"
-        },
-        {
-          "id": "SRofjq",
-          "name": "전람윤",
-          "case": "만근, 특이사항 없음"
+          "id": "O80nEw",
+          "name": "박담하",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
         },
         {
           "id": "EY5zIA",
           "name": "오서하",
+          "case": "요양병원 장기 입원",
+          "kind": "만성"
+        },
+        {
+          "id": "318bxN",
+          "name": "박빈도",
+          "case": "항암 통원 치료",
+          "kind": "만성"
+        },
+        {
+          "id": "rAMEDC",
+          "name": "최도다",
+          "case": "한 달 전 실직",
+          "kind": "만성"
+        },
+        {
+          "id": "RCl5TX",
+          "name": "김로경",
+          "case": "격주 투석",
+          "kind": "만성"
+        }
+      ],
+      "must_exclude": [
+        {
+          "id": "qofsPh",
+          "name": "권진호",
           "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "Pfur77",
+          "name": "최규하",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "N2L4B6",
+          "name": "강아준",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "G4P4tg",
+          "name": "송하율",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "ozAIH1",
+          "name": "유담가",
+          "case": "7주 출석, 봉사팀 활동"
         }
       ]
     },
@@ -295,56 +470,91 @@
       "file": "data/eval/set06.json",
       "must_include": [
         {
-          "id": "dFSeTy",
-          "name": "전채태",
-          "case": "지난주 모친상"
+          "id": "fPBwQi",
+          "name": "홍채솔",
+          "case": "2주 전 출산",
+          "kind": "급성"
         },
         {
-          "id": "7KuQaX",
-          "name": "임민연",
-          "case": "3주 전 배우자 수술"
+          "id": "er9Xad",
+          "name": "권이엘",
+          "case": "2주 전 배우자 별세",
+          "kind": "급성"
+        },
+        {
+          "id": "OjLez3",
+          "name": "유우결",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
+        },
+        {
+          "id": "myDI7R",
+          "name": "윤솔나",
+          "case": "지난주 응급실 이송",
+          "kind": "급성"
+        },
+        {
+          "id": "I9D2FJ",
+          "name": "윤진채",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
+        },
+        {
+          "id": "H5Zymk",
+          "name": "전유채",
+          "case": "격주 투석",
+          "kind": "만성"
         },
         {
           "id": "qYs73f",
           "name": "황은민",
-          "case": "출석 0회, 연락 두절"
+          "case": "출석 0회, 연락 두절",
+          "kind": "만성"
         },
         {
-          "id": "98qJMH",
-          "name": "안온솔",
-          "case": "격주 투석"
+          "id": "jlTIOw",
+          "name": "오하유",
+          "case": "항암 통원 치료",
+          "kind": "만성"
         },
         {
-          "id": "gHXA4O",
-          "name": "오재유",
-          "case": "한 달 전 실직"
+          "id": "wAmoOa",
+          "name": "윤선건",
+          "case": "거동 불편으로 외출 어려움",
+          "kind": "만성"
+        },
+        {
+          "id": "XoEuVd",
+          "name": "최엘하",
+          "case": "두 달째 발길 끊음",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "2wDanr",
-          "name": "정하재",
-          "case": "만근, 요청 사항 없음"
+          "id": "cPZCy9",
+          "name": "송도다",
+          "case": "7주 출석, 봉사팀 활동"
         },
         {
-          "id": "YbWuqy",
-          "name": "김엘나",
-          "case": "만근, 봉사 참여"
-        },
-        {
-          "id": "s1mk8C",
-          "name": "한솔건",
+          "id": "uADlay",
+          "name": "이건람",
           "case": "만근, 특이사항 없음"
         },
         {
           "id": "4SFfgm",
-          "name": "한온영",
+          "name": "송원시",
           "case": "7주 출석, 특이사항 없음"
         },
         {
-          "id": "jp5czf",
-          "name": "양수담",
-          "case": "7주 출석, 봉사팀 활동"
+          "id": "Z9Da9P",
+          "name": "송빈람",
+          "case": "만근, 봉사 참여"
+        },
+        {
+          "id": "9ILOFi",
+          "name": "최하민",
+          "case": "만근, 요청 사항 없음"
         }
       ]
     },
@@ -353,56 +563,91 @@
       "file": "data/eval/set07.json",
       "must_include": [
         {
-          "id": "lisbXU",
-          "name": "권지재",
-          "case": "낙상 후 자택 요양"
+          "id": "dCLsU5",
+          "name": "권은율",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
+        },
+        {
+          "id": "E3GmLF",
+          "name": "임선름",
+          "case": "지난주 부친상",
+          "kind": "급성"
+        },
+        {
+          "id": "L1m19b",
+          "name": "송솔서",
+          "case": "지난주 모친상",
+          "kind": "급성"
         },
         {
           "id": "7y9n43",
-          "name": "신결규",
-          "case": "출석 0회, 연락 두절"
+          "name": "유규호",
+          "case": "2주 전 배우자 별세",
+          "kind": "급성"
         },
         {
-          "id": "p7T5eh",
-          "name": "전원시",
-          "case": "3주 전 본인 수술"
-        },
-        {
-          "id": "qvVHER",
-          "name": "강영율",
-          "case": "2주 전 배우자 별세"
+          "id": "LNes8O",
+          "name": "유솔엘",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
         },
         {
           "id": "pVhKnv",
-          "name": "전람율",
-          "case": "지난주 부친상"
+          "name": "고민훈",
+          "case": "한 달 전 실직",
+          "kind": "만성"
+        },
+        {
+          "id": "YB1GXV",
+          "name": "고호우",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
+        },
+        {
+          "id": "Js3g0W",
+          "name": "유규엘",
+          "case": "요양병원 장기 입원",
+          "kind": "만성"
+        },
+        {
+          "id": "p7T5eh",
+          "name": "배다람",
+          "case": "항암 통원 치료",
+          "kind": "만성"
+        },
+        {
+          "id": "YzuD4n",
+          "name": "홍윤우",
+          "case": "거동 불편으로 외출 어려움",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "mtUDca",
-          "name": "홍윤유",
-          "case": "7주 출석, 특이사항 없음"
+          "id": "BUilWS",
+          "name": "한이우",
+          "case": "만근, 봉사 참여"
         },
         {
-          "id": "68ufme",
-          "name": "안선지",
+          "id": "ZRqdol",
+          "name": "한은진",
           "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "2cZ1Ml",
+          "name": "강훈우",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "lisbXU",
+          "name": "손다재",
+          "case": "7주 출석, 특이사항 없음"
         },
         {
           "id": "Q63Od5",
           "name": "전준율",
-          "case": "만근, 봉사 참여"
-        },
-        {
-          "id": "syU6Fi",
-          "name": "박경율",
           "case": "7주 출석, 봉사팀 활동"
-        },
-        {
-          "id": "YdIhDD",
-          "name": "백재온",
-          "case": "만근, 요청 사항 없음"
         }
       ]
     },
@@ -411,56 +656,91 @@
       "file": "data/eval/set08.json",
       "must_include": [
         {
-          "id": "CUCtvX",
-          "name": "신민온",
-          "case": "격주 투석"
+          "id": "vAJ1gN",
+          "name": "송진연",
+          "case": "2주 전 배우자 별세",
+          "kind": "급성"
         },
         {
-          "id": "wdIGpF",
-          "name": "송시진",
-          "case": "지난주 응급실 이송"
+          "id": "XUlTrr",
+          "name": "권로나",
+          "case": "2주 전 출산",
+          "kind": "급성"
         },
         {
-          "id": "z1Ggtj",
-          "name": "손름람",
-          "case": "요양병원 장기 입원"
+          "id": "4ytcGt",
+          "name": "백시원",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
         },
         {
           "id": "bwOQS2",
-          "name": "손태규",
-          "case": "3주 전 배우자 수술"
+          "name": "조호은",
+          "case": "3주 전 배우자 수술",
+          "kind": "급성"
         },
         {
-          "id": "NDkGBg",
-          "name": "조현서",
-          "case": "낙상 후 자택 요양"
+          "id": "CUCtvX",
+          "name": "김온결",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
+        },
+        {
+          "id": "jtdoFr",
+          "name": "임가나",
+          "case": "요양병원 장기 입원",
+          "kind": "만성"
+        },
+        {
+          "id": "MWwd5C",
+          "name": "황경나",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
+        },
+        {
+          "id": "QvqU1p",
+          "name": "박은건",
+          "case": "항암 통원 치료",
+          "kind": "만성"
+        },
+        {
+          "id": "puYXbc",
+          "name": "송수도",
+          "case": "출석 0회, 연락 두절",
+          "kind": "만성"
+        },
+        {
+          "id": "YG97jU",
+          "name": "오호율",
+          "case": "격주 투석",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "XEqcfj",
-          "name": "정온나",
-          "case": "7주 출석, 특이사항 없음"
-        },
-        {
-          "id": "L2qdTQ",
-          "name": "홍우인",
+          "id": "6xKwAW",
+          "name": "장선연",
           "case": "만근, 요청 사항 없음"
         },
         {
-          "id": "rMyM9C",
-          "name": "고진연",
+          "id": "6aHvSa",
+          "name": "유재하",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "p4o71g",
+          "name": "양하하",
           "case": "만근, 봉사 참여"
         },
         {
-          "id": "jtdoFr",
-          "name": "임재우",
-          "case": "만근, 특이사항 없음"
+          "id": "OwpU5Z",
+          "name": "송원엘",
+          "case": "7주 출석, 봉사팀 활동"
         },
         {
-          "id": "Vgoywg",
-          "name": "백우원",
-          "case": "7주 출석, 봉사팀 활동"
+          "id": "wdIGpF",
+          "name": "임현도",
+          "case": "만근, 특이사항 없음"
         }
       ]
     },
@@ -469,56 +749,91 @@
       "file": "data/eval/set09.json",
       "must_include": [
         {
-          "id": "1XGQsb",
-          "name": "오재람",
-          "case": "출석 0회, 연락 두절"
+          "id": "1p5CBZ",
+          "name": "장경우",
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
+        },
+        {
+          "id": "rjz61I",
+          "name": "권수결",
+          "case": "지난주 부친상",
+          "kind": "급성"
         },
         {
           "id": "gKvDaG",
-          "name": "장현솔",
-          "case": "한 달 전 실직"
+          "name": "신진서",
+          "case": "3주 전 배우자 수술",
+          "kind": "급성"
         },
         {
-          "id": "uZSK22",
-          "name": "양태다",
-          "case": "2주 전 출산"
+          "id": "bAs062",
+          "name": "이호진",
+          "case": "지난주 모친상",
+          "kind": "급성"
         },
         {
-          "id": "xGe5pG",
-          "name": "손결태",
-          "case": "3주 전 배우자 수술"
+          "id": "iI7dFd",
+          "name": "유솔나",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
         },
         {
           "id": "rgHH3x",
-          "name": "권지람",
-          "case": "격주 투석"
+          "name": "정람재",
+          "case": "두 달째 발길 끊음",
+          "kind": "만성"
+        },
+        {
+          "id": "9SeaW3",
+          "name": "최율하",
+          "case": "거동 불편으로 외출 어려움",
+          "kind": "만성"
+        },
+        {
+          "id": "FQt9cT",
+          "name": "한율호",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
+        },
+        {
+          "id": "i3MwOi",
+          "name": "장경연",
+          "case": "격주 투석",
+          "kind": "만성"
+        },
+        {
+          "id": "aPEIsn",
+          "name": "윤서온",
+          "case": "한 달 전 실직",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "bAs062",
-          "name": "권수결",
+          "id": "1XGQsb",
+          "name": "문온규",
+          "case": "만근, 요청 사항 없음"
+        },
+        {
+          "id": "GfByeY",
+          "name": "권진아",
           "case": "7주 출석, 특이사항 없음"
         },
         {
-          "id": "i3MwOi",
-          "name": "강솔경",
-          "case": "만근, 봉사 참여"
-        },
-        {
           "id": "cy5MBn",
-          "name": "황율진",
-          "case": "7주 출석, 봉사팀 활동"
-        },
-        {
-          "id": "rjz61I",
-          "name": "정람재",
+          "name": "오가진",
           "case": "만근, 특이사항 없음"
         },
         {
-          "id": "hMei2C",
-          "name": "임름서",
-          "case": "만근, 요청 사항 없음"
+          "id": "SONGSc",
+          "name": "신름수",
+          "case": "7주 출석, 봉사팀 활동"
+        },
+        {
+          "id": "1oOQ2c",
+          "name": "황원온",
+          "case": "만근, 봉사 참여"
         }
       ]
     },
@@ -527,56 +842,91 @@
       "file": "data/eval/set10.json",
       "must_include": [
         {
-          "id": "MXUxHe",
-          "name": "신도수",
-          "case": "3주 전 본인 수술"
+          "id": "VTjjG6",
+          "name": "임나시",
+          "case": "지난주 모친상",
+          "kind": "급성"
         },
         {
           "id": "QM20pI",
           "name": "권담아",
-          "case": "한 달 전 실직"
+          "case": "2주 전 자녀 교통사고",
+          "kind": "급성"
         },
         {
-          "id": "8DVAwg",
-          "name": "유진율",
-          "case": "2주 전 배우자 별세"
+          "id": "3C46wc",
+          "name": "임하재",
+          "case": "3주 전 본인 수술",
+          "kind": "급성"
         },
         {
-          "id": "tUgGal",
-          "name": "장지름",
-          "case": "낙상 후 자택 요양"
+          "id": "VlH5r9",
+          "name": "임율결",
+          "case": "2주 전 배우자 별세",
+          "kind": "급성"
         },
         {
-          "id": "viu9Pf",
-          "name": "손엘진",
-          "case": "지난주 모친상"
+          "id": "BVkbpO",
+          "name": "오선호",
+          "case": "2주 전 출산",
+          "kind": "급성"
+        },
+        {
+          "id": "of89p5",
+          "name": "손영태",
+          "case": "격주 투석",
+          "kind": "만성"
+        },
+        {
+          "id": "EK5Zi1",
+          "name": "유재결",
+          "case": "출석 0회, 연락 두절",
+          "kind": "만성"
+        },
+        {
+          "id": "WJfZCT",
+          "name": "최이다",
+          "case": "낙상 후 자택 요양",
+          "kind": "만성"
+        },
+        {
+          "id": "jtDGPs",
+          "name": "오나온",
+          "case": "항암 통원 치료",
+          "kind": "만성"
+        },
+        {
+          "id": "4zUUFE",
+          "name": "문온가",
+          "case": "거동 불편으로 외출 어려움",
+          "kind": "만성"
         }
       ],
       "must_exclude": [
         {
-          "id": "3C46wc",
-          "name": "배태원",
-          "case": "만근, 특이사항 없음"
-        },
-        {
-          "id": "RWfN9H",
-          "name": "이온윤",
-          "case": "7주 출석, 봉사팀 활동"
-        },
-        {
-          "id": "av2RyM",
-          "name": "양현율",
+          "id": "rqFnai",
+          "name": "김아규",
           "case": "만근, 봉사 참여"
         },
         {
-          "id": "EK5Zi1",
-          "name": "이채담",
+          "id": "RWfN9H",
+          "name": "배태원",
+          "case": "7주 출석, 특이사항 없음"
+        },
+        {
+          "id": "3vZ1n5",
+          "name": "홍현율",
           "case": "만근, 요청 사항 없음"
         },
         {
-          "id": "fFoQiC",
-          "name": "정하연",
-          "case": "7주 출석, 특이사항 없음"
+          "id": "IKOXbT",
+          "name": "이름준",
+          "case": "만근, 특이사항 없음"
+        },
+        {
+          "id": "D5EzQR",
+          "name": "문결결",
+          "case": "7주 출석, 봉사팀 활동"
         }
       ]
     }

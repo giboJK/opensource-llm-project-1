@@ -191,27 +191,55 @@ GIVEN_SYLLABLES = list(
     "규태건우진서윤아름결이재하람로하나엘결가온다인"
 )
 
+# (문구, 붙을 수 있는 최소 나이).
+#
+# 나이를 안 보고 뽑으면 7세에게 "자녀 결혼", 2세에게 "손주 출생"이 붙습니다. 말이 안 되는
+# 기록이 명부에 섞이면 모델이 헷갈리고 채점 결과도 그만큼 흐려집니다.
 HEALTH_NOTES = [
-    "특이사항 없음", "특이사항 없음", "특이사항 없음", "특이사항 없음",
-    "고혈압으로 정기 통원 중", "최근 무릎 수술 후 재활 중", "만성 질환으로 정기 검진 중",
-    "가벼운 우울감을 호소함", "최근 건강검진에서 이상 소견 발견", "당뇨 관리 중",
+    ("특이사항 없음", 0), ("특이사항 없음", 0), ("특이사항 없음", 0), ("특이사항 없음", 0),
+    ("만성 질환으로 정기 검진 중", 0),
+    ("알레르기로 병원 통원 중", 0),
+    ("최근 골절로 깁스 중", 6),
+    ("가벼운 우울감을 호소함", 14),
+    ("최근 무릎 수술 후 재활 중", 18),
+    ("당뇨 관리 중", 20),
+    ("최근 건강검진에서 이상 소견 발견", 20),
+    ("고혈압으로 정기 통원 중", 30),
 ]
 FAMILY_EVENTS = [
-    "없음", "없음", "없음", "없음", "없음",
-    "자녀 결혼", "손주 출생", "배우자 별세", "최근 이사", "자녀 입시로 가정 내 스트레스",
-    "가족 간 갈등을 최근 언급함", "반려동물 사망",
+    ("없음", 0), ("없음", 0), ("없음", 0), ("없음", 0), ("없음", 0),
+    ("최근 이사", 0),
+    ("반려동물 사망", 0),
+    ("동생이 태어남", 0),
+    ("가족 간 갈등을 최근 언급함", 12),
+    ("배우자 별세", 35),
+    ("자녀 입시로 가정 내 스트레스", 35),
+    ("자녀 결혼", 45),
+    ("손주 출생", 45),
 ]
 SPECIAL_NOTES = [
-    "특이사항 없음", "특이사항 없음", "특이사항 없음", "특이사항 없음",
-    "장기 결석 중, 사유 확인 필요", "타 지역 이주 예정", "최근 새신자로 등록",
-    "봉사팀 리더로 활동 중", "연락처가 최근 변경됨",
+    ("특이사항 없음", 0), ("특이사항 없음", 0), ("특이사항 없음", 0), ("특이사항 없음", 0),
+    ("장기 결석 중, 사유 확인 필요", 0),
+    ("타 지역 이주 예정", 0),
+    ("연락처가 최근 변경됨", 18),
+    ("최근 새신자로 등록", 18),
+    ("봉사팀 리더로 활동 중", 22),
 ]
 
-# 자녀(미성년)용 비고. 사실만 적고 판단 지침은 넣지 않습니다.
+# 12세 이하용 비고. 사실만 적고 판단 지침은 넣지 않습니다.
 CHILD_SPECIAL_NOTES = [
-    "보호자와 함께 출석", "보호자와 함께 출석", "보호자와 함께 출석",
-    "교육부 소속으로 활동 중", "최근 출석이 줄어듦", "정보 없음",
+    ("보호자와 함께 출석", 0), ("보호자와 함께 출석", 0), ("보호자와 함께 출석", 0),
+    ("교육부 소속으로 활동 중", 0), ("최근 출석이 줄어듦", 0), ("정보 없음", 0),
 ]
+
+CHILD_NOTE_MAX_AGE = 12   # 이 나이 이하는 자녀용 비고를 씁니다
+MIN_COMMUNITY_AGE = 4     # 이 나이부터 공동체에 소속됩니다
+
+
+def pick_for_age(pool: list, age: int) -> str:
+    """나이에 맞는 문구만 추려서 뽑습니다."""
+    ok = [text for text, min_age in pool if age >= min_age]
+    return random.choice(ok)
 
 _used_names: set = set()
 
@@ -265,18 +293,20 @@ def base_profile_fields(age: int, is_child: bool, force_insufficient: bool = Fal
 
     # 자녀에게는 상태를 서술하는 문구만 붙입니다. "보호자 기준으로 판단하라" 같은 안내 문구를
     # 넣으면 모델이 판단하는 대신 문서에 적힌 지시를 따라 읽게 되어 채점이 무의미해집니다.
-    special_note = (
-        random.choice(CHILD_SPECIAL_NOTES) if is_child else random.choice(SPECIAL_NOTES)
-    )
-    if special_note == "최근 새신자로 등록" and not is_child:
+    #
+    # 어느 풀을 쓸지는 is_child 가 아니라 나이로 정합니다. 가구 생성기마다 is_child 기준이
+    # 달라(13세 미만) 13~18세가 성인 풀을 쓰면서 "최근 새신자로 등록"이 붙는 일이 있었습니다.
+    note_pool = CHILD_SPECIAL_NOTES if age <= CHILD_NOTE_MAX_AGE else SPECIAL_NOTES
+    special_note = pick_for_age(note_pool, age)
+    if special_note == "최근 새신자로 등록":
         faith_years = random.choice([0, 0, 1])
 
     return {
         "faith_years": faith_years,
         "last_visitation_date": last_visit,
         "recent_attendance": random_attendance(is_child),
-        "health_note": random.choice(HEALTH_NOTES),
-        "family_event": random.choice(FAMILY_EVENTS),
+        "health_note": pick_for_age(HEALTH_NOTES, age),
+        "family_event": pick_for_age(FAMILY_EVENTS, age),
         "special_note": special_note,
     }
 
@@ -586,7 +616,10 @@ def generate_community_history(current_age: int, faith_years=99) -> list:
     """최근 HISTORY_YEARS개년 각각에 대해 0~2개(무소속 가능)의 소속 공동체를 배정합니다.
 
     신앙 연차보다 오래된 해에는 소속 이력을 만들지 않습니다
-    (예: 지난주에 처음 온 사람에게 3년치 소속 이력이 붙는 모순 방지)."""
+    (예: 지난주에 처음 온 사람에게 3년치 소속 이력이 붙는 모순 방지).
+
+    MIN_COMMUNITY_AGE 미만인 해에도 만들지 않습니다. 그러지 않으면 2세에게 3년치 유치부
+    소속 이력이 붙습니다."""
     birth_year_est = TODAY.year - current_age
     years = [TODAY.year - (HISTORY_YEARS - 1) + i for i in range(HISTORY_YEARS)]
     # faith_years는 "해당없음(자녀)" 처럼 문자열일 수 있어 숫자일 때만 제약으로 씁니다
@@ -595,7 +628,7 @@ def generate_community_history(current_age: int, faith_years=99) -> list:
     history = []
     for year in years:
         age_in_year = year - birth_year_est
-        if age_in_year < 0 or year < first_year:
+        if age_in_year < MIN_COMMUNITY_AGE or year < first_year:
             history.append({"year": year, "affiliations": []})
             continue
 

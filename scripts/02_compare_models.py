@@ -4,7 +4,7 @@
 결과를 JSONL 로 쌓은 뒤 터미널에 비교 표를 출력합니다.
 
 표의 포함/제외는 STEP 5 정답 대조입니다.
-    포함 — 반드시 top 10 에 들어가야 할 5명 중 몇 명이 들어왔는가 (많을수록 좋음)
+    포함 — 반드시 top 10 에 들어가야 할 10명 중 몇 명이 들어왔는가 (10이면 만점)
     제외 — 반드시 빠져야 할 5명 중 몇 명이 들어왔는가 (0이어야 함)
 
 실행:
@@ -69,11 +69,12 @@ def print_summary(rows: list, runners: list) -> None:
         if not mine:
             continue
         inc = sum(r["validation"]["hit_include"] for r in mine)
+        inc_max = sum(r["validation"]["include_total"] for r in mine)
         exc = sum(r["validation"]["miss_exclude"] for r in mine)
         bad = sum(1 for r in mine if not r["validation"]["format_ok"])
         avg = sum(r["elapsed_sec"] for r in mine) / len(mine)
         worst = max(r["elapsed_sec"] for r in mine)
-        print(f"{runner.name:<32} 포함 {inc}/{len(mine) * 5}  "
+        print(f"{runner.name:<32} 포함 {inc}/{inc_max}  "
               f"제외 위반 {exc}  형식 미달 {bad}회  "
               f"평균 {avg:.1f}초 / 최대 {worst:.1f}초")
 
@@ -121,7 +122,8 @@ def main():
                     parsed = TopTen.parse(result.text, eval_set)
                     validation = parsed.to_record()
                     print(f"{result.elapsed_sec}초  "
-                          f"포함 {parsed.hit_include}/5  제외위반 {parsed.miss_exclude}"
+                          f"포함 {parsed.hit_include}/{parsed.include_total}  "
+                          f"제외위반 {parsed.miss_exclude}"
                           + ("" if parsed.format_ok else f"  [형식: {parsed.issues[0]}]"))
 
                 record = {

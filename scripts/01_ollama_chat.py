@@ -47,8 +47,8 @@ def main():
     print(result.text)
     print("-" * 60)
     print(f"형식: {'OK' if parsed.format_ok else ' / '.join(parsed.issues)}")
-    print(f"반드시 포함 5명 중 {parsed.hit_include}명 포함")
-    print(f"반드시 제외 5명 중 {parsed.miss_exclude}명 포함 (0이어야 함)")
+    print(f"반드시 포함 {parsed.include_total}명 중 {parsed.hit_include}명 포함")
+    print(f"반드시 제외 {parsed.exclude_total}명 중 {parsed.miss_exclude}명 포함 (0이어야 함)")
 
     store = ResultStore(RESULTS_DIR / "local" / f"check_{runner.safe_name}.jsonl")
     store.append({

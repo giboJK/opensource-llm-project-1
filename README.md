@@ -74,8 +74,8 @@ uv run scripts/02_compare_models.py --sets set01 --repeat 5
 |---|---|
 | 파일 | `data/eval/set01.json` ~ `set10.json` |
 | 세트당 인원 | 50명 |
-| 세트당 명부 크기 | 약 9,600~10,500토큰 |
-| 정답 | 세트당 반드시 포함 5명, 반드시 제외 5명 |
+| 세트당 명부 크기 | 약 10,200~10,700토큰 |
+| 정답 | 세트당 반드시 포함 10명(급성 5 / 만성 5), 반드시 제외 5명 |
 
 자세한 구성은 [data/sample_congregation_members.md](data/sample_congregation_members.md)를
 참고하세요. 채점 기준은 [docs/step5.md](docs/step5.md)에 있습니다.
