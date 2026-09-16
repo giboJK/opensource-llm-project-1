@@ -19,6 +19,7 @@ Thumbs.db
 # Editor
 .vscode/*
 !.vscode/settings.json
+.obsidian/
 
 # Model weights (never commit these)
 *.gguf
