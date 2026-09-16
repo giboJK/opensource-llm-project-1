@@ -1,189 +1,35 @@
-"""가상 교인 300명 + 가족관계 + 심방 기록 + 기도제목 + 소속 이력 데이터를 생성합니다
-(전부 합성 데이터, 실제 인물과 무관).
+"""가상 교인 한 명을 만드는 로직 모음 (전부 합성 데이터, 실제 인물과 무관).
 
-- 앞의 15명: 기존에 손으로 만든 인물 (STEP 5 질문 10개가 이름으로 직접 참조하므로 내용을 바꾸지 않습니다).
-- 그다음 17명: 위 15명 중 일부의 배우자/자녀/부모를 새로 만들어 가족관계를 채웁니다
-  (예: 최지안님의 남편, 윤서준(8세)의 부모 등).
-- 나머지: "가구(household)" 단위로 무작위 생성 — 1인 가구, 부부, 자녀가 있는 가정,
-  3대가 함께인 가정 등을 섞어서 총원 300명을 채웁니다.
-- 같은 시드(seed=42)를 쓰므로 다시 실행해도 항상 같은 데이터가 나옵니다.
+직접 실행하는 파일이 아닙니다. sample_member_generator.py 가 이 함수들을 가져다
+평가 세트를 조립합니다.
 
-추가로 각 인물마다:
-- visitation_records: 최근 3년간의 심방 기록 (평균 약 3달에 한 번, last_visitation_date를
-  마지막 기록으로 삼아 과거로 역산해서 생성 — "정보 없음"/"해당없음" 등인 사람은 기록 없음).
-- prayer_requests: 기도제목 목록 (인원당 평균 6개, 최소 0 최대 15).
-- community_history: 최근 3개년(각 연도)의 소속 공동체 이력 — 교육부/행정부/봉사부 산하
-  공동체 중 연도별로 0~2개(무소속 가능), 나이대에 맞춰 자녀는 교육부 위주로 배정.
-- 전체의 약 10%(--unknown-ratio)는 담당자 입력이 빠져 기록이 거의 비어 있는 '정보 부족' 교인으로
-  만듭니다. 절반은 출석까지 "정보 없음"이고, 나머지 절반은 출석 기록만 남습니다.
+가구 단위로 사람을 만듭니다. 1인 가구, 부부, 자녀가 있는 가정, 3대가 함께인 가정을
+확률로 섞어 뽑고, 그 안에서 배우자·자녀·부모·조부모를 서로 연결합니다.
 
-실행:
-    uv run scripts/generate_sample_congregation.py
-    uv run scripts/generate_sample_congregation.py --total 500 --years 5 --out data/congregation_500_5y.json
+사람마다 붙는 것
+    prayer_requests      기도제목. 나이와 성별에 맞는 주제만, 1인당 평균 6개(최소 0, 최대 15)
+    visitation_records   심방 기록. last_visitation_date 에서 평균 약 3개월 간격으로 역산
+    community_history    소속 공동체. 연도별 0~2개(무소속 가능), 만 4세부터
+    family / family_note 세트 안의 가족관계, 없으면 사유
 
-결과:
-    --out 으로 지정한 경로(기본 data/congregation_300_3y.json)를 덮어씁니다.
+앞뒤가 맞도록 거는 제약
+    - 건강·경조사·비고는 나이를 봅니다. 7세에게 "자녀 결혼"이 붙지 않습니다.
+    - 소속 이력과 기도제목 등록일은 신앙 연차를 넘지 않습니다.
+    - 비고란에는 그 사람에 대한 사실만 적습니다. 판단이나 지시는 넣지 않습니다.
+      "심방 필요" 같은 문구가 들어가면 모델이 명부에 적힌 답을 따라 읽게 되어
+      채점이 의미를 잃습니다.
 
-각 인물의 "family" 필드는 이 데이터셋 안의 다른 인물과의 관계
-(member_id, name, relation)를 담고, "family_note"는 데이터셋에 없는 가족
-(예: 타지역에 사는 교인 아닌 자녀)이나 "정보 없음" 같은 상태를 담습니다.
+일부는 담당자 입력이 빠진 '정보 부족' 교인으로 만듭니다. 실제 교회 명부를 재현한 것입니다.
 """
 
-import argparse
-import json
 import random
 import string
 from datetime import date, timedelta
-from pathlib import Path
 
 RANDOM_SEED = 42
-TOTAL_MEMBERS = 300
 TODAY = date(2026, 9, 14)
 HISTORY_YEARS = 3  # 심방 기록 / 소속 이력 모두 최근 3년 기준
 UNKNOWN_RATIO = 0.10  # 기록이 거의 비어 있는 '정보 부족' 교인 비율 (권장 0.08~0.12)
-
-OUT_PATH = Path(__file__).parent.parent / "data" / "congregation_300_3y.json"
-
-# --- 기존 15명, 명부의 맨 앞에 놓입니다
-# (STEP 5 질문 10개가 이 이름들을 그대로 참조하므로 이름/나이/상황을 바꾸지 않습니다) ---
-#
-# DB는 DB입니다. 아래 항목에는 "그 사람에 대한 사실"만 적습니다.
-#   - 데이터 설명을 적지 않습니다.      (X) "정보가 거의 없는 상태", "(정보 부족 사례)"
-#   - 판단이나 지시를 적지 않습니다.    (X) "자녀는 보호자 기준으로 판단 필요", "함께 심방 필요"
-# 이런 문구가 들어가면 모델이 스스로 판단하는 대신 명부에 적힌 답을 따라 읽게 되어,
-# 정보 부족 상황을 제대로 다루는지 재려던 q07~q09의 채점이 의미를 잃습니다.
-CURATED_MEMBERS = [
-    {"name": "김도윤", "age": 78, "gender": "남", "faith_years": 32, "last_visitation_date": "2025-11-02",
-     "recent_attendance": "최근 8주 중 2주 출석", "health_note": "지난달 낙상으로 입원, 현재 자택 요양 중",
-     "family_event": "없음", "special_note": "거동이 불편해 혼자 예배 참석이 어려움"},
-    {"name": "이서연", "age": 34, "gender": "여", "faith_years": 1, "last_visitation_date": "심방 기록 없음",
-     "recent_attendance": "최근 8주 중 7주 출석", "health_note": "특이사항 없음",
-     "family_event": "두 달 전 세례 받음", "special_note": "새신자, 아직 공동체에 아는 사람이 적다고 함"},
-    {"name": "박현우", "age": 45, "gender": "남", "faith_years": 15, "last_visitation_date": "2026-08-20",
-     "recent_attendance": "최근 8주 중 8주 출석", "health_note": "특이사항 없음",
-     "family_event": "없음", "special_note": "정기적으로 봉사에 참여, 최근 특별한 이슈 없음"},
-    {"name": "최지안", "age": 62, "gender": "여", "faith_years": 20, "last_visitation_date": "2025-09-10",
-     "recent_attendance": "최근 8주 중 1주 출석", "health_note": "본인 특이사항 없음",
-     "family_event": "3주 전 배우자 수술", "special_note": "본인이 아니라 배우자 간병 부담이 큰 상황"},
-    {"name": "정하율", "age": 29, "gender": "남", "faith_years": 5, "last_visitation_date": "2026-06-15",
-     "recent_attendance": "최근 8주 중 0주 출석", "health_note": "정보 없음",
-     "family_event": "정보 없음", "special_note": "연락이 잘 닿지 않음, 이유 불명"},
-    {"name": "한소율", "age": 51, "gender": "여", "faith_years": 25, "last_visitation_date": "2026-01-05",
-     "recent_attendance": "최근 8주 중 6주 출석", "health_note": "특이사항 없음",
-     "family_event": "지난주 부친상", "special_note": "장례 이후 첫 예배 참석 예정"},
-    {"name": "윤서준", "age": 8, "gender": "남", "faith_years": "해당없음(자녀)", "last_visitation_date": "해당없음",
-     "recent_attendance": "부모와 함께 최근 8주 중 8주 출석", "health_note": "특이사항 없음",
-     "family_event": "없음", "special_note": "부모와 함께 출석"},
-    {"name": "강민재", "age": 39, "gender": "남", "faith_years": 10, "last_visitation_date": "2026-07-01",
-     "recent_attendance": "최근 8주 중 8주 출석", "health_note": "특이사항 없음",
-     "family_event": "없음", "special_note": "특별한 요청 사항 없음"},
-    {"name": "오지훈", "age": 71, "gender": "남", "faith_years": 40, "last_visitation_date": "2025-05-20",
-     "recent_attendance": "최근 8주 중 3주 출석", "health_note": "만성 신장질환으로 격주 투석 중",
-     "family_event": "없음", "special_note": "체력 저하로 예배 참석이 점차 줄고 있음"},
-    {"name": "백수아", "age": 26, "gender": "여", "faith_years": 0, "last_visitation_date": "심방 기록 없음",
-     "recent_attendance": "지난주 첫 방문", "health_note": "정보 없음",
-     "family_event": "정보 없음", "special_note": "지인 소개로 처음 방문"},
-    {"name": "임도현", "age": 55, "gender": "남", "faith_years": 18, "last_visitation_date": "2026-02-14",
-     "recent_attendance": "최근 8주 중 5주 출석", "health_note": "특이사항 없음",
-     "family_event": "한 달 전 실직", "special_note": "경제적 어려움을 최근 대화 중 언급함"},
-    {"name": "노은채", "age": 83, "gender": "여", "faith_years": 50, "last_visitation_date": "2025-12-01",
-     "recent_attendance": "최근 8주 중 0주 출석", "health_note": "요양병원 입원 중",
-     "family_event": "없음", "special_note": "장기 입원으로 공동체와 접촉이 거의 끊긴 상태"},
-    {"name": "권지호", "age": 41, "gender": "남", "faith_years": 12, "last_visitation_date": "2026-08-01",
-     "recent_attendance": "최근 8주 중 7주 출석", "health_note": "특이사항 없음",
-     "family_event": "없음", "special_note": "특이사항 없음"},
-    {"name": "송예은", "age": 33, "gender": "여", "faith_years": 3, "last_visitation_date": "2026-04-22",
-     "recent_attendance": "최근 8주 중 6주 출석", "health_note": "특이사항 없음",
-     "family_event": "2주 전 출산", "special_note": "산후 회복 중, 외부 방문보다 전화 연락을 선호할 수 있음"},
-    {"name": "문시우", "age": 60, "gender": "남", "faith_years": 22, "last_visitation_date": "정보 없음",
-     "recent_attendance": "정보 없음", "health_note": "정보 없음",
-     "family_event": "정보 없음", "special_note": "최근 담당자 교체로 인수인계 기록이 누락됨"},
-]
-
-# 위 15명 중 가족을 새로 채울 인물의 인덱스(0-based)와, 만들어줄 가족 스펙.
-# relation은 "새 인물 -> 커리티드 인물" 관계를 새 인물 시점에서 적습니다.
-CURATED_FAMILY_PLAN = {
-    0: [  # 김도윤 (78,남) - 아내
-        {"name": "이순자", "age": 75, "gender": "여", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "없음",
-         "special_note": "남편(김도윤)의 자택 요양을 홀로 돌보고 있음"},
-    ],
-    2: [  # 박현우 (45,남) - 아내 + 자녀 2
-        {"name": "장미래", "age": 43, "gender": "여", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "특이사항 없음"},
-        {"name": "박서아", "age": 14, "gender": "여", "relation_to_curated": "자녀",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "중학생"},
-        {"name": "박도훈", "age": 11, "gender": "남", "relation_to_curated": "자녀",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "초등학생"},
-    ],
-    3: [  # 최지안 (62,여) - 남편(최근 수술)
-        {"name": "정우진", "age": 65, "gender": "남", "relation_to_curated": "배우자",
-         "health_note": "3주 전 수술, 현재 재활 중", "family_event": "본인 수술",
-         "special_note": "회복 중이라 거동이 불편함, 아내(최지안)가 간병 중"},
-    ],
-    5: [  # 한소율 (51,여) - 남편 + 자녀 1
-        {"name": "한동민", "age": 53, "gender": "남", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "장인상(지난주)", "special_note": "특이사항 없음"},
-        {"name": "한지유", "age": 17, "gender": "여", "relation_to_curated": "자녀",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "고등학생"},
-    ],
-    6: [  # 윤서준 (8,남) - 부모
-        {"name": "윤도경", "age": 42, "gender": "남", "relation_to_curated": "부모",
-         "health_note": "특이사항 없음", "family_event": "없음",
-         "special_note": "주말 근무가 잦아 예배 참석이 불규칙함"},
-        {"name": "윤채아", "age": 40, "gender": "여", "relation_to_curated": "부모",
-         "health_note": "특이사항 없음", "family_event": "없음",
-         "special_note": "교육부 봉사에 참여 중"},
-    ],
-    7: [  # 강민재 (39,남) - 아내 + 자녀 1
-        {"name": "강하은", "age": 37, "gender": "여", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "특이사항 없음"},
-        {"name": "강주원", "age": 6, "gender": "남", "relation_to_curated": "자녀",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "미취학 아동"},
-    ],
-    8: [  # 오지훈 (71,남) - 아내
-        {"name": "오말순", "age": 69, "gender": "여", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "없음",
-         "special_note": "남편(오지훈)의 투석 통원을 돕고 있음"},
-    ],
-    10: [  # 임도현 (55,남) - 아내 + 자녀 1
-        {"name": "임서영", "age": 52, "gender": "여", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "없음",
-         "special_note": "남편의 실직으로 함께 어려움을 겪고 있음"},
-        {"name": "임하준", "age": 16, "gender": "남", "relation_to_curated": "자녀",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "고등학생"},
-    ],
-    12: [  # 권지호 (41,남) - 아내
-        {"name": "권나연", "age": 40, "gender": "여", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "없음", "special_note": "특이사항 없음"},
-    ],
-    13: [  # 송예은 (33,여) - 남편 + 신생아
-        {"name": "송민호", "age": 35, "gender": "남", "relation_to_curated": "배우자",
-         "health_note": "특이사항 없음", "family_event": "2주 전 득남", "special_note": "육아휴직 중"},
-        {"name": "송아윤", "age": 0, "gender": "여", "relation_to_curated": "자녀",
-         "health_note": "정상 출생, 특이사항 없음", "family_event": "2주 전 출생",
-         "special_note": "생후 2주"},
-    ],
-}
-
-# 위 딕셔너리에 없는 인덱스(1,4,9,11,14 = 이서연/정하율/백수아/노은채/문시우)는
-# family_note로만 상태를 설명합니다 (아래 CURATED_FAMILY_NOTE 참고).
-CURATED_FAMILY_NOTE = {
-    1: "정보 없음",
-    4: "정보 없음",
-    9: "정보 없음",
-    11: "배우자와는 사별, 자녀들은 타지역 거주(교인 아님)",
-    14: "정보 없음",
-}
-
-RELATION_INVERSE = {
-    "배우자": "배우자",
-    "자녀": None,  # 부모->자녀 방향은 자녀의 성별에 따라 아래에서 결정
-    "부모": None,  # 자녀->부모 방향은 부모의 성별에 따라 아래에서 결정
-    "조부모": None,
-    "손주": None,
-    "형제자매": "형제자매",
-}
 
 SURNAMES = list("김이박최정강조윤장임한오신권황안송전홍유고문양손배백")
 GIVEN_SYLLABLES = list(
@@ -428,56 +274,6 @@ def pick_household_generator():
     return HOUSEHOLD_GENERATORS[0][0]
 
 
-def build_curated_cluster() -> tuple[list, list]:
-    """커리티드 15명 + 그들의 새 가족 구성원을 하나의 (임시)리스트로 만들고,
-    관계(local index 기준)도 함께 반환합니다. 커리티드 인물은 항상 인덱스 0~14."""
-    members = []
-    for c in CURATED_MEMBERS:
-        m = dict(c)
-        members.append(m)
-
-    relations = []
-    for curated_idx, new_people in CURATED_FAMILY_PLAN.items():
-        for spec in new_people:
-            rel_to_curated = spec["relation_to_curated"]
-            age = spec["age"]
-            is_child = age < 13
-            new_member = {
-                "name": spec["name"],
-                "age": age,
-                "gender": spec["gender"],
-                "faith_years": "해당없음(자녀)" if is_child and age < 5 else (
-                    random.randint(0, max(0, age - 10)) if not is_child else "해당없음(자녀)"
-                ),
-                "last_visitation_date": "해당없음" if is_child else random_past_date_or_missing(20, 0.15),
-                "recent_attendance": (
-                    f"부모와 함께 최근 8주 중 {random.randint(4, 8)}주 출석" if is_child
-                    else f"최근 8주 중 {random.randint(0, 8)}주 출석"
-                ),
-                "health_note": spec["health_note"],
-                "family_event": spec["family_event"],
-                "special_note": spec["special_note"],
-            }
-            _used_names.add(spec["name"])
-            new_idx = len(members)
-            members.append(new_member)
-
-            if rel_to_curated == "배우자":
-                relations.append((new_idx, curated_idx, "배우자"))
-                relations.append((curated_idx, new_idx, "배우자"))
-            elif rel_to_curated == "자녀":
-                curated_gender = CURATED_MEMBERS[curated_idx]["gender"]
-                relations.append((curated_idx, new_idx, "자녀"))
-                relations.append((new_idx, curated_idx, _child_to_parent_relation(curated_gender)))
-            elif rel_to_curated == "부모":
-                new_gender = spec["gender"]
-                relations.append((new_idx, curated_idx, "자녀"))
-                relations.append((curated_idx, new_idx, _child_to_parent_relation(new_gender)))
-
-    return members, relations
-
-
-# --- 소속 공동체 (부서별 최소 3개 이상) ---
 COMMUNITIES = {
     "교육부": ["유치부", "초등부", "중고등부", "대학청년부"],
     "행정부": ["재정팀", "홍보팀", "시설관리팀", "서기팀"],
@@ -681,22 +477,20 @@ def make_member_ids(count: int, seed: int) -> list:
 UNKNOWN_BASE_FIELDS = ["health_note", "family_event", "special_note", "last_visitation_date"]
 
 
-def apply_unknown_members(all_members: list, ratio: float, curated_count: int) -> list:
+def apply_unknown_members(all_members: list, ratio: float, curated_count: int = 0) -> list:
     """기록이 거의 비어 있는 '정보 부족' 교인을 비율만큼 만듭니다.
 
     실제 교회 명부에서 담당자 입력이 빠진 성도를 재현한 것입니다. 두 단계로 나눕니다.
       - 전면 미기재: 출석까지 포함해 판단 근거가 전부 "정보 없음"
       - 기본만 있음: 출석 기록만 남고 건강/경조사/비고/심방/기도제목/소속은 비어 있음
 
-    손으로 만든 앞의 15명은 질문이 내용을 그대로 참조하므로 기본 필드를 덮어쓰지 않고,
-    설계상 정보가 없어야 하는 인물(정하율/백수아/문시우)만 이력 3종을 비웁니다.
+    curated_count 는 앞에서부터 기본 필드를 건드리지 않을 인원 수입니다. 기본값 0 이면
+    전원이 대상입니다.
     """
-    curated_unknown = {"정하율", "백수아", "문시우"}
-    forced = [i for i, m in enumerate(all_members) if m["name"] in curated_unknown]
     # 가구 생성 단계에서 이미 기본 정보가 비어 있는 인물도 같은 코호트로 묶습니다
     # (출석은 "정보 없음"인데 기도제목만 잔뜩 있는 앞뒤 안 맞는 상태를 막습니다).
-    forced += [i for i, m in enumerate(all_members)
-               if i >= curated_count and m["recent_attendance"] == "정보 없음"]
+    forced = [i for i, m in enumerate(all_members)
+              if i >= curated_count and m["recent_attendance"] == "정보 없음"]
     forced = sorted(set(forced))
     target = round(len(all_members) * ratio)
     pool = [i for i in range(curated_count, len(all_members)) if i not in set(forced)]
@@ -717,113 +511,3 @@ def apply_unknown_members(all_members: list, ratio: float, curated_count: int) -
         if not m["family"]:
             m["family_note"] = "정보 없음"
     return sorted(all_members[i]["id"] for i in chosen)
-
-
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="가상 교인 데이터 생성 (인원수 / 이력 연차 / 시드 / 출력 경로 조절)"
-    )
-    parser.add_argument("--total", type=int, default=TOTAL_MEMBERS,
-                        help=f"총 인원 수 (기본 {TOTAL_MEMBERS})")
-    parser.add_argument("--years", type=int, default=HISTORY_YEARS,
-                        help=f"심방 기록 / 소속 이력 연차 (기본 {HISTORY_YEARS})")
-    parser.add_argument("--unknown-ratio", type=float, default=UNKNOWN_RATIO,
-                        help=f"기록이 거의 비어 있는 정보 부족 교인 비율 (기본 {UNKNOWN_RATIO}, 권장 0.08~0.12)")
-    parser.add_argument("--seed", type=int, default=RANDOM_SEED,
-                        help=f"난수 시드 (기본 {RANDOM_SEED})")
-    parser.add_argument("--out", type=Path, default=OUT_PATH,
-                        help="출력 JSON 경로 (기본 data/congregation_300_3y.json)")
-    return parser.parse_args()
-
-
-def main():
-    global TOTAL_MEMBERS, HISTORY_YEARS, RANDOM_SEED, OUT_PATH, UNKNOWN_RATIO
-    args = parse_args()
-    TOTAL_MEMBERS = args.total
-    HISTORY_YEARS = args.years
-    RANDOM_SEED = args.seed
-    OUT_PATH = args.out
-    UNKNOWN_RATIO = max(0.0, min(1.0, args.unknown_ratio))
-
-    random.seed(RANDOM_SEED)
-    global _used_names
-    _used_names = set()
-
-    all_members: list = []
-    all_relations: list = []  # (global_i, global_j, relation_i_to_j)
-
-    # 1) 커리티드 15명 + 새로 만든 가족
-    cluster_members, cluster_relations = build_curated_cluster()
-    offset = len(all_members)
-    all_members.extend(cluster_members)
-    for i, j, rel in cluster_relations:
-        all_relations.append((i + offset, j + offset, rel))
-
-    # 2) 나머지는 가구 단위로 채워서 TOTAL_MEMBERS에 도달
-    while len(all_members) < TOTAL_MEMBERS:
-        remaining = TOTAL_MEMBERS - len(all_members)
-        gen = pick_household_generator()
-        hh_members, hh_relations = gen()
-        if len(hh_members) > remaining:
-            hh_members = hh_members[:remaining]
-            hh_relations = [(i, j, r) for (i, j, r) in hh_relations if i < len(hh_members) and j < len(hh_members)]
-        offset = len(all_members)
-        all_members.extend(hh_members)
-        for i, j, rel in hh_relations:
-            all_relations.append((i + offset, j + offset, rel))
-
-    # 3) ID 부여
-    ids = make_member_ids(len(all_members), RANDOM_SEED)
-    for m, mid in zip(all_members, ids):
-        m["id"] = mid
-
-    # 4) family 필드 구성 (관계를 member_id/name 기반으로 변환)
-    family_lists = [[] for _ in all_members]
-    for i, j, rel in all_relations:
-        family_lists[i].append({"member_id": ids[j], "name": all_members[j]["name"], "relation": rel})
-
-    for idx, m in enumerate(all_members):
-        m["family"] = family_lists[idx]
-
-    # 5) family_note: 커리티드 중 가족 정보가 없는 인물 + 관계가 하나도 없는 나머지 인물
-    for curated_idx, note in CURATED_FAMILY_NOTE.items():
-        all_members[curated_idx]["family_note"] = note
-    for m in all_members:
-        if "family_note" not in m:
-            m["family_note"] = "" if m["family"] else "정보 없음"
-
-    # 6) 기도제목 / 심방 기록 / 소속 이력
-    for m in all_members:
-        earliest = TODAY - timedelta(days=365 * HISTORY_YEARS)
-        prayer_requests = generate_prayer_requests(earliest, m["age"], m["gender"], m["faith_years"])
-        m["prayer_requests"] = prayer_requests
-        m["visitation_records"] = generate_visitation_records(m["last_visitation_date"], prayer_requests)
-        m["community_history"] = generate_community_history(m["age"], m["faith_years"])
-
-    # 6-1) 기록이 거의 비어 있는 '정보 부족' 교인 (실제 명부에서 입력이 빠진 성도 재현)
-    unknown_ids = apply_unknown_members(all_members, UNKNOWN_RATIO, len(CURATED_MEMBERS))
-
-    # 7) 필드 순서 정리
-    field_order = [
-        "id", "name", "age", "gender", "faith_years", "last_visitation_date",
-        "recent_attendance", "health_note", "family_event", "special_note",
-        "family", "family_note", "prayer_requests", "visitation_records", "community_history",
-    ]
-    ordered_members = [{k: m[k] for k in field_order} for m in all_members]
-
-    # 데이터 파일에는 명부만 남깁니다. 생성 조건, 정보 부족 교인 명단, 데이터 설명처럼 실제 교회
-    # DB에 없을 항목은 넣지 않습니다. 이 데이터가 무엇인지는 data/sample_congregation_members.md
-    # 에 적혀 있고, 정보 부족 교인은 기도제목/심방기록/소속이력이 모두 빈 사람으로 추려낼 수 있습니다.
-    output = {
-        "communities": COMMUNITIES,
-        "members": ordered_members,
-    }
-
-    with open(OUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print(f"{len(ordered_members)}명 생성 완료 (정보 부족 {len(unknown_ids)}명) -> {OUT_PATH}")
-
-
-if __name__ == "__main__":
-    main()

@@ -69,8 +69,8 @@ cohort = [m["id"] for m in members
 시드가 고정돼 있어 다시 돌려도 같은 결과가 나옵니다.
 
 ```powershell
-uv run scripts/generate_eval_sets.py
+uv run scripts/member_data/sample_member_generator.py
 ```
 
-세트 개수와 인원은 `--sets`, `--size`로 조절합니다. 가구 구성·기도제목·심방 기록을 만드는
-부분은 `scripts/generate_sample_congregation.py`에 있고 `generate_eval_sets.py`가 가져다 씁니다.
+세트 개수와 인원은 `--sets`, `--size`로 조절합니다. 가구 구성·기도제목·심방 기록처럼
+사람 한 명을 만드는 로직은 `scripts/member_data/member_generation_logic.py`에 있고, 이 생성기가 가져다 씁니다.

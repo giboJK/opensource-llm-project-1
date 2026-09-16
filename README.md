@@ -28,7 +28,7 @@
 │   ├── eval/
 │   │   ├── set01.json ~ set10.json     # 평가 세트 10개 (각 50명)
 │   │   └── answer_key.json             # 세트별 정답 (포함 5명 / 제외 5명)
-│   └── sample_congregation_members.md  # 데이터 설명
+│   └── eval_data.md                    # 평가 세트 데이터 설명
 ├── scripts/
 │   ├── experiment.py                   # 공통 모듈 (세트 로드, 프롬프트, 호출, 채점)
 │   ├── 01_ollama_chat.py               # 세트 하나 돌려 응답 확인
@@ -36,8 +36,9 @@
 │   ├── 03_step6_run.py                 # STEP 6 본 실험 (워밍업 분리, 성능 측정)
 │   ├── 04_report.py                    # 기록을 브라우저 화면으로
 │   ├── report_template.html            # 그 화면 (여기만 고치면 보는 방식이 바뀜)
-│   ├── generate_eval_sets.py           # 평가 세트 생성
-│   └── generate_sample_congregation.py # 명부 생성 부품
+│   └── member_data/
+│       ├── sample_member_generator.py  # 평가 세트 생성 (실행)
+│       └── member_generation_logic.py  # 교인 한 명을 만드는 로직 (import 전용)
 └── results/                            # 후보 이름으로 폴더를 나눠 저장
     ├── local/
     │   ├── qwen3_4b-instruct-2507-q4_K_M/
@@ -65,7 +66,7 @@ copy .env.example .env
 
 ```powershell
 # 평가 세트 다시 만들기 (시드 고정이라 항상 같은 결과)
-uv run scripts/generate_eval_sets.py
+uv run scripts/member_data/sample_member_generator.py
 
 # 세트 하나로 응답 확인
 uv run scripts/01_ollama_chat.py
@@ -91,7 +92,7 @@ uv run scripts/02_compare_models.py --sets set01 --repeat 5
 | 세트당 명부 크기 | 약 10,200~10,700토큰 |
 | 정답 | 세트당 반드시 포함 10명(급성 5 / 만성 5), 반드시 제외 5명 |
 
-자세한 구성은 [data/sample_congregation_members.md](data/sample_congregation_members.md)를
+자세한 구성은 [data/eval_data.md](data/eval_data.md)를
 참고하세요. 채점 기준은 [docs/step5.md](docs/step5.md)에 있습니다.
 
 ## 재실행 확인

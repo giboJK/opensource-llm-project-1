@@ -8,7 +8,7 @@ window.REPORT_META = {
   "run_at": "2026-09-16 14:00",
   "source": "step6_20260916_135505.jsonl",
   "rerun": "uv run scripts/03_step6_run.py --models gemma3:4b",
-  "generated_at": "2026-09-16T15:29:29"
+  "generated_at": "2026-09-16T15:41:43"
 };
 window.RECORDS = [
   {

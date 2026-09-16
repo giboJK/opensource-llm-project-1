@@ -1,10 +1,10 @@
-"""평가 세트 10개(각 50명)를 만듭니다.
+"""샘플 교인으로 평가 세트 10개(각 50명)를 만듭니다.
 
 STEP 5의 고정 문제 10개가 이 10개 명부입니다. 세트마다 정답이 심어져 있습니다.
 
 - 반드시 top 10에 들어갈 5명: 시점이 적힌 경조사·수술·입원 기록
 - 반드시 top 10에서 빠질 5명: 출석이 좋고 특이사항이 없으며 최근 심방을 다녀옴
-- 나머지 40명: 가구 단위 무작위 (기존 생성기와 동일)
+- 나머지 40명: 가구 단위 무작위
 
 정답을 새로 만든 인물로 넣지 않고, 무작위로 생성된 인원 중 일부의 필드를 덮어쓰는 방식입니다.
 가족관계와 기도제목이 그대로 남아 있어 심어 넣은 티가 나지 않습니다.
@@ -12,8 +12,10 @@ STEP 5의 고정 문제 10개가 이 10개 명부입니다. 세트마다 정답�
 명부 파일에는 명부만 들어갑니다. 정답은 data/eval/answer_key.json 에 따로 나갑니다.
 세트별로 시드가 고정돼 있어 다시 실행해도 같은 결과가 나옵니다.
 
+사람을 만드는 로직은 member_generation_logic.py 에 있고 여기서 가져다 씁니다.
+
 실행:
-    uv run scripts/generate_eval_sets.py
+    uv run scripts/sample_member_generator.py
 """
 
 import argparse
@@ -25,9 +27,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-import generate_sample_congregation as G
+import member_generation_logic as G
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).parent.parent.parent   # scripts/member_data/ 에서 두 단계 위
 OUT_DIR = ROOT / "data" / "eval"
 
 SET_COUNT = 10
@@ -122,7 +124,7 @@ EXCLUDE_TEMPLATES = [
 
 
 def build_members(size: int, seed: int) -> list:
-    """가구 단위로 size명을 만듭니다 (기존 생성기와 같은 방식, 커리티드 인물은 빼고)."""
+    """가구 단위로 size명을 만듭니다."""
     random.seed(seed)
     members: list = []
     relations: list = []
