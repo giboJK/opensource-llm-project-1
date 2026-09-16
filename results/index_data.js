@@ -2,7 +2,7 @@
 // index.html 이 열릴 때 이 값을 읽어 직접 계산해 그립니다.
 
 window.RESULTS_INDEX = {
-  "generated_at": "2026-09-16T15:55:05",
+  "generated_at": "2026-09-16T17:06:22",
   "design": {
     "task": "교인 명부 50명을 읽고, 다음 7일 동안 심방해야 할 교인 top 10을 순위와 근거로 뽑는다",
     "instruction": "[작업]\n오늘은 2026-09-14입니다. 아래 교인 명부를 읽고, 오늘부터 다음 7일 동안\n심방해야 할 교인 10명을 우선순위가 높은 순서로 골라 주세요.\n\n- 명부에 있는 교인만 고릅니다. 같은 교인을 두 번 넣지 않습니다.\n- id 는 명부에서 이름 앞 대괄호 안에 있는 6자리 값입니다. 대괄호는 빼고 값만 씁니다.\n- 각 교인마다 명부에 적힌 내용을 근거로 한 줄을 씁니다.\n- 명부에 없는 내용은 쓰지 않습니다.\n- 아래 JSON 형식으로만 답합니다. 다른 설명을 붙이지 않습니다.\n\n{\"top10\": [{\"rank\": 1, \"id\": \"대괄호 안 6자리 값\", \"name\": \"이름\", \"reason\": \"근거 한 줄\"}]}",
@@ -4540,7 +4540,1055 @@ window.RESULTS_INDEX = {
     {
       "scope": "cloud",
       "label": "Cloud",
-      "models": []
+      "models": [
+        {
+          "model": "gpt-5.6-luna",
+          "folder": "gpt-5.6-luna",
+          "runs": [
+            {
+              "id": "20260916_165955",
+              "label": "2026-09-16 16:59",
+              "file": "step6_20260916_165955.jsonl",
+              "meta": {
+                "captured": "실행 시점",
+                "run_at": "2026-09-16T17:00:10",
+                "model": "gpt-5.6-luna",
+                "profile": {
+                  "model": "gpt-5.6-luna",
+                  "digest": null,
+                  "quantization_level": null,
+                  "parameter_size": null,
+                  "context_length": null,
+                  "base_url": "https://api.openai.com/v1",
+                  "note": "Cloud 모델이라 digest·양자화·VRAM 은 공개되지 않습니다",
+                  "owned_by": "system",
+                  "created": 1782228658
+                },
+                "vram": {
+                  "size_vram_mib": null,
+                  "size_mib": null,
+                  "processor": null,
+                  "note": "Cloud 모델이라 해당 없음"
+                },
+                "options": {
+                  "num_ctx": 16384,
+                  "temperature": 0.0,
+                  "num_predict": null
+                },
+                "sets": [
+                  "set01",
+                  "set02",
+                  "set03",
+                  "set04",
+                  "set05",
+                  "set06",
+                  "set07",
+                  "set08",
+                  "set09",
+                  "set10"
+                ],
+                "repeat": 2,
+                "warmup_set": "set01",
+                "instruction": "[작업]\n오늘은 2026-09-14입니다. 아래 교인 명부를 읽고, 오늘부터 다음 7일 동안\n심방해야 할 교인 10명을 우선순위가 높은 순서로 골라 주세요.\n\n- 명부에 있는 교인만 고릅니다. 같은 교인을 두 번 넣지 않습니다.\n- id 는 명부에서 이름 앞 대괄호 안에 있는 6자리 값입니다. 대괄호는 빼고 값만 씁니다.\n- 각 교인마다 명부에 적힌 내용을 근거로 한 줄을 씁니다.\n- 명부에 없는 내용은 쓰지 않습니다.\n- 아래 JSON 형식으로만 답합니다. 다른 설명을 붙이지 않습니다.\n\n{\"top10\": [{\"rank\": 1, \"id\": \"대괄호 안 6자리 값\", \"name\": \"이름\", \"reason\": \"근거 한 줄\"}]}",
+                "prompt_chars": 15152
+              },
+              "records": [
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:00:26",
+                  "model": "gpt-5.6-luna",
+                  "set": "set01",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15152,
+                  "perf": {
+                    "elapsed_sec": 16.3,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9451,
+                    "eval_count": 1419,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 9,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "MnaBL1",
+                      "ARig34",
+                      "GleXnY",
+                      "HLxEbU",
+                      "dn4vYH",
+                      "xU95JX",
+                      "9UDb6k",
+                      "18hSwH",
+                      "8qJ43t",
+                      "M4dbV8"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"MnaBL1\",\"name\":\"손서가\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 거동이 불편하며 최근 8주 중 1주 출석했다.\"},{\"rank\":2,\"id\":\"ARig34\",\"name\":\"최시유\",\"reason\":\"지난달 낙상으로 입원했고 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵다.\"},{\"rank\":3,\"id\":\"GleXnY\",\"name\":\"장민온\",\"reason\":\"요양병원 입원 중이고 최근 8주간 0주 출석하며 공동체와 접촉이 거의 끊긴 상태다.\"},{\"rank\":4,\"id\":\"HLxEbU\",\"name\":\"손은영\",\"reason\":\"지난주 부친상을 당했고 장례 이후 첫 예배 참석 예정이다.\"},{\"rank\":5,\"id\":\"dn4vYH\",\"name\":\"양규온\",\"reason\":\"3주 전 배우자 수술 후 간병 부담이 크고 최근 8주간 0주 출석이다.\"},{\"rank\":6,\"id\":\"xU95JX\",\"name\":\"황우인\",\"reason\":\"2주 전 자녀 교통사고로 자녀가 입원해 병원에서 지내는 날이 많고 최근 8주 중 2주 출석했다.\"},{\"rank\":7,\"id\":\"9UDb6k\",\"name\":\"임우아\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵다.\"},{\"rank\":8,\"id\":\"18hSwH\",\"name\":\"조결인\",\"reason\":\"최근 골절로 깁스 중이고 가족 간 갈등을 최근 언급했으며 최근 8주 중 3주 출석했다.\"},{\"rank\":9,\"id\":\"8qJ43t\",\"name\":\"정시원\",\"reason\":\"최근 8주간 0주 출석했고 연락이 잘 닿지 않으며 이유가 불명이다.\"},{\"rank\":10,\"id\":\"M4dbV8\",\"name\":\"조윤도\",\"reason\":\"최근 8주간 0주 출석했고 두 달째 예배에 나오지 않고 있다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:00:45",
+                  "model": "gpt-5.6-luna",
+                  "set": "set01",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15152,
+                  "perf": {
+                    "elapsed_sec": 19.0,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9451,
+                    "eval_count": 1550,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 9,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "HLxEbU",
+                      "MnaBL1",
+                      "ARig34",
+                      "GleXnY",
+                      "dn4vYH",
+                      "9UDb6k",
+                      "xU95JX",
+                      "18hSwH",
+                      "8qJ43t",
+                      "M4dbV8"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"HLxEbU\",\"name\":\"손은영\",\"reason\":\"지난주 부친상을 당했고 장례 이후 첫 예배 참석을 앞두고 있습니다.\"},{\"rank\":2,\"id\":\"MnaBL1\",\"name\":\"손서가\",\"reason\":\"3주 전 수술 후 재활 중이며 회복 과정에서 거동이 불편하고 최근 8주 중 1주만 출석했습니다.\"},{\"rank\":3,\"id\":\"ARig34\",\"name\":\"최시유\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이고 거동이 불편해 혼자 예배에 참석하기 어렵습니다.\"},{\"rank\":4,\"id\":\"GleXnY\",\"name\":\"장민온\",\"reason\":\"요양병원에 입원 중이며 최근 8주간 출석이 없고 공동체와의 접촉이 거의 끊긴 상태입니다.\"},{\"rank\":5,\"id\":\"dn4vYH\",\"name\":\"양규온\",\"reason\":\"최근 8주간 출석이 없고 3주 전 수술한 배우자를 간병하느라 부담이 큰 상황입니다.\"},{\"rank\":6,\"id\":\"9UDb6k\",\"name\":\"임우아\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵고 마지막 심방일이 2025-06-09입니다.\"},{\"rank\":7,\"id\":\"xU95JX\",\"name\":\"황우인\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많으며 최근 8주 중 2주만 출석했습니다.\"},{\"rank\":8,\"id\":\"18hSwH\",\"name\":\"조결인\",\"reason\":\"최근 골절로 깁스 중이고 가족 간 갈등을 최근 언급했으며 최근 8주 중 3주만 출석했습니다.\"},{\"rank\":9,\"id\":\"8qJ43t\",\"name\":\"정시원\",\"reason\":\"최근 8주간 출석이 없고 연락이 잘 닿지 않으며 이유가 확인되지 않은 상태입니다.\"},{\"rank\":10,\"id\":\"M4dbV8\",\"name\":\"조윤도\",\"reason\":\"최근 8주간 출석이 없고 두 달째 예배에 나오지 않고 있습니다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:01:04",
+                  "model": "gpt-5.6-luna",
+                  "set": "set02",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14908,
+                  "perf": {
+                    "elapsed_sec": 19.3,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9293,
+                    "eval_count": 1730,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "B9DVav",
+                      "hQ5snf",
+                      "fu4I1f",
+                      "Qv0uoE",
+                      "S5qfQU",
+                      "M9jMAe",
+                      "DVpQoZ",
+                      "pYdoF6",
+                      "lTWh0L",
+                      "DYAWkn"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"B9DVav\",\"name\":\"박하우\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내게 되었고 식사를 거르는 날이 많으며 최근 8주 중 3주 출석했습니다.\"},{\"rank\":2,\"id\":\"hQ5snf\",\"name\":\"강재재\",\"reason\":\"배우자 별세를 겪었고 당뇨를 관리 중이며 최근 8주 중 0주 출석했습니다.\"},{\"rank\":3,\"id\":\"fu4I1f\",\"name\":\"배아연\",\"reason\":\"항암 치료로 통원 중이고 최근 8주 중 1주 출석했으며 마지막 심방일이 2025-10-03입니다.\"},{\"rank\":4,\"id\":\"Qv0uoE\",\"name\":\"송이경\",\"reason\":\"만성 신장질환으로 격주 투석 중이고 체력 저하로 예배 참석이 점차 줄어 최근 8주 중 1주 출석했습니다.\"},{\"rank\":5,\"id\":\"S5qfQU\",\"name\":\"손나서\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵습니다.\"},{\"rank\":6,\"id\":\"M9jMAe\",\"name\":\"강영솔\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복 중이라 거동이 불편하며 마지막 심방일이 2026-01-28입니다.\"},{\"rank\":7,\"id\":\"DVpQoZ\",\"name\":\"권담연\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원했고 병원에서 지내는 날이 많으며 최근 8주 중 3주 출석했습니다.\"},{\"rank\":8,\"id\":\"pYdoF6\",\"name\":\"최솔지\",\"reason\":\"지난주 부친상을 당했고 장례 이후 첫 예배 참석 예정이며 마지막 심방일이 2026-01-26입니다.\"},{\"rank\":9,\"id\":\"lTWh0L\",\"name\":\"백하람\",\"reason\":\"최근 골절로 깁스 중이고 최근 8주 중 0주 출석했으며 장기 결석 중입니다.\"},{\"rank\":10,\"id\":\"DYAWkn\",\"name\":\"김하태\",\"reason\":\"무릎 관절염으로 보행이 어렵고 예배당 계단을 오르기 어려워 참석이 줄었으며 최근 8주 중 0주 출석했습니다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:01:16",
+                  "model": "gpt-5.6-luna",
+                  "set": "set02",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14908,
+                  "perf": {
+                    "elapsed_sec": 11.8,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9293,
+                    "eval_count": 980,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 7,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "B9DVav",
+                      "fu4I1f",
+                      "Qv0uoE",
+                      "S5qfQU",
+                      "M9jMAe",
+                      "pYdoF6",
+                      "DVpQoZ",
+                      "hQ5snf",
+                      "20H8LP",
+                      "lTWh0L"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"B9DVav\",\"name\":\"박하우\",\"reason\":\"2주 전 배우자가 별세했고 혼자 지내며 식사를 거르는 날이 많으며 최근 8주 중 3주 출석했다.\"},{\"rank\":2,\"id\":\"fu4I1f\",\"name\":\"배아연\",\"reason\":\"항암 치료로 통원 중이고 치료 일정이 있는 주에는 참석이 어려워 최근 8주 중 1주 출석했으며 마지막 심방일이 2025-10-03이다.\"},{\"rank\":3,\"id\":\"Qv0uoE\",\"name\":\"송이경\",\"reason\":\"만성 신장질환으로 격주 투석 중이고 체력 저하로 예배 참석이 점차 줄어 최근 8주 중 1주 출석했다.\"},{\"rank\":4,\"id\":\"S5qfQU\",\"name\":\"손나서\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵다.\"},{\"rank\":5,\"id\":\"M9jMAe\",\"name\":\"강영솔\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복 중이라 거동이 불편하며 마지막 심방일이 2026-01-28이다.\"},{\"rank\":6,\"id\":\"pYdoF6\",\"name\":\"최솔지\",\"reason\":\"지난주 부친상을 당했고 장례 이후 첫 예배 참석을 앞두고 있다.\"},{\"rank\":7,\"id\":\"DVpQoZ\",\"name\":\"권담연\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이며 병원에서 지내는 날이 많고 최근 8주 중 3주 출석했다.\"},{\"rank\":8,\"id\":\"hQ5snf\",\"name\":\"강재재\",\"reason\":\"배우자가 별세했고 당뇨를 관리 중이며 최근 8주 중 0주 출석했고 마지막 심방일은 정보 없음이다.\"},{\"rank\":9,\"id\":\"20H8LP\",\"name\":\"송결유\",\"reason\":\"당뇨 관리 중이고 반려동물 사망을 겪었으며 장기 결석 중으로 사유 확인이 필요하다.\"},{\"rank\":10,\"id\":\"lTWh0L\",\"name\":\"백하람\",\"reason\":\"최근 골절로 깁스 중이고 장기 결석 중으로 사유 확인이 필요하며 최근 8주 중 0주 출석했다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:01:28",
+                  "model": "gpt-5.6-luna",
+                  "set": "set03",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14745,
+                  "perf": {
+                    "elapsed_sec": 11.5,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9147,
+                    "eval_count": 925,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 7,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "vrtXcR",
+                      "qyB6mm",
+                      "K5iJaU",
+                      "gydMuq",
+                      "A0Pul8",
+                      "5GYlky",
+                      "LetGgE",
+                      "iBN2JU",
+                      "BygmdS",
+                      "g62WW5"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"vrtXcR\",\"name\":\"고민현\",\"reason\":\"지난주 응급실 이송 후 입원 중이며 입원 기간이 정해지지 않았다.\"},{\"rank\":2,\"id\":\"qyB6mm\",\"name\":\"이람유\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내게 되어 식사를 거르는 날이 많다고 한다.\"},{\"rank\":3,\"id\":\"K5iJaU\",\"name\":\"송현재\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠다.\"},{\"rank\":4,\"id\":\"gydMuq\",\"name\":\"오현솔\",\"reason\":\"2주 전 자녀 교통사고로 자녀가 입원해 병원에서 지내는 날이 많다.\"},{\"rank\":5,\"id\":\"A0Pul8\",\"name\":\"문서재\",\"reason\":\"3주 전 수술 후 재활 중이며 회복 중이라 거동이 불편하다.\"},{\"rank\":6,\"id\":\"5GYlky\",\"name\":\"강도하\",\"reason\":\"요양병원 입원 중이고 장기 입원으로 공동체와 접촉이 거의 끊긴 상태다.\"},{\"rank\":7,\"id\":\"LetGgE\",\"name\":\"유결진\",\"reason\":\"최근 8주 동안 한 주도 출석하지 않았고 가벼운 우울감을 호소하며 타 지역 이주 예정이다.\"},{\"rank\":8,\"id\":\"iBN2JU\",\"name\":\"장빈람\",\"reason\":\"장기 결석 중이며 만성 질환으로 정기 검진 중이어서 사유 확인이 필요하다.\"},{\"rank\":9,\"id\":\"BygmdS\",\"name\":\"강현민\",\"reason\":\"두 달째 예배에 나오지 않고 있으며 우울감 극복과 직장 내 어려움을 기도제목으로 두고 있다.\"},{\"rank\":10,\"id\":\"g62WW5\",\"name\":\"문나은\",\"reason\":\"최근 8주 동안 출석하지 않았고 가벼운 우울감과 가족 간 갈등을 언급했으며 장기 결석 중이다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:01:39",
+                  "model": "gpt-5.6-luna",
+                  "set": "set03",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14745,
+                  "perf": {
+                    "elapsed_sec": 11.6,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9147,
+                    "eval_count": 975,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "vrtXcR",
+                      "qyB6mm",
+                      "K5iJaU",
+                      "gydMuq",
+                      "A0Pul8",
+                      "5GYlky",
+                      "aizvcI",
+                      "LetGgE",
+                      "iBN2JU",
+                      "BygmdS"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"vrtXcR\",\"name\":\"고민현\",\"reason\":\"지난주 응급실 이송 후 입원 중이며 입원 기간이 아직 정해지지 않음.\"},{\"rank\":2,\"id\":\"qyB6mm\",\"name\":\"이람유\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내게 되었고 식사를 거르는 날이 많다고 함.\"},{\"rank\":3,\"id\":\"K5iJaU\",\"name\":\"송현재\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠음.\"},{\"rank\":4,\"id\":\"gydMuq\",\"name\":\"오현솔\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이며 병원에서 지내는 날이 많음.\"},{\"rank\":5,\"id\":\"A0Pul8\",\"name\":\"문서재\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복 중이라 거동이 불편함.\"},{\"rank\":6,\"id\":\"5GYlky\",\"name\":\"강도하\",\"reason\":\"요양병원에 장기 입원 중이며 공동체와 접촉이 거의 끊긴 상태임.\"},{\"rank\":7,\"id\":\"aizvcI\",\"name\":\"윤빈건\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵다고 함.\"},{\"rank\":8,\"id\":\"LetGgE\",\"name\":\"유결진\",\"reason\":\"최근 8주 중 0주 출석했고 가벼운 우울감을 호소하며 타 지역 이주 예정임.\"},{\"rank\":9,\"id\":\"iBN2JU\",\"name\":\"장빈람\",\"reason\":\"만성 질환으로 정기 검진 중이고 장기 결석 중이라 사유 확인이 필요함.\"},{\"rank\":10,\"id\":\"BygmdS\",\"name\":\"강현민\",\"reason\":\"두 달째 예배에 나오지 않고 있으며 우울감 극복과 직장 내 어려움을 기도제목으로 두고 있음.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:01:48",
+                  "model": "gpt-5.6-luna",
+                  "set": "set04",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14444,
+                  "perf": {
+                    "elapsed_sec": 9.0,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 8982,
+                    "eval_count": 848,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": false,
+                    "issues": [
+                      "명부에 없는 id: 임서영"
+                    ],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "QGOmX1",
+                      "dTZlQF",
+                      "dSXT2Z",
+                      "ix85ag",
+                      "cZaAVp",
+                      "2H1F2v",
+                      "임서영",
+                      "62XnvP",
+                      "7RNw2Y",
+                      "VcbnkZ"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"QGOmX1\",\"name\":\"김현하\",\"reason\":\"요양병원에 장기 입원 중이고 최근 8주간 출석이 없으며 공동체와 접촉이 거의 끊긴 상태입니다.\"},{\"rank\":2,\"id\":\"dTZlQF\",\"name\":\"조유경\",\"reason\":\"2주 전 자녀 교통사고로 자녀가 입원해 병원에서 지내는 날이 많고 최근 8주간 출석이 없습니다.\"},{\"rank\":3,\"id\":\"dSXT2Z\",\"name\":\"강하태\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵고 최근 8주간 출석이 없습니다.\"},{\"rank\":4,\"id\":\"ix85ag\",\"name\":\"권지결\",\"reason\":\"3주 전 배우자 수술 후 간병 부담이 큰 상황이며 최근 8주간 출석이 없습니다.\"},{\"rank\":5,\"id\":\"cZaAVp\",\"name\":\"문규이\",\"reason\":\"3주 전 수술을 받고 현재 재활 중이며 회복 과정에서 거동이 불편합니다.\"},{\"rank\":6,\"id\":\"2H1F2v\",\"name\":\"박이솔\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠습니다.\"},{\"rank\":7,\"id\":\"임서영\",\"name\":\"임서영\",\"reason\":\"최근 8주간 출석이 없고 두 달째 예배에 나오지 않고 있습니다.\"},{\"rank\":8,\"id\":\"62XnvP\",\"name\":\"전서호\",\"reason\":\"무릎 관절염으로 보행이 어렵고 예배당 계단을 오르기 어려워 참석이 줄었으며 최근 8주 중 1주 출석했습니다.\"},{\"rank\":9,\"id\":\"7RNw2Y\",\"name\":\"윤현진\",\"reason\":\"최근 무릎 수술 후 재활 중이고 최근 8주 중 2주 출석했으며 우울감 극복을 기도제목으로 두고 있습니다.\"},{\"rank\":10,\"id\":\"VcbnkZ\",\"name\":\"배온결\",\"reason\":\"2주 전 출산 후 산후 회복 중이며 최근 8주 중 3주 출석했고 외부 방문보다 전화 연락을 선호할 수 있습니다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:01:59",
+                  "model": "gpt-5.6-luna",
+                  "set": "set04",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14444,
+                  "perf": {
+                    "elapsed_sec": 10.4,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 8982,
+                    "eval_count": 1049,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "QGOmX1",
+                      "dSXT2Z",
+                      "dTZlQF",
+                      "ix85ag",
+                      "2H1F2v",
+                      "cZaAVp",
+                      "7RNw2Y",
+                      "VcbnkZ",
+                      "62XnvP",
+                      "E9Ud3s"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"QGOmX1\",\"name\":\"김현하\",\"reason\":\"요양병원에 입원 중이며 최근 8주간 출석이 없고 장기 입원으로 공동체와 접촉이 거의 끊긴 상태입니다.\"},{\"rank\":2,\"id\":\"dSXT2Z\",\"name\":\"강하태\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵습니다.\"},{\"rank\":3,\"id\":\"dTZlQF\",\"name\":\"조유경\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많으며 최근 8주간 출석이 없습니다.\"},{\"rank\":4,\"id\":\"ix85ag\",\"name\":\"권지결\",\"reason\":\"3주 전 배우자가 수술을 받아 간병 부담이 큰 상황이며 최근 8주간 출석이 없습니다.\"},{\"rank\":5,\"id\":\"2H1F2v\",\"name\":\"박이솔\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠습니다.\"},{\"rank\":6,\"id\":\"cZaAVp\",\"name\":\"문규이\",\"reason\":\"3주 전 수술을 받고 현재 재활 중이며 회복 중이라 거동이 불편합니다.\"},{\"rank\":7,\"id\":\"7RNw2Y\",\"name\":\"윤현진\",\"reason\":\"최근 무릎 수술 후 재활 중이고 최근 8주 중 2주만 출석했습니다.\"},{\"rank\":8,\"id\":\"VcbnkZ\",\"name\":\"배온결\",\"reason\":\"2주 전 출산 후 산후 회복 중이며 최근 8주 중 3주 출석했고 외부 방문보다 전화 연락을 선호할 수 있습니다.\"},{\"rank\":9,\"id\":\"62XnvP\",\"name\":\"전서호\",\"reason\":\"무릎 관절염으로 보행이 어렵고 예배당 계단을 오르기 어려워 참석이 줄었으며 최근 8주 중 1주만 출석했습니다.\"},{\"rank\":10,\"id\":\"E9Ud3s\",\"name\":\"문우람\",\"reason\":\"최근 건강검진에서 이상 소견이 발견되었고 자녀 입시로 가정 내 스트레스가 있으며 최근 8주 중 3주 출석했습니다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:02:09",
+                  "model": "gpt-5.6-luna",
+                  "set": "set05",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15124,
+                  "perf": {
+                    "elapsed_sec": 10.8,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9436,
+                    "eval_count": 913,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "uenPmy",
+                      "EY5zIA",
+                      "O80nEw",
+                      "318bxN",
+                      "JQlFhK",
+                      "vG0sMg",
+                      "zsJZx0",
+                      "RCl5TX",
+                      "83HnzM",
+                      "hcZrDP"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"uenPmy\",\"name\":\"문시결\",\"reason\":\"지난주 응급실 이송 후 입원 중이며 입원 기간이 정해지지 않았다.\"},{\"rank\":2,\"id\":\"EY5zIA\",\"name\":\"오서하\",\"reason\":\"요양병원 입원 중이고 최근 8주간 한 번도 출석하지 않아 공동체와 접촉이 거의 끊긴 상태다.\"},{\"rank\":3,\"id\":\"O80nEw\",\"name\":\"박담하\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵고 최근 8주간 출석하지 않았다.\"},{\"rank\":4,\"id\":\"318bxN\",\"name\":\"박빈도\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵다.\"},{\"rank\":5,\"id\":\"JQlFhK\",\"name\":\"배름솔\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많다.\"},{\"rank\":6,\"id\":\"vG0sMg\",\"name\":\"조재율\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠다.\"},{\"rank\":7,\"id\":\"zsJZx0\",\"name\":\"임로람\",\"reason\":\"배우자가 별세했으며 당뇨를 관리 중이다.\"},{\"rank\":8,\"id\":\"RCl5TX\",\"name\":\"김로경\",\"reason\":\"만성 신장질환으로 격주 투석 중이고 체력 저하로 예배 참석이 점차 줄고 있다.\"},{\"rank\":9,\"id\":\"83HnzM\",\"name\":\"전건하\",\"reason\":\"2주 전 출산 후 산후 회복 중이며 최근 8주 중 2주 출석했다.\"},{\"rank\":10,\"id\":\"hcZrDP\",\"name\":\"황온선\",\"reason\":\"최근 골절로 깁스 중이고 장기 결석 중이라 사유 확인이 필요하다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:02:20",
+                  "model": "gpt-5.6-luna",
+                  "set": "set05",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15124,
+                  "perf": {
+                    "elapsed_sec": 10.2,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9436,
+                    "eval_count": 832,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 9,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "uenPmy",
+                      "O80nEw",
+                      "EY5zIA",
+                      "318bxN",
+                      "JQlFhK",
+                      "RCl5TX",
+                      "48KOtw",
+                      "vG0sMg",
+                      "83HnzM",
+                      "zsJZx0"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"uenPmy\",\"name\":\"문시결\",\"reason\":\"지난주 응급실 이송 후 입원 중이며 입원 기간이 정해지지 않았다.\"},{\"rank\":2,\"id\":\"O80nEw\",\"name\":\"박담하\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이고 거동이 불편해 혼자 예배 참석이 어렵다.\"},{\"rank\":3,\"id\":\"EY5zIA\",\"name\":\"오서하\",\"reason\":\"요양병원 입원 중이며 최근 8주간 출석하지 못해 공동체와 접촉이 거의 끊긴 상태다.\"},{\"rank\":4,\"id\":\"318bxN\",\"name\":\"박빈도\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 예배 참석이 어렵다.\"},{\"rank\":5,\"id\":\"JQlFhK\",\"name\":\"배름솔\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많다.\"},{\"rank\":6,\"id\":\"RCl5TX\",\"name\":\"김로경\",\"reason\":\"만성 신장질환으로 격주 투석 중이며 체력 저하로 예배 참석이 점차 줄고 있다.\"},{\"rank\":7,\"id\":\"48KOtw\",\"name\":\"문아온\",\"reason\":\"3주 전 배우자가 수술했고 본인이 배우자 간병 부담이 큰 상황이다.\"},{\"rank\":8,\"id\":\"vG0sMg\",\"name\":\"조재율\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠다.\"},{\"rank\":9,\"id\":\"83HnzM\",\"name\":\"전건하\",\"reason\":\"2주 전 출산해 산후 회복 중이며 외부 방문보다 전화 연락을 선호할 수 있다.\"},{\"rank\":10,\"id\":\"zsJZx0\",\"name\":\"임로람\",\"reason\":\"배우자가 별세했으며 당뇨를 관리 중이고 재정적 어려움과 건강 회복을 기도제목으로 두고 있다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:02:26",
+                  "model": "gpt-5.6-luna",
+                  "set": "set06",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14718,
+                  "perf": {
+                    "elapsed_sec": 6.6,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9138,
+                    "eval_count": 964,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "myDI7R",
+                      "er9Xad",
+                      "OjLez3",
+                      "I9D2FJ",
+                      "jlTIOw",
+                      "H5Zymk",
+                      "wdoCan",
+                      "OumsDC",
+                      "XoEuVd",
+                      "fPBwQi"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"myDI7R\",\"name\":\"윤솔나\",\"reason\":\"지난주 응급실 이송 후 입원 중이며 입원 기간이 정해지지 않음.\"},{\"rank\":2,\"id\":\"er9Xad\",\"name\":\"권이엘\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내게 되어 식사를 거르는 날이 많다고 함.\"},{\"rank\":3,\"id\":\"OjLez3\",\"name\":\"유우결\",\"reason\":\"2주 전 자녀 교통사고로 자녀가 입원해 병원에서 지내는 날이 많으며 최근 8주 출석이 0주임.\"},{\"rank\":4,\"id\":\"I9D2FJ\",\"name\":\"윤진채\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복 중이라 거동이 불편함.\"},{\"rank\":5,\"id\":\"jlTIOw\",\"name\":\"오하유\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵다고 함.\"},{\"rank\":6,\"id\":\"H5Zymk\",\"name\":\"전유채\",\"reason\":\"만성 신장질환으로 격주 투석 중이며 체력 저하로 예배 참석이 점차 줄고 있음.\"},{\"rank\":7,\"id\":\"wdoCan\",\"name\":\"홍경하\",\"reason\":\"최근 골절로 깁스 중이고 장기 결석 중이라 사유 확인이 필요함.\"},{\"rank\":8,\"id\":\"OumsDC\",\"name\":\"신지경\",\"reason\":\"최근 골절로 깁스 중임.\"},{\"rank\":9,\"id\":\"XoEuVd\",\"name\":\"최엘하\",\"reason\":\"두 달째 예배에 나오지 않고 있으며 최근 8주 출석이 0주임.\"},{\"rank\":10,\"id\":\"fPBwQi\",\"name\":\"홍채솔\",\"reason\":\"2주 전 출산 후 산후 회복 중이며 외부 방문보다 전화 연락을 선호할 수 있음.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:02:31",
+                  "model": "gpt-5.6-luna",
+                  "set": "set06",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14718,
+                  "perf": {
+                    "elapsed_sec": 5.1,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9138,
+                    "eval_count": 743,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "myDI7R",
+                      "OjLez3",
+                      "er9Xad",
+                      "I9D2FJ",
+                      "jlTIOw",
+                      "H5Zymk",
+                      "fPBwQi",
+                      "wdoCan",
+                      "XoEuVd",
+                      "NeNFgP"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"myDI7R\",\"name\":\"윤솔나\",\"reason\":\"지난주 응급실 이송 후 입원 중이며 입원 기간이 정해지지 않았다.\"},{\"rank\":2,\"id\":\"OjLez3\",\"name\":\"유우결\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고, 병원에서 지내는 날이 많아 최근 8주 출석이 0주이다.\"},{\"rank\":3,\"id\":\"er9Xad\",\"name\":\"권이엘\",\"reason\":\"2주 전 배우자가 별세했고 혼자 지내게 되어 식사를 거르는 날이 많다고 했다.\"},{\"rank\":4,\"id\":\"I9D2FJ\",\"name\":\"윤진채\",\"reason\":\"3주 전 수술 후 현재 재활 중이며 회복 중이라 거동이 불편하다.\"},{\"rank\":5,\"id\":\"jlTIOw\",\"name\":\"오하유\",\"reason\":\"항암 치료로 통원 중이고 치료 일정이 있는 주에는 참석이 어렵다고 했다.\"},{\"rank\":6,\"id\":\"H5Zymk\",\"name\":\"전유채\",\"reason\":\"만성 신장질환으로 격주 투석 중이며 체력 저하로 예배 참석이 점차 줄고 있다.\"},{\"rank\":7,\"id\":\"fPBwQi\",\"name\":\"홍채솔\",\"reason\":\"2주 전 출산하여 산후 회복 중이고 외부 방문보다 전화 연락을 선호할 수 있다.\"},{\"rank\":8,\"id\":\"wdoCan\",\"name\":\"홍경하\",\"reason\":\"최근 골절로 깁스 중이며 장기 결석 중이라 사유 확인이 필요하다.\"},{\"rank\":9,\"id\":\"XoEuVd\",\"name\":\"최엘하\",\"reason\":\"최근 8주 동안 예배에 한 번도 참석하지 않았고 두 달째 예배에 나오지 않고 있다.\"},{\"rank\":10,\"id\":\"NeNFgP\",\"name\":\"신로하\",\"reason\":\"만성 질환으로 정기 검진 중이며 장기 결석 중이라 사유 확인이 필요하다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:02:44",
+                  "model": "gpt-5.6-luna",
+                  "set": "set07",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15042,
+                  "perf": {
+                    "elapsed_sec": 12.9,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9357,
+                    "eval_count": 1233,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "7y9n43",
+                      "L1m19b",
+                      "E3GmLF",
+                      "dCLsU5",
+                      "p7T5eh",
+                      "YB1GXV",
+                      "Js3g0W",
+                      "9oXtgS",
+                      "LNes8O",
+                      "qq6zHa"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"7y9n43\",\"name\":\"유규호\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내며 식사를 거르는 날이 많다고 함.\"},{\"rank\":2,\"id\":\"L1m19b\",\"name\":\"송솔서\",\"reason\":\"지난주 모친상 후 장례 절차로 최근 2주간 연락이 어려웠음.\"},{\"rank\":3,\"id\":\"E3GmLF\",\"name\":\"임선름\",\"reason\":\"지난주 부친상을 당했으며 장례 이후 첫 예배 참석 예정임.\"},{\"rank\":4,\"id\":\"dCLsU5\",\"name\":\"권은율\",\"reason\":\"2주 전 자녀 교통사고로 자녀가 입원해 병원에서 지내는 날이 많음.\"},{\"rank\":5,\"id\":\"p7T5eh\",\"name\":\"배다람\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵다고 함.\"},{\"rank\":6,\"id\":\"YB1GXV\",\"name\":\"고호우\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어려움.\"},{\"rank\":7,\"id\":\"Js3g0W\",\"name\":\"유규엘\",\"reason\":\"요양병원에 장기 입원 중이고 공동체와 접촉이 거의 끊긴 상태임.\"},{\"rank\":8,\"id\":\"9oXtgS\",\"name\":\"배온호\",\"reason\":\"최근 무릎 수술 후 재활 중이며 배우자 별세가 기록되어 있음.\"},{\"rank\":9,\"id\":\"LNes8O\",\"name\":\"유솔엘\",\"reason\":\"3주 전 수술 후 재활 중이고 회복 중이라 거동이 불편함.\"},{\"rank\":10,\"id\":\"qq6zHa\",\"name\":\"홍호서\",\"reason\":\"89세이며 최근 무릎 수술 후 재활 중이고 최근 8주 중 1주 출석함.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:02:56",
+                  "model": "gpt-5.6-luna",
+                  "set": "set07",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15042,
+                  "perf": {
+                    "elapsed_sec": 11.3,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9357,
+                    "eval_count": 967,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "E3GmLF",
+                      "L1m19b",
+                      "7y9n43",
+                      "dCLsU5",
+                      "p7T5eh",
+                      "Js3g0W",
+                      "YB1GXV",
+                      "LNes8O",
+                      "qq6zHa",
+                      "9oXtgS"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"E3GmLF\",\"name\":\"임선름\",\"reason\":\"지난주 부친상을 당했고 장례 이후 첫 예배 참석 예정임.\"},{\"rank\":2,\"id\":\"L1m19b\",\"name\":\"송솔서\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠음.\"},{\"rank\":3,\"id\":\"7y9n43\",\"name\":\"유규호\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내며 식사를 거르는 날이 많음.\"},{\"rank\":4,\"id\":\"dCLsU5\",\"name\":\"권은율\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이며 병원에서 지내는 날이 많음.\"},{\"rank\":5,\"id\":\"p7T5eh\",\"name\":\"배다람\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어려움.\"},{\"rank\":6,\"id\":\"Js3g0W\",\"name\":\"유규엘\",\"reason\":\"요양병원 입원 중이고 장기 입원으로 공동체와 접촉이 거의 끊긴 상태임.\"},{\"rank\":7,\"id\":\"YB1GXV\",\"name\":\"고호우\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어려움.\"},{\"rank\":8,\"id\":\"LNes8O\",\"name\":\"유솔엘\",\"reason\":\"3주 전 수술 후 재활 중이고 회복 중이라 거동이 불편함.\"},{\"rank\":9,\"id\":\"qq6zHa\",\"name\":\"홍호서\",\"reason\":\"최근 무릎 수술 후 재활 중이며 최근 8주 중 1주 출석함.\"},{\"rank\":10,\"id\":\"9oXtgS\",\"name\":\"배온호\",\"reason\":\"최근 무릎 수술 후 재활 중이고 마지막 심방일이 기록되지 않았음.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:03:05",
+                  "model": "gpt-5.6-luna",
+                  "set": "set08",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14820,
+                  "perf": {
+                    "elapsed_sec": 9.4,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9187,
+                    "eval_count": 819,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 8,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "vAJ1gN",
+                      "uCXQFF",
+                      "L2qdTQ",
+                      "QvqU1p",
+                      "jtdoFr",
+                      "MWwd5C",
+                      "YG97jU",
+                      "bwOQS2",
+                      "4ytcGt",
+                      "CUCtvX"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"vAJ1gN\",\"name\":\"송진연\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내며 식사를 거르는 날이 많다고 함.\"},{\"rank\":2,\"id\":\"uCXQFF\",\"name\":\"홍하율\",\"reason\":\"배우자 별세와 최근 건강검진 이상 소견이 있으며 최근 8주 중 4주 출석함.\"},{\"rank\":3,\"id\":\"L2qdTQ\",\"name\":\"문원진\",\"reason\":\"배우자 별세 후 최근 골절로 깁스 중이며 마지막 심방일이 2025-06-30임.\"},{\"rank\":4,\"id\":\"QvqU1p\",\"name\":\"박은건\",\"reason\":\"항암 치료로 통원 중이고 치료 일정이 있는 주에는 참석이 어렵다고 함.\"},{\"rank\":5,\"id\":\"jtdoFr\",\"name\":\"임가나\",\"reason\":\"요양병원 입원 중이며 장기 입원으로 공동체와 접촉이 거의 끊긴 상태임.\"},{\"rank\":6,\"id\":\"MWwd5C\",\"name\":\"황경나\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어려움.\"},{\"rank\":7,\"id\":\"YG97jU\",\"name\":\"오호율\",\"reason\":\"만성 신장질환으로 격주 투석 중이고 체력 저하로 예배 참석이 점차 줄고 있음.\"},{\"rank\":8,\"id\":\"bwOQS2\",\"name\":\"조호은\",\"reason\":\"3주 전 배우자가 수술해 본인이 간병 부담이 큰 상황이며 최근 8주 중 1주 출석함.\"},{\"rank\":9,\"id\":\"4ytcGt\",\"name\":\"백시원\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복 중이라 거동이 불편함.\"},{\"rank\":10,\"id\":\"CUCtvX\",\"name\":\"김온결\",\"reason\":\"2주 전 자녀 교통사고로 자녀가 입원해 병원에서 지내는 날이 많음.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:03:16",
+                  "model": "gpt-5.6-luna",
+                  "set": "set08",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14820,
+                  "perf": {
+                    "elapsed_sec": 11.1,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9187,
+                    "eval_count": 1021,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 7,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "vAJ1gN",
+                      "uCXQFF",
+                      "L2qdTQ",
+                      "QvqU1p",
+                      "jtdoFr",
+                      "MWwd5C",
+                      "YG97jU",
+                      "4ytcGt",
+                      "bwOQS2",
+                      "RBsChV"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"vAJ1gN\",\"name\":\"송진연\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내며 식사를 거르는 날이 많고 최근 8주 중 4주 출석함.\"},{\"rank\":2,\"id\":\"uCXQFF\",\"name\":\"홍하율\",\"reason\":\"배우자 별세와 최근 건강검진 이상 소견이 있으며 최근 8주 중 4주 출석함.\"},{\"rank\":3,\"id\":\"L2qdTQ\",\"name\":\"문원진\",\"reason\":\"배우자 별세와 최근 골절로 깁스 중인 상황이며 마지막 심방일이 2025-06-30임.\"},{\"rank\":4,\"id\":\"QvqU1p\",\"name\":\"박은건\",\"reason\":\"항암 치료로 통원 중이고 최근 8주 중 2주 출석했으며 마지막 심방일이 2025-05-07임.\"},{\"rank\":5,\"id\":\"jtdoFr\",\"name\":\"임가나\",\"reason\":\"요양병원 입원 중이고 장기 입원으로 공동체와 접촉이 거의 끊긴 상태이며 마지막 심방일이 2025-05-20임.\"},{\"rank\":6,\"id\":\"MWwd5C\",\"name\":\"황경나\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이고 거동이 불편해 혼자 예배 참석이 어려움.\"},{\"rank\":7,\"id\":\"YG97jU\",\"name\":\"오호율\",\"reason\":\"만성 신장질환으로 격주 투석 중이며 체력 저하로 예배 참석이 점차 줄고 최근 8주 중 1주 출석함.\"},{\"rank\":8,\"id\":\"4ytcGt\",\"name\":\"백시원\",\"reason\":\"3주 전 수술 후 재활 중이고 회복으로 거동이 불편하며 최근 경조사가 본인 수술임.\"},{\"rank\":9,\"id\":\"bwOQS2\",\"name\":\"조호은\",\"reason\":\"3주 전 배우자 수술 후 간병 부담이 크고 최근 8주 중 1주 출석함.\"},{\"rank\":10,\"id\":\"RBsChV\",\"name\":\"윤서재\",\"reason\":\"만성 질환으로 정기 검진 중이며 자녀 입시로 가정 내 스트레스가 있고 최근 8주 중 0주 출석함.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:03:29",
+                  "model": "gpt-5.6-luna",
+                  "set": "set09",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14743,
+                  "perf": {
+                    "elapsed_sec": 12.4,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9090,
+                    "eval_count": 1037,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 7,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "bAs062",
+                      "rjz61I",
+                      "FQt9cT",
+                      "iI7dFd",
+                      "i3MwOi",
+                      "1p5CBZ",
+                      "iSOD3X",
+                      "laFeVH",
+                      "tqwRTr",
+                      "aPEIsn"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"bAs062\",\"name\":\"이호진\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠으며 마지막 심방일이 2025-08-19이다.\"},{\"rank\":2,\"id\":\"rjz61I\",\"name\":\"권수결\",\"reason\":\"지난주 부친상을 당했고 장례 이후 첫 예배 참석을 앞두고 있다.\"},{\"rank\":3,\"id\":\"FQt9cT\",\"name\":\"한율호\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵다.\"},{\"rank\":4,\"id\":\"iI7dFd\",\"name\":\"유솔나\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복 중이라 거동이 불편하다.\"},{\"rank\":5,\"id\":\"i3MwOi\",\"name\":\"장경연\",\"reason\":\"만성 신장질환으로 격주 투석 중이며 체력 저하로 예배 참석이 점차 줄고 있다.\"},{\"rank\":6,\"id\":\"1p5CBZ\",\"name\":\"장경우\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이며 병원에서 지내는 날이 많다.\"},{\"rank\":7,\"id\":\"iSOD3X\",\"name\":\"전진지\",\"reason\":\"고혈압으로 정기 통원 중이고 장기 결석 중이라 사유 확인이 필요하다.\"},{\"rank\":8,\"id\":\"laFeVH\",\"name\":\"안아건\",\"reason\":\"최근 8주 동안 한 번도 출석하지 않았고 기도제목에 우울감 극복과 건강 회복이 있다.\"},{\"rank\":9,\"id\":\"tqwRTr\",\"name\":\"고선가\",\"reason\":\"최근 골절로 깁스 중인 새신자이며 마지막 심방일이 2025-04-30이다.\"},{\"rank\":10,\"id\":\"aPEIsn\",\"name\":\"윤서온\",\"reason\":\"한 달 전 실직했고 경제적 어려움을 언급했으며 최근 8주 중 3주 출석했다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:03:39",
+                  "model": "gpt-5.6-luna",
+                  "set": "set09",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14743,
+                  "perf": {
+                    "elapsed_sec": 10.3,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9090,
+                    "eval_count": 938,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 7,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "bAs062",
+                      "rjz61I",
+                      "iSOD3X",
+                      "FQt9cT",
+                      "iI7dFd",
+                      "1p5CBZ",
+                      "i3MwOi",
+                      "laFeVH",
+                      "9SeaW3",
+                      "hbroS0"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"bAs062\",\"name\":\"이호진\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠으며 마지막 심방일도 2025-08-19이다.\"},{\"rank\":2,\"id\":\"rjz61I\",\"name\":\"권수결\",\"reason\":\"지난주 부친상을 당했으며 장례 이후 첫 예배 참석을 앞두고 있다.\"},{\"rank\":3,\"id\":\"iSOD3X\",\"name\":\"전진지\",\"reason\":\"배우자 별세를 겪었고 고혈압으로 정기 통원 중이며 장기 결석 중으로 사유 확인이 필요하다.\"},{\"rank\":4,\"id\":\"FQt9cT\",\"name\":\"한율호\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이고 거동이 불편해 혼자 예배 참석이 어렵다.\"},{\"rank\":5,\"id\":\"iI7dFd\",\"name\":\"유솔나\",\"reason\":\"3주 전 수술 후 현재 재활 중이며 회복 중이라 거동이 불편하다.\"},{\"rank\":6,\"id\":\"1p5CBZ\",\"name\":\"장경우\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많다.\"},{\"rank\":7,\"id\":\"i3MwOi\",\"name\":\"장경연\",\"reason\":\"만성 신장질환으로 격주 투석 중이며 체력 저하로 예배 참석이 점차 줄고 있다.\"},{\"rank\":8,\"id\":\"laFeVH\",\"name\":\"안아건\",\"reason\":\"최근 8주 동안 한 번도 출석하지 않았고 우울감 극복과 건강 회복을 기도제목으로 두고 있다.\"},{\"rank\":9,\"id\":\"9SeaW3\",\"name\":\"최율하\",\"reason\":\"무릎 관절염으로 보행이 어렵고 예배당 계단을 오르기 어려워 참석이 줄었으며 마지막 심방일이 2024-12-31이다.\"},{\"rank\":10,\"id\":\"hbroS0\",\"name\":\"배율민\",\"reason\":\"최근 8주 동안 한 번도 출석하지 않았고 타 지역 이주 예정이며 재정적 어려움과 이사 문제를 기도제목으로 두고 있다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:03:48",
+                  "model": "gpt-5.6-luna",
+                  "set": "set10",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14713,
+                  "perf": {
+                    "elapsed_sec": 9.3,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9122,
+                    "eval_count": 861,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 9,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "WJfZCT",
+                      "3C46wc",
+                      "VlH5r9",
+                      "jtDGPs",
+                      "of89p5",
+                      "QM20pI",
+                      "VTjjG6",
+                      "gcyNHh",
+                      "4zUUFE",
+                      "EK5Zi1"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"WJfZCT\",\"name\":\"최이다\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이며 거동이 불편해 혼자 예배 참석이 어렵다.\"},{\"rank\":2,\"id\":\"3C46wc\",\"name\":\"임하재\",\"reason\":\"3주 전 수술 후 재활 중이고 회복 과정에서 거동이 불편하며 최근 8주 중 1주 출석했다.\"},{\"rank\":3,\"id\":\"VlH5r9\",\"name\":\"임율결\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내게 되어 식사를 거르는 날이 많고 최근 8주 중 3주 출석했다.\"},{\"rank\":4,\"id\":\"jtDGPs\",\"name\":\"오나온\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵고 최근 8주 중 2주 출석했다.\"},{\"rank\":5,\"id\":\"of89p5\",\"name\":\"손영태\",\"reason\":\"만성 신장질환으로 격주 투석 중이고 체력 저하로 예배 참석이 점차 줄어 최근 8주 중 1주 출석했다.\"},{\"rank\":6,\"id\":\"QM20pI\",\"name\":\"권담아\",\"reason\":\"2주 전 자녀 교통사고 후 자녀가 입원해 병원에서 지내는 날이 많고 최근 8주 중 1주 출석했다.\"},{\"rank\":7,\"id\":\"VTjjG6\",\"name\":\"임나시\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠다.\"},{\"rank\":8,\"id\":\"gcyNHh\",\"name\":\"이우솔\",\"reason\":\"배우자 별세를 겪었고 고혈압으로 정기 통원 중이며 최근 8주 중 3주 출석했다.\"},{\"rank\":9,\"id\":\"4zUUFE\",\"name\":\"문온가\",\"reason\":\"무릎 관절염으로 보행이 어렵고 예배당 계단을 오르기 어려워 참석이 줄어 최근 8주 중 1주 출석했다.\"},{\"rank\":10,\"id\":\"EK5Zi1\",\"name\":\"유재결\",\"reason\":\"최근 8주 동안 한 번도 출석하지 않았고 연락이 잘 닿지 않으며 이유가 불명확하다.\"}]}",
+                  "error": null
+                },
+                {
+                  "phase": "main",
+                  "run_at": "2026-09-16T17:04:00",
+                  "model": "gpt-5.6-luna",
+                  "set": "set10",
+                  "attempt": 2,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 14713,
+                  "perf": {
+                    "elapsed_sec": 11.5,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9122,
+                    "eval_count": 1155,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 9,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "VlH5r9",
+                      "VTjjG6",
+                      "WJfZCT",
+                      "3C46wc",
+                      "jtDGPs",
+                      "QM20pI",
+                      "of89p5",
+                      "4zUUFE",
+                      "gcyNHh",
+                      "EK5Zi1"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"VlH5r9\",\"name\":\"임율결\",\"reason\":\"2주 전 배우자 별세 후 혼자 지내며 식사를 거르는 날이 많고, 최근 8주 중 3주 출석했으며 마지막 심방일이 2025-03-25입니다.\"},{\"rank\":2,\"id\":\"VTjjG6\",\"name\":\"임나시\",\"reason\":\"지난주 모친상을 당했고 장례 절차로 최근 2주간 연락이 어려웠으며, 마지막 심방일이 2025-07-03입니다.\"},{\"rank\":3,\"id\":\"WJfZCT\",\"name\":\"최이다\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이고 거동이 불편해 혼자 예배 참석이 어려우며, 마지막 심방일이 2025-08-18입니다.\"},{\"rank\":4,\"id\":\"3C46wc\",\"name\":\"임하재\",\"reason\":\"3주 전 수술 후 현재 재활 중이고 회복으로 거동이 불편하며, 최근 8주 중 1주 출석했고 마지막 심방일이 2025-09-08입니다.\"},{\"rank\":5,\"id\":\"jtDGPs\",\"name\":\"오나온\",\"reason\":\"항암 치료로 통원 중이고 치료 일정이 있는 주에는 참석이 어려우며, 최근 8주 중 2주 출석했고 마지막 심방일이 2025-04-22입니다.\"},{\"rank\":6,\"id\":\"QM20pI\",\"name\":\"권담아\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많으며, 최근 8주 중 1주 출석했습니다.\"},{\"rank\":7,\"id\":\"of89p5\",\"name\":\"손영태\",\"reason\":\"만성 신장질환으로 격주 투석 중이고 체력 저하로 예배 참석이 점차 줄어 최근 8주 중 1주 출석했습니다.\"},{\"rank\":8,\"id\":\"4zUUFE\",\"name\":\"문온가\",\"reason\":\"무릎 관절염으로 보행이 어렵고 예배당 계단을 오르기 어려워 참석이 줄었으며, 최근 8주 중 1주 출석했습니다.\"},{\"rank\":9,\"id\":\"gcyNHh\",\"name\":\"이우솔\",\"reason\":\"배우자 별세와 고혈압으로 정기 통원 중인 상황에서 최근 8주 중 3주 출석했고 마지막 심방일이 2025-02-19입니다.\"},{\"rank\":10,\"id\":\"EK5Zi1\",\"name\":\"유재결\",\"reason\":\"최근 8주 동안 한 주도 출석하지 않았고 연락이 잘 닿지 않으며 이유가 불명이고, 마지막 심방일이 2025-07-25입니다.\"}]}",
+                  "error": null
+                }
+              ],
+              "warmup": [
+                {
+                  "phase": "warmup",
+                  "run_at": "2026-09-16T17:00:10",
+                  "model": "gpt-5.6-luna",
+                  "set": "set01",
+                  "attempt": 1,
+                  "options": {
+                    "num_ctx": 16384,
+                    "temperature": 0.0,
+                    "num_predict": null
+                  },
+                  "prompt_chars": 15152,
+                  "perf": {
+                    "elapsed_sec": 13.8,
+                    "load_sec": null,
+                    "tokens_per_sec": null,
+                    "speed_note": "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)",
+                    "prompt_eval_count": 9451,
+                    "eval_count": 1146,
+                    "total_duration_ns": null,
+                    "load_duration_ns": null,
+                    "prompt_eval_duration_ns": null,
+                    "eval_duration_ns": null
+                  },
+                  "validation": {
+                    "format_ok": true,
+                    "issues": [],
+                    "hit_include": 9,
+                    "include_total": 10,
+                    "miss_exclude": 0,
+                    "exclude_total": 5,
+                    "picked_ids": [
+                      "GleXnY",
+                      "ARig34",
+                      "9UDb6k",
+                      "MnaBL1",
+                      "dn4vYH",
+                      "xU95JX",
+                      "HLxEbU",
+                      "18hSwH",
+                      "M4dbV8",
+                      "8qJ43t"
+                    ]
+                  },
+                  "answer": "{\"top10\":[{\"rank\":1,\"id\":\"GleXnY\",\"name\":\"장민온\",\"reason\":\"요양병원에 입원 중이며 최근 8주 동안 한 주도 출석하지 않았고 공동체와 접촉이 거의 끊긴 상태입니다.\"},{\"rank\":2,\"id\":\"ARig34\",\"name\":\"최시유\",\"reason\":\"지난달 낙상으로 입원한 뒤 현재 자택 요양 중이고 거동이 불편해 혼자 예배 참석이 어렵습니다.\"},{\"rank\":3,\"id\":\"9UDb6k\",\"name\":\"임우아\",\"reason\":\"항암 치료로 통원 중이며 치료 일정이 있는 주에는 참석이 어렵고 마지막 심방일도 2025-06-09입니다.\"},{\"rank\":4,\"id\":\"MnaBL1\",\"name\":\"손서가\",\"reason\":\"3주 전 수술 후 재활 중이며 회복으로 거동이 불편하고 최근 8주 중 1주만 출석했습니다.\"},{\"rank\":5,\"id\":\"dn4vYH\",\"name\":\"양규온\",\"reason\":\"3주 전 배우자가 수술해 간병 부담이 큰 상황이며 최근 8주 동안 한 주도 출석하지 않았습니다.\"},{\"rank\":6,\"id\":\"xU95JX\",\"name\":\"황우인\",\"reason\":\"2주 전 자녀가 교통사고를 당해 입원 중이고 병원에서 지내는 날이 많으며 최근 8주 중 2주만 출석했습니다.\"},{\"rank\":7,\"id\":\"HLxEbU\",\"name\":\"손은영\",\"reason\":\"지난주 부친상을 당했으며 장례 이후 첫 예배 참석을 앞두고 있습니다.\"},{\"rank\":8,\"id\":\"18hSwH\",\"name\":\"조결인\",\"reason\":\"최근 골절로 깁스 중이고 가족 간 갈등을 최근 언급했으며 마지막 심방일이 2025-05-28입니다.\"},{\"rank\":9,\"id\":\"M4dbV8\",\"name\":\"조윤도\",\"reason\":\"최근 8주 동안 한 주도 출석하지 않았고 두 달째 예배에 나오지 않고 있습니다.\"},{\"rank\":10,\"id\":\"8qJ43t\",\"name\":\"정시원\",\"reason\":\"최근 8주 동안 한 주도 출석하지 않았고 연락이 잘 닿지 않으며 이유가 불명입니다.\"}]}",
+                  "error": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 };

@@ -7,12 +7,13 @@ STEP 6(로컬 본 실험)과 STEP 7(Cloud 비교)에서도 이 모듈을 그대�
     GenerationOptions : 생성 설정. 모든 후보에 같은 값을 적용하기 위해 한 곳에 둡니다.
     EvalSet           : data/eval 의 평가 세트 하나 (명부 50명 + 정답).
     PromptBuilder     : [작업 지시] + [교인 명부] 순서로 조립합니다.
-    ModelRunner       : 모델 호출 인터페이스. OllamaRunner 가 이를 구현합니다.
+    ModelRunner       : 모델 호출 인터페이스. OllamaRunner 와 CloudRunner 가 이를 구현합니다.
     TopTen            : 모델 응답에서 top 10 을 꺼내 명부와 대조하고 정답과 맞춰 봅니다.
     ResultStore       : 실행 기록을 JSONL 로 남깁니다.
 """
 
 import json
+import os
 import re
 import time
 from dataclasses import dataclass, asdict, field
@@ -20,6 +21,8 @@ from datetime import date
 from pathlib import Path
 
 import ollama
+from dotenv import load_dotenv
+from openai import OpenAI
 
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
@@ -273,7 +276,7 @@ class RunResult:
     def speed_note(self) -> str | None:
         """속도를 계산하지 못한 사유."""
         if self.eval_count is None or self.eval_duration is None:
-            return "통계 필드 없음"
+            return "응답에 생성 시간 통계가 없음 (Cloud 응답에는 들어 있지 않습니다)"
         if self.eval_duration <= 0:
             return "eval_duration 이 0 이하"
         return None
@@ -391,6 +394,78 @@ class OllamaRunner(ModelRunner):
             prompt_eval_duration=response.get("prompt_eval_duration"),
             eval_duration=response.get("eval_duration"),
         )
+
+
+class CloudRunner(ModelRunner):
+    """OpenAI 호환 엔드포인트를 호출합니다 (STEP 7 대조군).
+
+    결과는 results/cloud/<모델명>/ 에 쌓입니다. 키와 주소는 .env 에서 읽습니다.
+
+    Cloud 응답에는 모델 로딩 시간이나 생성 시간 통계가 없습니다. 없는 값을 0 이나
+    전체 응답 시간으로 채우면 로컬과 같은 척도인 것처럼 보이므로, 계산하지 않고
+    사유만 남깁니다.
+    """
+
+    results_root = CLOUD_RESULTS_DIR
+
+    def __init__(self, name: str | None = None, env_path: Path = ROOT / ".env"):
+        load_dotenv(env_path)
+        super().__init__(name or os.environ.get("CLOUD_MODEL", "gpt-5.6-luna"))
+        self.base_url = os.environ.get("CLOUD_BASE_URL", "https://api.openai.com/v1")
+        self._client = OpenAI(api_key=os.environ.get("CLOUD_API_KEY"), base_url=self.base_url)
+
+    def run(self, prompt: str, options: GenerationOptions) -> RunResult:
+        started = time.perf_counter()
+        try:
+            # 모델마다 받는 인자가 다릅니다. 값이 없는 인자는 아예 넘기지 않습니다
+            # (null 을 넘기면 400 을 돌려주는 모델이 있습니다).
+            kwargs = {"model": self.name,
+                      "messages": [{"role": "user", "content": prompt}]}
+            if options.num_predict is not None:
+                kwargs["max_tokens"] = options.num_predict
+            if options.temperature is not None:
+                kwargs["temperature"] = options.temperature
+            try:
+                response = self._client.chat.completions.create(**kwargs)
+            except Exception as first:
+                # temperature 를 안 받는 추론 모델이 있습니다. 빼고 한 번 더 시도합니다.
+                if "temperature" not in str(first):
+                    raise
+                kwargs.pop("temperature", None)
+                response = self._client.chat.completions.create(**kwargs)
+        except Exception as exc:
+            return RunResult(elapsed_sec=round(time.perf_counter() - started, 1),
+                             error=f"{type(exc).__name__}: {exc}")
+        usage = response.usage
+        return RunResult(
+            text=response.choices[0].message.content or "",
+            elapsed_sec=round(time.perf_counter() - started, 1),
+            prompt_eval_count=getattr(usage, "prompt_tokens", None),
+            eval_count=getattr(usage, "completion_tokens", None),
+            # total/load/eval duration 은 Cloud 가 주지 않습니다. None 으로 둡니다.
+        )
+
+
+def cloud_profile(tag: str, env_path: Path = ROOT / ".env") -> dict:
+    """Cloud 모델의 실행 조건. 로컬처럼 digest 나 양자화가 없습니다."""
+    load_dotenv(env_path)
+    profile = {"model": tag, "digest": None, "quantization_level": None,
+               "parameter_size": None, "context_length": None,
+               "base_url": os.environ.get("CLOUD_BASE_URL"), "note": None}
+    try:
+        info = OpenAI(api_key=os.environ.get("CLOUD_API_KEY"),
+                      base_url=profile["base_url"]).models.retrieve(tag)
+        profile["owned_by"] = getattr(info, "owned_by", None)
+        profile["created"] = getattr(info, "created", None)
+        profile["note"] = "Cloud 모델이라 digest·양자화·VRAM 은 공개되지 않습니다"
+    except Exception as exc:
+        profile["note"] = f"{type(exc).__name__}: {exc}"
+    return profile
+
+
+def cloud_vram(_tag: str) -> dict:
+    return {"size_vram_mib": None, "size_mib": None, "processor": None,
+            "note": "Cloud 모델이라 해당 없음"}
 
 
 class ResultStore:

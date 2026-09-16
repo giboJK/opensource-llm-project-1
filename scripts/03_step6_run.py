@@ -24,12 +24,15 @@ from datetime import datetime
 
 from experiment import (
     PromptBuilder as _PB,
+    CloudRunner,
     EvalSet,
     GenerationOptions,
     OllamaRunner,
     PromptBuilder,
     ResultStore,
     TopTen,
+    cloud_profile,
+    cloud_vram,
     model_profile,
     vram_snapshot,
 )
@@ -48,6 +51,8 @@ def parse_args():
     p.add_argument("--sets", type=str, default=None, help="쉼표로 구분한 세트 이름")
     p.add_argument("--repeat", type=int, default=REPEAT, help=f"세트당 반복 (기본 {REPEAT})")
     p.add_argument("--num-ctx", type=int, default=16384)
+    p.add_argument("--cloud", action="store_true",
+                   help="Cloud 대조군을 돌립니다 (results/cloud/<모델명>/ 에 저장)")
     return p.parse_args()
 
 
@@ -137,7 +142,13 @@ def p_or(value, unit):
 def main():
     args = parse_args()
     options = GenerationOptions(num_ctx=args.num_ctx)
-    runners = [OllamaRunner(s.strip()) for s in (args.models or ",".join(MODELS)).split(",")]
+    if args.cloud:
+        runners = ([CloudRunner(s.strip()) for s in args.models.split(",")]
+                   if args.models else [CloudRunner()])
+        profile_of, vram_of = cloud_profile, cloud_vram
+    else:
+        runners = [OllamaRunner(s.strip()) for s in (args.models or ",".join(MODELS)).split(",")]
+        profile_of, vram_of = model_profile, vram_snapshot
 
     all_sets = EvalSet.load_all()
     if args.sets:
@@ -164,7 +175,7 @@ def main():
 
     for runner in runners:
         main_store, warm_store = stores[runner.name]
-        profiles[runner.name] = model_profile(runner.name)
+        profiles[runner.name] = profile_of(runner.name)
 
         warm_set = next((s for s in all_sets if s.name == WARMUP_SET), sets[0])
         print(f"[워밍업] {runner.name} / {warm_set.name} ... ", end="", flush=True)
@@ -178,7 +189,7 @@ def main():
         warm_store.append(wrec)
 
         # 로드된 직후에 재야 실제 점유가 잡힙니다.
-        vram[runner.name] = vram_snapshot(runner.name)
+        vram[runner.name] = vram_of(runner.name)
 
         # 실행 조건을 파일로 남깁니다. 터미널에만 찍고 말면 나중에 확인할 수 없습니다.
         meta_path = runner.results_dir / f"run_meta_{stamp}.json"
