@@ -7,6 +7,8 @@
     포함 — 반드시 top 10 에 들어가야 할 10명 중 몇 명이 들어왔는가 (10이면 만점)
     제외 — 반드시 빠져야 할 5명 중 몇 명이 들어왔는가 (0이어야 함)
 
+기록은 후보별 폴더(results/local/<모델명>/)에 따로 쌓습니다.
+
 실행:
     uv run scripts/02_compare_models.py                       # 10세트 x 후보 2개
     uv run scripts/02_compare_models.py --sets set01,set02
@@ -18,7 +20,6 @@ import argparse
 from datetime import datetime
 
 from experiment import (
-    RESULTS_DIR,
     EvalSet,
     GenerationOptions,
     OllamaRunner,
@@ -104,10 +105,11 @@ def main():
     print(f"num_ctx {options.num_ctx:,} / temperature {options.temperature}\n")
 
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    store = ResultStore(RESULTS_DIR / "local" / f"top10_{stamp}.jsonl")
+    stores = {r.name: ResultStore(r.results_dir / f"top10_{stamp}.jsonl") for r in runners}
 
     rows, done = [], 0
     for runner in runners:
+        store = stores[runner.name]
         for eval_set in sets:
             prompt = PromptBuilder.build(eval_set)
             for attempt in range(1, args.repeat + 1):

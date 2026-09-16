@@ -36,9 +36,14 @@
 │   ├── 03_step6_run.py                 # STEP 6 본 실험 (워밍업 분리, 성능 측정)
 │   ├── generate_eval_sets.py           # 평가 세트 생성
 │   └── generate_sample_congregation.py # 명부 생성 부품
-└── results/
-    ├── local/                          # 로컬 실험 결과 (JSONL)
-    └── cloud/                          # Cloud 비교 결과 (JSONL)
+└── results/                            # 후보 이름으로 폴더를 나눠 저장
+    ├── local/
+    │   ├── qwen3_4b-instruct-2507-q4_K_M/
+    │   │   ├── step6_{시각}.jsonl      # 본 실험
+    │   │   └── warmup/                 # 워밍업 (본 집계에서 분리)
+    │   └── gemma3_4b/
+    └── cloud/
+        └── {모델명}/
 ```
 
 ## 환경 설정

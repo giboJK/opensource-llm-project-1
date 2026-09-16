@@ -8,8 +8,15 @@
 uv run scripts/03_step6_run.py
 ```
 
-기록은 `results/local/step6_20260916_135505.jsonl`,
-워밍업은 `results/local/warmup/step6_warmup_20260916_135505.jsonl`.
+기록은 후보 이름으로 폴더를 나눠 저장한다.
+
+| | |
+|---|---|
+| 본 실험 | `results/local/<모델명>/step6_20260916_135505.jsonl` |
+| 워밍업 | `results/local/<모델명>/warmup/step6_warmup_20260916_135505.jsonl` |
+
+파일 이름의 시각은 실행 한 번에 하나씩 찍힌다. 같은 실행에서 나온 파일은 후보가 달라도
+같은 시각을 갖는다.
 
 ## 실행 조건
 

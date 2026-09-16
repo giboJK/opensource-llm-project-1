@@ -10,7 +10,6 @@ Windows -> Python -> localhost 의 Ollama -> 로컬 모델 경로를 사용합�
 from datetime import datetime
 
 from experiment import (
-    RESULTS_DIR,
     EvalSet,
     GenerationOptions,
     OllamaRunner,
@@ -50,7 +49,7 @@ def main():
     print(f"반드시 포함 {parsed.include_total}명 중 {parsed.hit_include}명 포함")
     print(f"반드시 제외 {parsed.exclude_total}명 중 {parsed.miss_exclude}명 포함 (0이어야 함)")
 
-    store = ResultStore(RESULTS_DIR / "local" / f"check_{runner.safe_name}.jsonl")
+    store = ResultStore(runner.results_dir / "check.jsonl")
     store.append({
         "run_at": datetime.now().isoformat(timespec="seconds"),
         "model": MODEL,

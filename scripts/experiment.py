@@ -26,6 +26,18 @@ DATA_DIR = ROOT / "data"
 EVAL_DIR = DATA_DIR / "eval"
 ANSWER_KEY_FILE = EVAL_DIR / "answer_key.json"
 RESULTS_DIR = ROOT / "results"
+LOCAL_RESULTS_DIR = RESULTS_DIR / "local"
+CLOUD_RESULTS_DIR = RESULTS_DIR / "cloud"
+
+
+def safe_name(model: str) -> str:
+    """파일 이름으로 쓸 수 있게 다듬은 모델명."""
+    return model.replace(":", "_").replace("/", "_")
+
+
+def model_results_dir(model: str, root: Path = LOCAL_RESULTS_DIR) -> Path:
+    """후보별 결과 폴더. results/local/<모델명>/ 아래에 그 후보의 기록만 모입니다."""
+    return root / safe_name(model)
 
 # 명부 데이터가 만들어진 기준일. "다음 7일"의 시작점이라 프롬프트에 그대로 넣습니다.
 TODAY = date(2026, 9, 14)
@@ -328,7 +340,13 @@ def vram_snapshot(tag: str) -> dict:
 
 
 class ModelRunner:
-    """모델 호출 인터페이스. Cloud 후보도 이 인터페이스로 붙입니다."""
+    """모델 호출 인터페이스. Cloud 후보도 이 인터페이스로 붙입니다.
+
+    results_root 는 결과가 쌓일 곳입니다. 로컬은 results/local, Cloud 는 results/cloud 이고
+    그 아래에 후보 이름으로 폴더가 하나씩 생깁니다.
+    """
+
+    results_root: Path = LOCAL_RESULTS_DIR
 
     def __init__(self, name: str):
         self.name = name
@@ -339,11 +357,18 @@ class ModelRunner:
     @property
     def safe_name(self) -> str:
         """파일 이름으로 쓸 수 있게 다듬은 모델명."""
-        return self.name.replace(":", "_").replace("/", "_")
+        return safe_name(self.name)
+
+    @property
+    def results_dir(self) -> Path:
+        """이 후보의 결과 폴더. results/<local|cloud>/<모델명>/"""
+        return model_results_dir(self.name, self.results_root)
 
 
 class OllamaRunner(ModelRunner):
     """같은 PC 의 Ollama 를 호출합니다."""
+
+    results_root = LOCAL_RESULTS_DIR
 
     def run(self, prompt: str, options: GenerationOptions) -> RunResult:
         started = time.perf_counter()

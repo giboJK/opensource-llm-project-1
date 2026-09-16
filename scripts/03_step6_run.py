@@ -8,9 +8,9 @@
 
 측정 불가 값은 0 으로 채우지 않고 사유를 남깁니다.
 
-기록
-    본 실험   results/local/step6_{시각}.jsonl
-    워밍업    results/local/warmup/step6_warmup_{시각}.jsonl
+기록은 후보별 폴더에 따로 쌓습니다.
+    본 실험   results/local/<모델명>/step6_{시각}.jsonl
+    워밍업    results/local/<모델명>/warmup/step6_warmup_{시각}.jsonl
 
 실행:
     uv run scripts/03_step6_run.py
@@ -21,7 +21,6 @@ import argparse
 from datetime import datetime
 
 from experiment import (
-    RESULTS_DIR,
     EvalSet,
     GenerationOptions,
     OllamaRunner,
@@ -145,8 +144,11 @@ def main():
         sets = all_sets
 
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    main_store = ResultStore(RESULTS_DIR / "local" / f"step6_{stamp}.jsonl")
-    warm_store = ResultStore(RESULTS_DIR / "local" / "warmup" / f"step6_warmup_{stamp}.jsonl")
+    stores = {
+        r.name: (ResultStore(r.results_dir / f"step6_{stamp}.jsonl"),
+                 ResultStore(r.results_dir / "warmup" / f"step6_warmup_{stamp}.jsonl"))
+        for r in runners
+    }
 
     per_model = len(sets) * args.repeat
     print(f"\nSTEP 6  모델 {len(runners)}개 x 세트 {len(sets)}개 x {args.repeat}회 "
@@ -158,6 +160,7 @@ def main():
     done, total = 0, len(runners) * per_model
 
     for runner in runners:
+        main_store, warm_store = stores[runner.name]
         profiles[runner.name] = model_profile(runner.name)
 
         warm_set = next((s for s in all_sets if s.name == WARMUP_SET), sets[0])
