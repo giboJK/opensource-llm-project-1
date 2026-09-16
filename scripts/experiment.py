@@ -46,13 +46,14 @@ class GenerationOptions:
 
     num_ctx: int = 16384
     temperature: float = 0.0
+    num_predict: int | None = None   # None 이면 Ollama 기본값(출력 한도 없음)
 
     def to_ollama(self) -> dict:
         """Ollama 의 options 인자로 넘길 형태."""
         return {k: v for k, v in asdict(self).items() if v is not None}
 
     def to_record(self) -> dict:
-        """실행 기록에 남길 형태."""
+        """실행 기록에 남길 형태. None 도 그대로 남겨 무엇을 안 걸었는지 알 수 있게 합니다."""
         return asdict(self)
 
 
@@ -125,11 +126,12 @@ class PromptBuilder:
         f"심방해야 할 교인 {TOP_N}명을 우선순위가 높은 순서로 골라 주세요.\n"
         "\n"
         "- 명부에 있는 교인만 고릅니다. 같은 교인을 두 번 넣지 않습니다.\n"
+        "- id 는 명부에서 이름 앞 대괄호 안에 있는 6자리 값입니다. 대괄호는 빼고 값만 씁니다.\n"
         "- 각 교인마다 명부에 적힌 내용을 근거로 한 줄을 씁니다.\n"
         "- 명부에 없는 내용은 쓰지 않습니다.\n"
         "- 아래 JSON 형식으로만 답합니다. 다른 설명을 붙이지 않습니다.\n"
         "\n"
-        '{"top10": [{"rank": 1, "id": "교인 식별값", "name": "이름", "reason": "근거 한 줄"}]}'
+        '{"top10": [{"rank": 1, "id": "대괄호 안 6자리 값", "name": "이름", "reason": "근거 한 줄"}]}'
     )
 
     @classmethod
@@ -138,6 +140,11 @@ class PromptBuilder:
 
 
 _JSON_BLOCK = re.compile(r"\{.*\}", re.DOTALL)
+
+
+def _norm_id(value) -> str:
+    """모델이 돌려준 식별값을 명부와 맞춰 봅니다. 대괄호는 우리 서식이라 벗깁니다."""
+    return str(value).strip().strip("[]").strip()
 
 
 @dataclass
@@ -188,7 +195,9 @@ class TopTen:
             if not isinstance(e, dict) or not {"rank", "id", "name", "reason"} <= set(e):
                 result.issues.append("항목에 rank/id/name/reason 중 빠진 것이 있음")
                 continue
-            mid = e["id"]
+            # 명부를 "- [Ab3xY9] 이름" 으로 쓰다 보니 대괄호까지 베껴 오는 경우가 있습니다.
+            # 우리 서식 탓이라 감점하지 않고 벗겨서 대조합니다.
+            mid = _norm_id(e["id"])
             if mid not in roster:
                 result.issues.append(f"명부에 없는 id: {mid}")
                 continue
@@ -210,8 +219,11 @@ class TopTen:
             "include_total": self.include_total,
             "miss_exclude": self.miss_exclude,
             "exclude_total": self.exclude_total,
-            "picked_ids": [e.get("id") for e in self.entries if isinstance(e, dict)],
+            "picked_ids": [_norm_id(e.get("id")) for e in self.entries if isinstance(e, dict)],
         }
+
+
+NS = 1_000_000_000
 
 
 @dataclass
@@ -221,10 +233,98 @@ class RunResult:
     prompt_eval_count: int | None = None
     eval_count: int | None = None
     error: str | None = None
+    # Ollama 가 돌려주는 나노초 단위 통계. 없으면 None 으로 둡니다.
+    total_duration: int | None = None
+    load_duration: int | None = None
+    prompt_eval_duration: int | None = None
+    eval_duration: int | None = None
 
     @property
     def ok(self) -> bool:
         return self.error is None
+
+    @property
+    def load_sec(self) -> float | None:
+        """모델 로딩 시간. 첫 호출에서만 크게 나옵니다."""
+        return None if self.load_duration is None else round(self.load_duration / NS, 2)
+
+    @property
+    def tokens_per_sec(self) -> float | None:
+        """토큰 생성 속도. 계산할 수 없으면 None 입니다. 0 으로 채우지 않습니다."""
+        if self.eval_count is None or self.eval_duration is None:
+            return None
+        if self.eval_duration <= 0:
+            return None
+        return round(self.eval_count / (self.eval_duration / NS), 1)
+
+    @property
+    def speed_note(self) -> str | None:
+        """속도를 계산하지 못한 사유."""
+        if self.eval_count is None or self.eval_duration is None:
+            return "통계 필드 없음"
+        if self.eval_duration <= 0:
+            return "eval_duration 이 0 이하"
+        return None
+
+    def to_record(self) -> dict:
+        return {
+            "elapsed_sec": self.elapsed_sec,
+            "load_sec": self.load_sec,
+            "tokens_per_sec": self.tokens_per_sec,
+            "speed_note": self.speed_note,
+            "prompt_eval_count": self.prompt_eval_count,
+            "eval_count": self.eval_count,
+            "total_duration_ns": self.total_duration,
+            "load_duration_ns": self.load_duration,
+            "prompt_eval_duration_ns": self.prompt_eval_duration,
+            "eval_duration_ns": self.eval_duration,
+        }
+
+
+def model_profile(tag: str) -> dict:
+    """실행 조건으로 남길 모델 정보. 모델 카드가 아니라 실제로 로드되는 것을 읽습니다."""
+    client = ollama.Client()
+    profile = {"model": tag, "digest": None, "quantization_level": None,
+               "parameter_size": None, "context_length": None, "note": None}
+    try:
+        for m in client.list()["models"]:
+            if m["model"] == tag:
+                profile["digest"] = m.get("digest")
+                break
+        shown = client.show(tag)
+        details = dict(shown["details"])
+        profile["quantization_level"] = details.get("quantization_level")
+        profile["parameter_size"] = details.get("parameter_size")
+        info = dict(shown.get("modelinfo") or {})
+        family = details.get("family")
+        profile["context_length"] = info.get(f"{family}.context_length")
+    except Exception as exc:
+        profile["note"] = f"{type(exc).__name__}: {exc}"
+    return profile
+
+
+def vram_snapshot(tag: str) -> dict:
+    """지금 로드된 모델의 VRAM 점유와 CPU/GPU 적재 상태.
+
+    ollama ps 의 PROCESSOR 열과 같은 계산입니다. size_vram 이 size 와 같으면 전량 GPU 입니다.
+    """
+    snap = {"size_vram_mib": None, "size_mib": None, "processor": None, "note": None}
+    try:
+        for m in ollama.Client().ps()["models"]:
+            if m["model"] != tag:
+                continue
+            size, vram = m.get("size"), m.get("size_vram")
+            snap["size_mib"] = None if size is None else round(size / 1048576, 1)
+            snap["size_vram_mib"] = None if vram is None else round(vram / 1048576, 1)
+            if size and vram is not None:
+                pct = round(vram / size * 100)
+                snap["processor"] = "100% GPU" if pct >= 100 else (
+                    "100% CPU" if pct == 0 else f"{100 - pct}% CPU / {pct}% GPU")
+            return snap
+        snap["note"] = "ollama ps 에 로드돼 있지 않음"
+    except Exception as exc:
+        snap["note"] = f"{type(exc).__name__}: {exc}"
+    return snap
 
 
 class ModelRunner:
@@ -261,6 +361,10 @@ class OllamaRunner(ModelRunner):
             elapsed_sec=round(time.perf_counter() - started, 1),
             prompt_eval_count=response.get("prompt_eval_count"),
             eval_count=response.get("eval_count"),
+            total_duration=response.get("total_duration"),
+            load_duration=response.get("load_duration"),
+            prompt_eval_duration=response.get("prompt_eval_duration"),
+            eval_duration=response.get("eval_duration"),
         )
 
 

@@ -10,7 +10,7 @@
 - [x] STEP 3. 후보 모델 탐색 (`docs/step3.md`)
 - [x] STEP 4. 모델 실행 환경 확인
 - [x] STEP 5. 평가 세트와 채점 기준 (`docs/step5.md`, `data/eval/`)
-- [ ] STEP 6. 로컬 모델 비교 실험
+- [x] STEP 6. 로컬 모델 품질·성능 측정 (`docs/step6.md`)
 - [ ] STEP 7. Local–Cloud 비교
 - [ ] STEP 8. 최종 모델 선정 및 발표
 
@@ -22,7 +22,8 @@
 │   ├── step1.md                        # 문제 정의
 │   ├── step2.md                        # 모델 요구사항
 │   ├── step3.md                        # 후보 모델
-│   └── step5.md                        # 평가 세트와 채점 기준
+│   ├── step5.md                        # 평가 세트와 채점 기준
+│   └── step6.md                        # 로컬 모델 측정 결과
 ├── data/
 │   ├── eval/
 │   │   ├── set01.json ~ set10.json     # 평가 세트 10개 (각 50명)
@@ -32,6 +33,7 @@
 │   ├── experiment.py                   # 공통 모듈 (세트 로드, 프롬프트, 호출, 채점)
 │   ├── 01_ollama_chat.py               # 세트 하나 돌려 응답 확인
 │   ├── 02_compare_models.py            # 10세트 x 후보 비교 실행
+│   ├── 03_step6_run.py                 # STEP 6 본 실험 (워밍업 분리, 성능 측정)
 │   ├── generate_eval_sets.py           # 평가 세트 생성
 │   └── generate_sample_congregation.py # 명부 생성 부품
 └── results/
@@ -59,8 +61,8 @@ uv run scripts/generate_eval_sets.py
 # 세트 하나로 응답 확인
 uv run scripts/01_ollama_chat.py
 
-# 본 실험: 10세트 x 후보 2개 = 20회
-uv run scripts/02_compare_models.py
+# STEP 6 본 실험: 10세트 x 후보 2개 x 2회 = 40회 (워밍업 별도)
+uv run scripts/03_step6_run.py
 
 # 목록 일관성 확인: 같은 세트를 5회
 uv run scripts/02_compare_models.py --sets set01 --repeat 5
