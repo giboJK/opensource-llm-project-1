@@ -34,12 +34,16 @@
 │   ├── 01_ollama_chat.py               # 세트 하나 돌려 응답 확인
 │   ├── 02_compare_models.py            # 10세트 x 후보 비교 실행
 │   ├── 03_step6_run.py                 # STEP 6 본 실험 (워밍업 분리, 성능 측정)
+│   ├── 04_report.py                    # 기록을 브라우저 화면으로
+│   ├── report_template.html            # 그 화면 (여기만 고치면 보는 방식이 바뀜)
 │   ├── generate_eval_sets.py           # 평가 세트 생성
 │   └── generate_sample_congregation.py # 명부 생성 부품
 └── results/                            # 후보 이름으로 폴더를 나눠 저장
     ├── local/
     │   ├── qwen3_4b-instruct-2507-q4_K_M/
-    │   │   ├── step6_{시각}.jsonl      # 본 실험
+    │   │   ├── step6_{시각}.jsonl      # 본 실험 (원본 기록)
+    │   │   ├── report.html             # 더블클릭하면 열리는 결과 화면
+    │   │   ├── records.js              # 그 화면이 읽는 원본 기록
     │   │   └── warmup/                 # 워밍업 (본 집계에서 분리)
     │   └── gemma3_4b/
     └── cloud/
@@ -68,6 +72,9 @@ uv run scripts/01_ollama_chat.py
 
 # STEP 6 본 실험: 10세트 x 후보 2개 x 2회 = 40회 (워밍업 별도)
 uv run scripts/03_step6_run.py
+
+# 결과를 브라우저에서 보기 (후보별 report.html 생성)
+uv run scripts/04_report.py
 
 # 목록 일관성 확인: 같은 세트를 5회
 uv run scripts/02_compare_models.py --sets set01 --repeat 5
