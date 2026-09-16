@@ -11,8 +11,8 @@
 - [x] STEP 4. 모델 실행 환경 확인
 - [x] STEP 5. 평가 세트와 채점 기준 (`docs/step5.md`, `data/eval/`)
 - [x] STEP 6. 로컬 모델 품질·성능 측정 (`docs/step6.md`)
-- [ ] STEP 7. Local–Cloud 비교
-- [ ] STEP 8. 최종 모델 선정 및 발표
+- [x] STEP 7. Local–Cloud 비교 (`docs/step7.md`)
+- [x] STEP 8. 최종 모델 선정 및 발표 (`docs/step8.md`)
 
 ## 폴더 구조
 
@@ -23,7 +23,9 @@
 │   ├── step2.md                        # 모델 요구사항
 │   ├── step3.md                        # 후보 모델
 │   ├── step5.md                        # 평가 세트와 채점 기준
-│   └── step6.md                        # 로컬 모델 측정 결과
+│   ├── step6.md                        # 로컬 모델 측정 결과
+│   ├── step7.md                        # Local–Cloud 비교
+│   └── step8.md                        # 최종 모델 선정
 ├── data/
 │   ├── eval/
 │   │   ├── set01.json ~ set10.json     # 평가 세트 10개 (각 50명)
